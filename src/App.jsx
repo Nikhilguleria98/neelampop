@@ -8,10 +8,6 @@ import CoreKey from './app/Core value/CoreKey'
 import Quality from './app/QualityAssurance/Quality'
 
 
-
-
-
-
 const router = createBrowserRouter([
   {
     path: '/',

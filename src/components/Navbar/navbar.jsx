@@ -10,7 +10,7 @@ const Navbar = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
 
-  // ✅ Close dropdown when clicking outside
+
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -24,7 +24,7 @@ const Navbar = () => {
     };
   }, []);
 
-  // ✅ Categories Array
+
   const categories = [
     { name: "Pharma Dry syrup Bottles", path: "/products/1" },
     { name: "Measuring Spoons", path: "/products/2" },

@@ -116,7 +116,7 @@ const ProductDetails = ({ product, selectedSize, onSizeChange }) => {
       </AccordionItem>
 
       <div className="mt-auto pt-6 border-t border-gray-200">
-        <button className="inline-flex items-center justify-center bg-[#2592AD] px-8 py-3 text-sm font-medium text-white hover:bg-[#1d7a95] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2592AD] focus-visible:ring-offset-2 transition-colors duration-200 w-full sm:w-auto ">
+        <button className="inline-flex items-center justify-center bg-[#2592AD] px-8 py-3 text-sm font-medium text-white hover:bg-[#1d7a95] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2592AD] focus-visible:ring-offset-2 transition-colors duration-300 w-full sm:w-auto ">
           SEND INQUIRY
         </button>
       </div>

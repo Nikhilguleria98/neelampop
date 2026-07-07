@@ -131,23 +131,17 @@ const ProductDetails = ({ product, selectedSize, onSizeChange }) => {
       )}
 
       {/* Features */}
-      {/* Features */}
-{product.features && (
+{product.features?.length > 0 && (
   <AccordionItem
     title="Features"
     isOpen={openIndex === 4}
     onClick={() => toggleAccordion(4)}
   >
-    <div className="mt-3 text-sm leading-6 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3">
+    <ul className="list-disc pl-5 space-y-2 text-sm text-gray-700">
       {product.features.map((feature, idx) => (
-        <div key={idx} className="flex justify-between gap-3">
-          <span className="font-medium">{feature.label}</span>
-          <span className="text-gray-600 text-right">
-            : {feature.value}
-          </span>
-        </div>
+        <li key={idx}>{feature}</li>
       ))}
-    </div>
+    </ul>
   </AccordionItem>
 )}
 

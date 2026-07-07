@@ -59,164 +59,310 @@ const products = [
     //     "55 ml", "65 ml", "75 ml", "85 ml",
     //   ],
 
-    id: 1,
-    name: "Pharma Dry syrup Bottles",
-    rating: 4.8,
-    reviews: 49,
-    description: "Durable and hygienic bottles specially designed for safe storage of dry syrups. Ensures moisture protection, tamper-resistance, and accurate pouring to maintain medicine stability and shelf life.",
+  
+  id: 1,
+  name: "Pharma Dry Syrup Bottles",
+  rating: 4.8,
+  reviews: 49,
 
-    // Default images
-    images: [
-      { src: "/medicine_img/i1.jpg", alt: "Syrup bottle and box mockup" },
-      { src: "/medicine_img/i2.jpg", alt: "Brown glass bottle" },
-      { src: "/medicine_img/i3.jpg", alt: "White medicine bottle" },
-      { src: "/medicine_img/i4.jpg", alt: "Label close-up" },
-      { src: "/medicine_img/i5.jpg", alt: "Packaging box" },
+  description:
+    "Dry Syrup Bottles are specially designed pharmaceutical packaging solutions used for storing medicines that require reconstitution before administration. Manufactured from high-quality food-grade HDPE, these bottles provide moisture protection, leak-proof sealing, long shelf life, and accurate dosing for healthcare applications.",
+
+  images: [
+    { src: "/medicine_img/i1.jpg", alt: "Syrup bottle and box mockup" },
+    { src: "/medicine_img/i2.jpg", alt: "Brown glass bottle" },
+    { src: "/medicine_img/i3.jpg", alt: "White medicine bottle" },
+    { src: "/medicine_img/i4.jpg", alt: "Label close-up" },
+    { src: "/medicine_img/i5.jpg", alt: "Packaging box" },
+  ],
+
+  sizeImages: {
+    "10 ml": [
+      { src: "/medicine_img/i1.jpg", alt: "10ml Dry Syrup Bottle" },
+      { src: "/medicine_img/i2.jpg", alt: "10ml Bottle" },
+      { src: "/medicine_img/i3.jpg", alt: "10ml Packaging" },
     ],
 
-    // Size-specific images in increasing order
-    sizeImages: {
-      "5 ml": [
-        { src: "/medicine_img/i1.jpg", alt: "5ml Syrup bottle" },
-        { src: "/medicine_img/i2.jpg", alt: "5ml Brown glass bottle" },
-        { src: "/medicine_img/i3.jpg", alt: "5ml White medicine bottle" },
-      ],
-      "8 ml": [
-        { src: "/medicine_img/i4.jpg", alt: "8ml Label close-up" },
-        { src: "/medicine_img/i5.jpg", alt: "8ml Packaging box" },
-        { src: "/medicine_img/i6.jpg", alt: "8ml Medicine bottle" },
-      ],
-      "10 ml": [
-        { src: "/medicine_img/i7.jpg", alt: "10ml Syrup bottle" },
-        { src: "/medicine_img/i8.jpg", alt: "10ml Brown glass bottle" },
-        { src: "/medicine_img/i9.jpg", alt: "10ml White medicine bottle" },
-      ],
-      "15 ml": [
-        { src: "/medicine_img/i10.jpg", alt: "15ml Label close-up" },
-        { src: "/medicine_img/i11.jpg", alt: "15ml Packaging box" },
-        { src: "/medicine_img/i12.jpg", alt: "15ml Medicine bottle" },
-      ],
-      "20 ml": [
-        { src: "/medicine_img/i13.jpg", alt: "20ml Syrup bottle" },
-        { src: "/medicine_img/i14.jpg", alt: "20ml Brown glass bottle" },
-        { src: "/medicine_img/i15.jpg", alt: "20ml White medicine bottle" },
-      ],
-      "25 ml": [
-        { src: "/medicine_img/i16.jpg", alt: "25ml Label close-up" },
-        { src: "/medicine_img/i1.jpg", alt: "25ml Packaging box" },
-        { src: "/medicine_img/i2.jpg", alt: "25ml Medicine bottle" },
-      ],
-      "30 ml": [
-        { src: "/medicine_img/i3.jpg", alt: "30ml Syrup bottle" },
-        { src: "/medicine_img/i4.jpg", alt: "30ml Brown glass bottle" },
-        { src: "/medicine_img/i5.jpg", alt: "30ml White medicine bottle" },
-      ],
-      "35 ml": [
-        { src: "/medicine_img/i6.jpg", alt: "35ml Label close-up" },
-        { src: "/medicine_img/i7.jpg", alt: "35ml Packaging box" },
-        { src: "/medicine_img/i8.jpg", alt: "35ml Medicine bottle" },
-      ],
-      "40 ml": [
-        { src: "/medicine_img/i9.jpg", alt: "40ml Syrup bottle" },
-        { src: "/medicine_img/i10.jpg", alt: "40ml Brown glass bottle" },
-        { src: "/medicine_img/i11.jpg", alt: "40ml White medicine bottle" },
-      ],
-      "45 ml": [
-        { src: "/medicine_img/i12.jpg", alt: "45ml Label close-up" },
-        { src: "/medicine_img/i13.jpg", alt: "45ml Packaging box" },
-        { src: "/medicine_img/i14.jpg", alt: "45ml Medicine bottle" },
-      ],
-      "50 ml": [
-        { src: "/medicine_img/i15.jpg", alt: "50ml Syrup bottle" },
-        { src: "/medicine_img/i16.jpg", alt: "50ml Brown glass bottle" },
-        { src: "/medicine_img/i1.jpg", alt: "50ml White medicine bottle" },
-      ],
-      "55 ml": [
-        { src: "/medicine_img/i2.jpg", alt: "55ml Label close-up" },
-        { src: "/medicine_img/i3.jpg", alt: "55ml Packaging box" },
-        { src: "/medicine_img/i4.jpg", alt: "55ml Medicine bottle" },
-      ],
-      "60 ml": [
-        { src: "/medicine_img/i5.jpg", alt: "60ml Syrup bottle" },
-        { src: "/medicine_img/i6.jpg", alt: "60ml Brown glass bottle" },
-        { src: "/medicine_img/i7.jpg", alt: "60ml White medicine bottle" },
-      ],
-      "65 ml": [
-        { src: "/medicine_img/i8.jpg", alt: "65ml Label close-up" },
-        { src: "/medicine_img/i9.jpg", alt: "65ml Packaging box" },
-        { src: "/medicine_img/i10.jpg", alt: "65ml Medicine bottle" },
-      ],
-      "70 ml": [
-        { src: "/medicine_img/i11.jpg", alt: "70ml Syrup bottle" },
-        { src: "/medicine_img/i12.jpg", alt: "70ml Brown glass bottle" },
-        { src: "/medicine_img/i13.jpg", alt: "70ml White medicine bottle" },
-      ],
-      "75 ml": [
-        { src: "/medicine_img/i14.jpg", alt: "75ml Label close-up" },
-        { src: "/medicine_img/i15.jpg", alt: "75ml Packaging box" },
-        { src: "/medicine_img/i16.jpg", alt: "75ml Medicine bottle" },
-      ],
-      "80 ml": [
-        { src: "/medicine_img/i1.jpg", alt: "80ml Syrup bottle" },
-        { src: "/medicine_img/i2.jpg", alt: "80ml Brown glass bottle" },
-        { src: "/medicine_img/i3.jpg", alt: "80ml White medicine bottle" },
-      ],
-      "85 ml": [
-        { src: "/medicine_img/i4.jpg", alt: "85ml Label close-up" },
-        { src: "/medicine_img/i5.jpg", alt: "85ml Packaging box" },
-        { src: "/medicine_img/i6.jpg", alt: "85ml Medicine bottle" },
-      ],
+    "15 ml": [
+      { src: "/medicine_img/i4.jpg", alt: "15ml Dry Syrup Bottle" },
+      { src: "/medicine_img/i5.jpg", alt: "15ml Bottle" },
+      { src: "/medicine_img/i6.jpg", alt: "15ml Packaging" },
+    ],
+
+    "30 ml": [
+      { src: "/medicine_img/i7.jpg", alt: "30ml Dry Syrup Bottle" },
+      { src: "/medicine_img/i8.jpg", alt: "30ml Bottle" },
+      { src: "/medicine_img/i9.jpg", alt: "30ml Packaging" },
+    ],
+
+    "50 ml": [
+      { src: "/medicine_img/i10.jpg", alt: "50ml Dry Syrup Bottle" },
+      { src: "/medicine_img/i11.jpg", alt: "50ml Bottle" },
+      { src: "/medicine_img/i12.jpg", alt: "50ml Packaging" },
+    ],
+
+    "60 ml": [
+      { src: "/medicine_img/i13.jpg", alt: "60ml Dry Syrup Bottle" },
+      { src: "/medicine_img/i14.jpg", alt: "60ml Bottle" },
+      { src: "/medicine_img/i15.jpg", alt: "60ml Packaging" },
+    ],
+
+    "100 ml": [
+      { src: "/medicine_img/i16.jpg", alt: "100ml Dry Syrup Bottle" },
+      { src: "/medicine_img/i1.jpg", alt: "100ml Bottle" },
+      { src: "/medicine_img/i2.jpg", alt: "100ml Packaging" },
+    ],
+  },
+
+  specs: [
+    {
+      label: "Bottle Material",
+      value: "High Density Polyethylene (HDPE)",
     },
+    {
+      label: "Dosage Cup Material",
+      value: "Polypropylene (PP)",
+    },
+    {
+      label: "Bottle Color",
+      value: "Natural",
+    },
+    {
+      label: "Cap Colors",
+      value: "White, Blue, Red",
+    },
+    {
+      label: "Neck Sizes",
+      value: "25mm, 28mm",
+    },
+    {
+      label: "Dosage Cup",
+      value: "10ml Transparent",
+    },
+    {
+      label: "Cap Type",
+      value: "Screw Cap with Induction Seal Wad",
+    },
+    {
+      label: "Application Area",
+      value: "Pharmaceutical Industry",
+    },
+    {
+      label: "Supply Ability",
+      value: "1000 Per Day",
+    },
+    {
+      label: "Delivery Time",
+      value: "4-5 Days",
+    },
+  ],
 
-    specs: [
-      { label: "Color", value: "White" },
-      { label: "Usage", value: "Laboratory" },
-      { label: "Size", value: "Standard" },
-      { label: "Product Type", value: "Adaptors Bottles" },
-      { label: "Material", value: "PTFE" },
-      { label: "Application", value: "Industrial" },
-      { label: "Supply Ability", value: "1000 Per Day" },
-      { label: "Delivery Time", value: "4-5 Days" },
-    ],
-    sizes: [
-      "5 ml", "8 ml", "10 ml", "15 ml", "20 ml",
-      "25 ml", "30 ml", "35 ml", "40 ml", "45 ml",
-      "50 ml", "55 ml", "60 ml", "65 ml", "70 ml",
-      "75 ml", "80 ml", "85 ml"
-    ],
+  applications: [
+    "Storage of dry syrups and powders",
+    "Storage of liquid medicines",
+    "Storage of tablets and capsules",
+    "Food industry powder packaging",
+    "Cosmetic powder packaging",
+    "Products requiring reconstitution before use",
+  ],
 
+  industryApplications: [
+    "Pharmaceutical Industry",
+    "Nutraceutical & Supplement Industry",
+    "Healthcare (Hospitals)",
+    "Veterinary Industry",
+  ],
+
+  features: [
+    "Dimensionally Accurate",
+    "Crack Resistant",
+    "High Quality Food Grade Raw Material",
+    "Airtight & Leak Proof",
+    "Fine Finish",
+    "Space For Shaking",
+    "Moisture Resistant Material",
+  ],
+
+  sizes: [
+    "10 ml",
+    "15 ml",
+    "30 ml",
+    "50 ml",
+    "60 ml",
+    "100 ml",
+  ],
+},
+{
+  id: 2,
+  name: "Measuring Hollow Spoon",
+  rating: 4.9,
+  reviews: 38,
+
+  description:
+    "At Neelam Print O Pack, we offer a premium-quality Measuring Hollow Spoon designed for precision, durability, and convenience. Manufactured using high-grade non-toxic Polypropylene (PP), this scoop ensures accurate measurement of both dry and liquid materials. Its rectangular bowl design, ergonomic handle, and clear measurement markings make it ideal for pharmaceutical, nutraceutical, food, cosmetic, and industrial applications.",
+
+  images: [
+    { src: "/medicine_img/spoon1.jpeg", alt: "Measuring Spoon Front View" },
+    { src: "/medicine_img/spoon2.jpg", alt: "Measuring Spoon Side View" },
+    { src: "/medicine_img/spoon3.jpg", alt: "Measuring Spoon Packaging" },
+    { src: "/medicine_img/spoon4.jpg", alt: "Transparent Measuring Spoon" },
+    { src: "/medicine_img/spoon5.jpg", alt: "PP Measuring Spoon" }
+  ],
+
+  sizeImages: {
+    "10 ml": [
+      { src: "/medicine_img/spoon1.jpeg", alt: "10ml Measuring Spoon" },
+    
+    ]
   },
-  {
-    id: 3,
-    name: "Lotion Bottles",
-    rating: 4.8,
-    reviews: 49,
-    description: "Easy-to-use bottles with pumps or flip tops for smooth application of lotions and moisturizers. Durable material ensures long-lasting freshness and brand appeal.",
-    images: [
-      { src: "/lotionbottle.png", alt: "Syrup bottle and box mockup" },
-      { src: "/lotionbottle2.png", alt: "Brown glass bottle" },
-      { src: "/lotionbottle3.png", alt: "White medicine bottle" },
-      { src: "/lotionbottle4.png", alt: "Label close-up" },
-      { src: "/lotionbottle5.png", alt: "Packaging box" },
-    ],
-    specs: [
-      { label: "Color", value: "White" },
-      { label: "Usage", value: "Laboratory" },
-      { label: "Size", value: "Standard" },
-      { label: "Product Type", value: "Adaptors Bottles" },
-      { label: "Material", value: "PTFE" },
-      { label: "Application", value: "Industrial" },
-      { label: "Supply Ability", value: "1000 Per Day" },
-      { label: "Delivery Time", value: "4-5 Days" },
-    ],
-    sizes: [
-      "5 ml", "10 ml", "20 ml", "30 ml", "40 ml",
-      "50 ml", "60 ml", "70 ml", "80 ml",
-      "8 ml", "15 ml", "25 ml", "35 ml", "45 ml",
-      "55 ml", "65 ml", "75 ml", "85 ml",
-    ],
+
+  specs: [
+    { label: "Capacity", value: "10ml" },
+    { label: "Material", value: "Polypropylene (PP)" },
+    { label: "Color", value: "Transparent" },
+    { label: "Custom Colors", value: "Available on Request" },
+    {
+      label: "Shape",
+      value:
+        "Rectangular Scoop with Flat Bottom and Measurement Markings"
+    },
+    { label: "Reusable", value: "Yes" },
+    { label: "Food Grade", value: "Yes" },
+    { label: "Chemical Resistant", value: "Yes" }
+  ],
+
+  applications: [
+    "Measuring powders, granules and liquids",
+    "Dosing pharmaceutical syrups and suspensions",
+    "Filling and transferring materials without spillage",
+    "Portion control for food, supplements and chemicals",
+    "Measuring protein powders and baby formula",
+    "Dispensing Ayurvedic and herbal powders",
+    "Sampling in quality control laboratories",
+    "Cosmetic product handling",
+    "Filling sachets, containers and bottles",
+    "Measuring detergents and cleaning agents",
+    "Hospital dosage preparation",
+    "Home baking and spice measurement",
+    "Industrial pigment and additive handling",
+    "Educational and research applications"
+  ],
+
+  industryApplications: [
+    "Pharmaceutical Industry",
+    "Nutraceutical & Supplement Industry",
+    "Food & Beverage Industry",
+    "Cosmetic Industry",
+    "Veterinary Industry",
+    "Ayurvedic & Herbal Applications"
+  ],
+
+  features: [
+    "Accurate measurement markings",
+    "Rectangular scoop for easy filling",
+    "Lightweight and durable construction",
+    "Ergonomic handle design",
+    "Smooth finish for easy cleaning",
+    "Chemical resistant",
+    "Moisture resistant",
+    "Compact and easy to store",
+    "Reusable and cost-effective",
+    "Suitable for dry and liquid materials",
+    "Non-toxic food grade material"
+  ],
+
+  sizes: ["10 ml"],
+
+  tagline: "Measure Right, Every Time"
+},
+ {
+  id: 3,
+  name: "60ml HDPE Ujjala Type Oil / Lotion / Shampoo Bottle",
+  rating: 4.8,
+  reviews: 49,
+
+  description:
+    "Crafted from high-quality HDPE material, the 60ml Ujjala-type bottle is designed for safe, convenient, and efficient packaging of liquid formulations. Its ergonomic shape ensures a comfortable grip, while the narrow 19mm neck enables controlled dispensing with minimal spillage. The bottle offers excellent resistance to chemicals, moisture, and impact, making it a reliable choice for cosmetic, pharmaceutical, ayurvedic, and FMCG applications.",
+
+  images: [
+    { src: "/lotionbottle.png", alt: "60ml HDPE Lotion Bottle" },
+    { src: "/lotionbottle2.png", alt: "HDPE Shampoo Bottle" },
+    { src: "/lotionbottle3.png", alt: "HDPE Oil Bottle" },
+    { src: "/lotionbottle4.png", alt: "Flip Top Bottle" },
+    { src: "/lotionbottle5.png", alt: "Packaging Bottle" }
+  ],
+
+  sizeImages: {
+    "60 ml": [
+      { src: "/lotionbottle.png", alt: "60ml HDPE Bottle" },
+      { src: "/lotionbottle2.png", alt: "60ml Shampoo Bottle" },
+      { src: "/lotionbottle3.png", alt: "60ml Lotion Bottle" }
+    ]
   },
-  {
+
+  specs: [
+    { label: "Capacity", value: "60ml" },
+    { label: "Shape", value: "Ujjala Type" },
+    { label: "Bottle Material", value: "High Density Polyethylene (HDPE)" },
+    { label: "Bottle Colour", value: "Milky White" },
+    { label: "Cap Material", value: "Polypropylene (PP)" },
+    { label: "Cap Colour", value: "White" },
+    { label: "Cap Type", value: "Flip Top" },
+    { label: "Neck Size", value: "19mm" },
+    { label: "Supply Ability", value: "1000 Per Day" },
+    { label: "Delivery Time", value: "4-5 Days" }
+  ],
+
+  applications: [
+    "Hair oils",
+    "Hair serums",
+    "Shampoos",
+    "Conditioners",
+    "Body lotions",
+    "Cosmetic creams",
+    "Body oils",
+    "Face serums",
+    "Medicated shampoos",
+    "Medicated lotions",
+    "Medicated oils",
+    "Antiseptic solutions",
+    "Herbal oils",
+    "Ayurvedic formulations"
+  ],
+
+  industryApplications: [
+    "Pharmaceutical Industry",
+    "Personal Care & Cosmetics Industry",
+    "Veterinary Industry",
+    "FMCG Industry",
+    "Herbal & Ayurvedic Industry"
+  ],
+
+  features: [
+    "Made from high-quality HDPE material",
+    "Excellent chemical resistance",
+    "Dimensionally accurate",
+    "Crack resistant",
+    "Food grade raw material",
+    "Leak-proof design",
+    "Fine finish",
+    "Controlled dispensing through flip-top cap",
+    "Safe storage and transportation",
+    "Easy dispensing",
+    "Lightweight and cost-effective",
+    "Impact resistant",
+    "Smooth surface for labeling",
+    "Suitable for branding and printing",
+    "Non-toxic and hygienic",
+    "Travel-friendly packaging",
+    "Compatible with screw, flip-top and plug closures"
+  ],
+
+  sizes: ["60 ml"],
+
+  customization:
+    "Customized colours available on request with minimum order quantity. Shrink sleeving and inner plug options can also be provided as per customer requirements."
+},{
     id: 4,
     name: "Hand wash Bottles",
     rating: 4.8,
@@ -247,36 +393,98 @@ const products = [
     ],
   },
 
-  {
-    id: 5,
-    name: "Eye-Ear Dropper Bottle",
-    rating: 4.8,
-    reviews: 49,
-    description: "Precision plastic dropper bottles for eye and ear care, ensuring accurate dosing and lasting freshness with hygienic, leak-proof design.",
-    images: [
-      { src: "/dropper.png", alt: "Syrup bottle and box mockup" },
-      { src: "/dropper2.png", alt: "Brown glass bottle" },
-      { src: "/dropper3.png", alt: "White medicine bottle" },
-      { src: "/dropper4.png", alt: "Label close-up" },
-      { src: "/dropper5.png", alt: "Packaging box" },
-    ],
-    specs: [
-      { label: "Color", value: "White" },
-      { label: "Usage", value: "Laboratory" },
-      { label: "Size", value: "Standard" },
-      { label: "Product Type", value: "Adaptors Bottles" },
-      { label: "Material", value: "PTFE" },
-      { label: "Application", value: "Industrial" },
-      { label: "Supply Ability", value: "1000 Per Day" },
-      { label: "Delivery Time", value: "4-5 Days" },
-    ],
-    sizes: [
-      "5 ml", "10 ml", "20 ml", "30 ml", "40 ml",
-      "50 ml", "60 ml", "70 ml", "80 ml",
-      "8 ml", "15 ml", "25 ml", "35 ml", "45 ml",
-      "55 ml", "65 ml", "75 ml", "85 ml",
+ {
+  id: 5,
+  name: "30ml Round Ear-Eye Drop / Lotion Bottle",
+  rating: 4.8,
+  reviews: 49,
+
+  description:
+    "Crafted to meet the highest standards of quality and functionality, our 30ml HDPE Ear/Eye Drop & Lotion Bottle is the perfect packaging solution for pharmaceutical and personal care formulations. Engineered with a precision nozzle dropper system, it ensures accurate dosage, leak-proof performance, and excellent product protection. The durable HDPE construction offers superior resistance to chemicals, moisture, and impact while maintaining portability and ease of use.",
+
+  images: [
+    { src: "/dropper.png", alt: "30ml Ear Eye Drop Bottle" },
+    { src: "/dropper2.png", alt: "HDPE Dropper Bottle" },
+    { src: "/dropper3.png", alt: "Dropper Cap Bottle" },
+    { src: "/dropper4.png", alt: "Lotion Bottle" },
+    { src: "/dropper5.png", alt: "Pharmaceutical Dropper Bottle" },
+  ],
+
+  sizeImages: {
+    "30 ml": [
+      { src: "/dropper.png", alt: "30ml Ear Eye Drop Bottle" },
+      { src: "/dropper2.png", alt: "30ml HDPE Bottle" },
+      { src: "/dropper3.png", alt: "30ml Dropper Bottle" },
     ],
   },
+
+  specs: [
+    { label: "Capacity", value: "30ml" },
+    { label: "Shape", value: "Round" },
+    { label: "Bottle Material", value: "High Density Polyethylene (HDPE)" },
+    { label: "Bottle Colour", value: "Milky White" },
+    { label: "Cap Material", value: "Polypropylene (PP)" },
+    { label: "Cap Colour", value: "White" },
+    { label: "Cap Type", value: "Ribbed Nozzle Dropper Cap" },
+    { label: "Inner Material", value: "Polypropylene (PP)" },
+    { label: "Inner Type", value: "Nozzle / Dropper Tip" },
+    { label: "Application Area", value: "Pharmaceutical Industry" },
+    { label: "Supply Ability", value: "1000 Per Day" },
+    { label: "Delivery Time", value: "4-5 Days" },
+  ],
+
+  applications: [
+    "Eye drops (lubricants, antibiotics, anti-allergy solutions)",
+    "Ear drops (wax softeners and anti-infective solutions)",
+    "Nasal drops (decongestants and saline solutions)",
+    "Topical liquid medicines",
+    "Medicated lotions for skin conditions",
+    "Baby care liquids and medicated drops",
+    "Beauty serums and cosmetic treatments",
+    "Under-eye solutions",
+    "Scalp treatment lotions",
+    "Essential oils for external use",
+    "Ayurvedic treatment solutions",
+    "Herbal extracts and wellness formulations",
+    "Veterinary eye and ear drops",
+    "Liquid medications for animals"
+  ],
+
+  industryApplications: [
+    "Pharmaceutical Industry",
+    "Ayurvedic & Herbal Industry",
+    "Cosmetics Industry",
+    "Veterinary Applications"
+  ],
+
+  features: [
+    "Dimensionally accurate",
+    "Crack resistant",
+    "Food-grade raw material",
+    "Leak-proof and durable design",
+    "Fine finish",
+    "Dropper tip for accurate dosage",
+    "Safe storage",
+    "Easy dispensing",
+    "Controlled usage of liquid products",
+    "Lightweight and cost-effective",
+    "User-friendly dispensing",
+    "High chemical resistance",
+    "Suitable for labeling",
+    "Hygienic and safe",
+    "Excellent squeezability",
+    "Space efficient",
+    "Ergonomic design",
+    "Impact resistant",
+    "Smooth surface for printing and branding",
+    "Non-toxic and safe for pharmaceutical use"
+  ],
+
+  sizes: ["30 ml"],
+
+  customization:
+    "Available with customized colours, tamper-evident caps, branding, labeling, and packaging options as per customer requirements."
+},
   {
     id: 6,
     name: "Flip-off Seals",

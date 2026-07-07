@@ -338,148 +338,148 @@ const products = [
     ],
   },
   {
-  id: 8,
-  name: "Toilet Cleaner Bottles",
-  rating: 4.8,
-  reviews: 49,
+    id: 8,
+    name: "Toilet Cleaner Bottles",
+    rating: 4.8,
+    reviews: 49,
 
-  description:
-    "Designed for efficiency, durability, and user convenience, our Ergonomic Angled Neck Toilet Cleaner Bottle is an ideal packaging solution for modern cleaning formulations. Engineered with a precision slant-neck design, the bottle allows effortless reach into difficult areas such as under toilet rims and tight corners, ensuring accurate and controlled dispensing of liquid or gel cleaners. Manufactured using high-quality, chemical-resistant plastic, this bottle offers excellent durability and compatibility with strong cleaning formulations, including acidic toilet cleaners and disinfectant liquids. The sturdy body structure, combined with a stable base and comfortable grip, ensures reliable handling during everyday use while maintaining a professional retail appearance. The smooth surface area supports premium labeling and branding, making it a perfect choice for companies looking to enhance shelf appeal and brand visibility. Suitable for both manual and automated filling lines, the bottle also offers customization options in color and capacity to meet diverse packaging requirements. With its combination of functional design, manufacturing quality, and aesthetic appeal, this bottle stands as a reliable and premium packaging solution for home care and sanitation products.",
+    description:
+      "Designed for efficiency, durability, and user convenience, our Ergonomic Angled Neck Toilet Cleaner Bottle is an ideal packaging solution for modern cleaning formulations. Engineered with a precision slant-neck design, the bottle allows effortless reach into difficult areas such as under toilet rims and tight corners, ensuring accurate and controlled dispensing of liquid or gel cleaners. Manufactured using high-quality, chemical-resistant plastic, this bottle offers excellent durability and compatibility with strong cleaning formulations, including acidic toilet cleaners and disinfectant liquids. The sturdy body structure, combined with a stable base and comfortable grip, ensures reliable handling during everyday use while maintaining a professional retail appearance. The smooth surface area supports premium labeling and branding, making it a perfect choice for companies looking to enhance shelf appeal and brand visibility. Suitable for both manual and automated filling lines, the bottle also offers customization options in color and capacity to meet diverse packaging requirements. With its combination of functional design, manufacturing quality, and aesthetic appeal, this bottle stands as a reliable and premium packaging solution for home care and sanitation products.",
 
-  images: [
-    { src: "/toiletCleaner.png", alt: "Toilet cleaner bottle front view" },
-    { src: "/toiletCleaner2.png", alt: "Toilet cleaner bottle side view" },
-    { src: "/toiletCleaner3.png", alt: "Toilet cleaner bottle angle view" },
-    { src: "/toiletCleaner4.png", alt: "Toilet cleaner bottle close-up" },
-    { src: "/toiletCleaner5.png", alt: "Toilet cleaner bottle packaging" },
-  ],
+    images: [
+      { src: "/toiletCleaner.png", alt: "Toilet cleaner bottle front view" },
+      { src: "/toiletCleaner2.png", alt: "Toilet cleaner bottle side view" },
+      { src: "/toiletCleaner3.png", alt: "Toilet cleaner bottle angle view" },
+      { src: "/toiletCleaner4.png", alt: "Toilet cleaner bottle close-up" },
+      { src: "/toiletCleaner5.png", alt: "Toilet cleaner bottle packaging" },
+    ],
 
-  specs: [
-    {
-      label: "Other Names",
-      value: "Angled Spout Cleaning Bottle, Toilet Cleaner Neck Bottle, Tilt-Neck Liquid Cleaner Bottle, Ergonomic Slant-Neck Bottle, Precision Pour Toilet Cleaner Bottle, ErgoTilt Toilet Cleaner Bottle",
-    },
-    {
-      label: "Capacity",
-      value: "500 ml",
-    },
-    {
-      label: "Shape",
-      value: "Slant Neck / Bent Neck Bottle with Integrated Spout",
-    },
-    {
-      label: "Shape Description",
-      value:
-        "Tall rectangular bottle with an ergonomically angled neck and narrow dispensing spout designed for under-rim and hard-to-reach cleaning.",
-    },
-    {
-      label: "Bottle Colour",
-      value: "Blue and Red (Other colors available on request)",
-    },
-    {
-      label: "Bottle Material",
-      value: "High Density Polyethylene (HDPE)",
-    },
-    {
-      label: "Cap Colour",
-      value: "Red, Blue and other colors on request",
-    },
-    {
-      label: "Cap Material",
-      value: "Polypropylene (PP)",
-    },
-    {
-      label: "Inner Plug Colour",
-      value: "Natural",
-    },
-    {
-      label: "Inner Plug Material",
-      value: "Low Density Polyethylene (LDPE)",
-    },
-  ],
+    specs: [
+      {
+        label: "Other Names",
+        value: "Angled Spout Cleaning Bottle, Toilet Cleaner Neck Bottle, Tilt-Neck Liquid Cleaner Bottle, Ergonomic Slant-Neck Bottle, Precision Pour Toilet Cleaner Bottle, ErgoTilt Toilet Cleaner Bottle",
+      },
+      {
+        label: "Capacity",
+        value: "500 ml",
+      },
+      {
+        label: "Shape",
+        value: "Slant Neck / Bent Neck Bottle with Integrated Spout",
+      },
+      {
+        label: "Shape Description",
+        value:
+          "Tall rectangular bottle with an ergonomically angled neck and narrow dispensing spout designed for under-rim and hard-to-reach cleaning.",
+      },
+      {
+        label: "Bottle Colour",
+        value: "Blue and Red (Other colors available on request)",
+      },
+      {
+        label: "Bottle Material",
+        value: "High Density Polyethylene (HDPE)",
+      },
+      {
+        label: "Cap Colour",
+        value: "Red, Blue and other colors on request",
+      },
+      {
+        label: "Cap Material",
+        value: "Polypropylene (PP)",
+      },
+      {
+        label: "Inner Plug Colour",
+        value: "Natural",
+      },
+      {
+        label: "Inner Plug Material",
+        value: "Low Density Polyethylene (LDPE)",
+      },
+    ],
 
-  applications: [
-    "Packaging of toilet cleaner liquids",
-    "Dispensing bathroom cleaning solutions",
-    "Storage and application of descaling liquids",
-    "Packaging of disinfectant and sanitizer liquids",
-    "Packaging of tile and floor cleaning chemicals",
-    "Controlled pouring of thick cleaning gels",
-  ],
+    applications: [
+      "Packaging of toilet cleaner liquids",
+      "Dispensing bathroom cleaning solutions",
+      "Storage and application of descaling liquids",
+      "Packaging of disinfectant and sanitizer liquids",
+      "Packaging of tile and floor cleaning chemicals",
+      "Controlled pouring of thick cleaning gels",
+    ],
 
-  industryApplications: [
-    "FMCG Cleaning Products Industry",
-    "Home Care & Household Cleaning Industry",
-    "Chemical & Detergent Manufacturing Industry",
-  ],
+    industryApplications: [
+      "FMCG Cleaning Products Industry",
+      "Home Care & Household Cleaning Industry",
+      "Chemical & Detergent Manufacturing Industry",
+    ],
 
-  features: [
-    {
-      label: "Ergonomic Angled Neck Design",
-      value: "Allows easy access to hard-to-reach areas such as under toilet rims.",
-    },
-    {
-      label: "Precision Dispensing Spout",
-      value: "Ensures controlled and targeted application of cleaning liquids.",
-    },
-    {
-      label: "User-Friendly Grip",
-      value: "Contoured body provides comfortable and secure handling.",
-    },
-    {
-      label: "Durable Plastic Construction",
-      value: "Manufactured from high-quality HDPE/PP material for long-lasting performance.",
-    },
-    {
-      label: "Chemical Resistant Material",
-      value: "Suitable for acidic and strong toilet cleaning formulations.",
-    },
-    {
-      label: "Leak-Resistant Closure",
-      value: "Secure cap design prevents leakage during storage and transport.",
-    },
-    {
-      label: "Stable Base Design",
-      value: "Flat bottom ensures upright stability on shelves and storage surfaces.",
-    },
-    {
-      label: "Lightweight Yet Strong",
-      value: "Easy to handle while maintaining structural durability.",
-    },
-    {
-      label: "Optimal Surface for Labeling",
-      value: "Smooth body area allows easy application of product labels and branding.",
-    },
-    {
-      label: "Easy Filling Compatibility",
-      value: "Designed for efficient filling on automated or manual production lines.",
-    },
-    {
-      label: "Reusable and Recyclable",
-      value: "Environmentally friendly plastic material supports recycling.",
-    },
-    {
-      label: "Efficient Liquid Flow",
-      value: "Internal design supports smooth dispensing of liquid or gel cleaners.",
-    },
-    {
-      label: "Compact Storage Design",
-      value: "Space-efficient shape suitable for packaging, shipping, and retail display.",
-    },
-    {
-      label: "Tamper-Evident Closure",
-      value: "Compatible with tamper-proof caps for enhanced product safety.",
-    },
-    {
-      label: "Customizable Colors & Sizes",
-      value: "Available in multiple colors and capacities to suit brand requirements.",
-    },
-  ],
+    features: [
+      {
+        label: "Ergonomic Angled Neck Design",
+        value: "Allows easy access to hard-to-reach areas such as under toilet rims.",
+      },
+      {
+        label: "Precision Dispensing Spout",
+        value: "Ensures controlled and targeted application of cleaning liquids.",
+      },
+      {
+        label: "User-Friendly Grip",
+        value: "Contoured body provides comfortable and secure handling.",
+      },
+      {
+        label: "Durable Plastic Construction",
+        value: "Manufactured from high-quality HDPE/PP material for long-lasting performance.",
+      },
+      {
+        label: "Chemical Resistant Material",
+        value: "Suitable for acidic and strong toilet cleaning formulations.",
+      },
+      {
+        label: "Leak-Resistant Closure",
+        value: "Secure cap design prevents leakage during storage and transport.",
+      },
+      {
+        label: "Stable Base Design",
+        value: "Flat bottom ensures upright stability on shelves and storage surfaces.",
+      },
+      {
+        label: "Lightweight Yet Strong",
+        value: "Easy to handle while maintaining structural durability.",
+      },
+      {
+        label: "Optimal Surface for Labeling",
+        value: "Smooth body area allows easy application of product labels and branding.",
+      },
+      {
+        label: "Easy Filling Compatibility",
+        value: "Designed for efficient filling on automated or manual production lines.",
+      },
+      {
+        label: "Reusable and Recyclable",
+        value: "Environmentally friendly plastic material supports recycling.",
+      },
+      {
+        label: "Efficient Liquid Flow",
+        value: "Internal design supports smooth dispensing of liquid or gel cleaners.",
+      },
+      {
+        label: "Compact Storage Design",
+        value: "Space-efficient shape suitable for packaging, shipping, and retail display.",
+      },
+      {
+        label: "Tamper-Evident Closure",
+        value: "Compatible with tamper-proof caps for enhanced product safety.",
+      },
+      {
+        label: "Customizable Colors & Sizes",
+        value: "Available in multiple colors and capacities to suit brand requirements.",
+      },
+    ],
 
-  sizes: [
-    "500 ml",
-  ],
-},
+    sizes: [
+      "500 ml",
+    ],
+  },
   {
     id: 9,
     name: "Cream Jars",
@@ -572,148 +572,148 @@ const products = [
       "55 ml", "65 ml", "75 ml", "85 ml",
     ],
   },
- {
-  id: 12,
-  name: "Floor Cleaner Bottles",
-  rating: 4.8,
-  reviews: 49,
+  {
+    id: 12,
+    name: "Floor Cleaner Bottles",
+    rating: 4.8,
+    reviews: 49,
 
-  description:
-    "Designed for performance, convenience, and brand appeal, our Angled Neck Floor Cleaner Bottle is a smart packaging solution for modern home care and sanitation products. Manufactured from high-quality HDPE, this bottle offers excellent durability, chemical resistance, and lightweight handling, making it ideal for everyday use and large-scale distribution. The ergonomically designed slanted neck ensures controlled pouring and easy application, especially in hard-to-reach areas such as corners and toilet rims. Its spacious front panel allows clear and attractive labeling, helping brands create strong shelf presence in retail environments. The sturdy base and compact rectangular shape provide stability and efficient storage during transport and display. Perfect for packaging floor cleaners, disinfectants, and multipurpose cleaning liquids, this bottle combines functional design, reliability, and professional aesthetics, making it an excellent choice for household, institutional, and industrial cleaning product manufacturers.",
+    description:
+      "Designed for performance, convenience, and brand appeal, our Angled Neck Floor Cleaner Bottle is a smart packaging solution for modern home care and sanitation products. Manufactured from high-quality HDPE, this bottle offers excellent durability, chemical resistance, and lightweight handling, making it ideal for everyday use and large-scale distribution. The ergonomically designed slanted neck ensures controlled pouring and easy application, especially in hard-to-reach areas such as corners and toilet rims. Its spacious front panel allows clear and attractive labeling, helping brands create strong shelf presence in retail environments. The sturdy base and compact rectangular shape provide stability and efficient storage during transport and display. Perfect for packaging floor cleaners, disinfectants, and multipurpose cleaning liquids, this bottle combines functional design, reliability, and professional aesthetics, making it an excellent choice for household, institutional, and industrial cleaning product manufacturers.",
 
-  images: [
-    { src: "/floorCleaner.png", alt: "Floor cleaner bottle front view" },
-    { src: "/floorCleaner2.png", alt: "Floor cleaner bottle side view" },
-    { src: "/floorCleaner3.png", alt: "Floor cleaner bottle angle view" },
-    { src: "/floorCleaner4.png", alt: "Floor cleaner bottle close-up" },
-    { src: "/floorCleaner5.png", alt: "Floor cleaner bottle packaging" },
-  ],
+    images: [
+      { src: "/floorCleaner.png", alt: "Floor cleaner bottle front view" },
+      { src: "/floorCleaner2.png", alt: "Floor cleaner bottle side view" },
+      { src: "/floorCleaner3.png", alt: "Floor cleaner bottle angle view" },
+      { src: "/floorCleaner4.png", alt: "Floor cleaner bottle close-up" },
+      { src: "/floorCleaner5.png", alt: "Floor cleaner bottle packaging" },
+    ],
 
-  specs: [
-    {
-      label: "Capacity",
-      value: "500ml",
-    },
-    {
-      label: "Shape",
-      value: "Slanted Shoulder Rectangular Bottle",
-    },
-    {
-      label: "Shape Description",
-      value:
-        "Rectangular body with ergonomic slanted shoulder and angled neck for easy pouring without spilling.",
-    },
-    {
-      label: "Bottle Colour",
-      value: "Natural and White",
-    },
-    {
-      label: "Bottle Material",
-      value: "High Density Polyethylene (HDPE)",
-    },
-    {
-      label: "Cap Colour",
-      value: "Pink, Blue and any color as per requirement",
-    },
-    {
-      label: "Cap Material",
-      value: "Polypropylene (PP)",
-    },
-    {
-      label: "Inner Plug Colour",
-      value: "Natural",
-    },
-    {
-      label: "Inner Plug Material",
-      value: "Low Density Polyethylene (LDPE)",
-    },
-  ],
+    specs: [
+      {
+        label: "Capacity",
+        value: "500ml",
+      },
+      {
+        label: "Shape",
+        value: "Slanted Shoulder Rectangular Bottle",
+      },
+      {
+        label: "Shape Description",
+        value:
+          "Rectangular body with ergonomic slanted shoulder and angled neck for easy pouring without spilling.",
+      },
+      {
+        label: "Bottle Colour",
+        value: "Natural and White",
+      },
+      {
+        label: "Bottle Material",
+        value: "High Density Polyethylene (HDPE)",
+      },
+      {
+        label: "Cap Colour",
+        value: "Pink, Blue and any color as per requirement",
+      },
+      {
+        label: "Cap Material",
+        value: "Polypropylene (PP)",
+      },
+      {
+        label: "Inner Plug Colour",
+        value: "Natural",
+      },
+      {
+        label: "Inner Plug Material",
+        value: "Low Density Polyethylene (LDPE)",
+      },
+    ],
 
-  applications: [
-    "Floor Cleaning Liquids – Ideal for packaging phenyl and floor disinfectants.",
-    "Toilet & Bathroom Cleaners – Angled neck helps direct liquid under toilet rims and corners.",
-    "Surface Disinfectants – Suitable for liquid disinfectant solutions used on tiles and floors.",
-    "Multipurpose Household Cleaners – Used for packaging all-purpose liquid cleaning products.",
-    "Industrial Cleaning Liquids – Can hold chemical cleaning agents for factories and workshops.",
-    "Kitchen Cleaning Solutions – Packaging for liquid degreasers and kitchen surface cleaners.",
-    "Sanitizing Liquids – Used for hygiene and sanitation liquids in homes and institutions.",
-  ],
+    applications: [
+      "Floor Cleaning Liquids – Ideal for packaging phenyl and floor disinfectants.",
+      "Toilet & Bathroom Cleaners – Angled neck helps direct liquid under toilet rims and corners.",
+      "Surface Disinfectants – Suitable for liquid disinfectant solutions used on tiles and floors.",
+      "Multipurpose Household Cleaners – Used for packaging all-purpose liquid cleaning products.",
+      "Industrial Cleaning Liquids – Can hold chemical cleaning agents for factories and workshops.",
+      "Kitchen Cleaning Solutions – Packaging for liquid degreasers and kitchen surface cleaners.",
+      "Sanitizing Liquids – Used for hygiene and sanitation liquids in homes and institutions.",
+    ],
 
-  industryApplications: [
-    "FMCG Cleaning Products Industry",
-    "Home Care & Household Cleaning Industry",
-    "Sanitation & Hygiene Products Industry",
-    "Hospital & Healthcare Industry",
-    "Hospitality Industry",
-  ],
+    industryApplications: [
+      "FMCG Cleaning Products Industry",
+      "Home Care & Household Cleaning Industry",
+      "Sanitation & Hygiene Products Industry",
+      "Hospital & Healthcare Industry",
+      "Hospitality Industry",
+    ],
 
- features: [
-  {
-    label: "Ergonomic Angled Neck",
-    value: "Provides controlled and precise pouring.",
-  },
-  {
-    label: "HDPE Construction",
-    value: "Ensures durability and excellent chemical resistance.",
-  },
-  {
-    label: "Leak-Resistant Neck",
-    value: "Compatible with standard screw caps.",
-  },
-  {
-    label: "Stable Flat Base",
-    value: "Provides secure placement on shelves and storage areas.",
-  },
-  {
-    label: "Large Front Label Panel",
-    value: "Ideal for branding and product information.",
-  },
-  {
-    label: "Lightweight Structure",
-    value: "Easy to handle and transport.",
-  },
-  {
-    label: "Chemical Compatibility",
-    value: "Suitable for a wide range of cleaning formulations.",
-  },
-  {
-    label: "Surface Finish",
-    value: "Smooth finish for premium appearance.",
-  },
-  {
-    label: "Bottle Geometry",
-    value: "Designed for spill-free pouring.",
-  },
-  {
-    label: "Rectangular Body",
-    value: "Space-efficient for storage and shelf display.",
-  },
-  {
-    label: "Grip Design",
-    value: "Comfortable and consumer-friendly.",
-  },
-  {
-    label: "Color Options",
-    value: "Available in multiple colors as per requirement.",
-  },
-  {
-    label: "Closure Compatibility",
-    value: "Supports screw caps and flip-top caps.",
-  },
-  {
-    label: "Impact Resistance",
-    value: "Strong plastic construction for long service life.",
-  },
-  {
-    label: "Filling Line Compatible",
-    value: "Suitable for automated filling machines.",
-  },
-],
+    features: [
+      {
+        label: "Ergonomic Angled Neck",
+        value: "Provides controlled and precise pouring.",
+      },
+      {
+        label: "HDPE Construction",
+        value: "Ensures durability and excellent chemical resistance.",
+      },
+      {
+        label: "Leak-Resistant Neck",
+        value: "Compatible with standard screw caps.",
+      },
+      {
+        label: "Stable Flat Base",
+        value: "Provides secure placement on shelves and storage areas.",
+      },
+      {
+        label: "Large Front Label Panel",
+        value: "Ideal for branding and product information.",
+      },
+      {
+        label: "Lightweight Structure",
+        value: "Easy to handle and transport.",
+      },
+      {
+        label: "Chemical Compatibility",
+        value: "Suitable for a wide range of cleaning formulations.",
+      },
+      {
+        label: "Surface Finish",
+        value: "Smooth finish for premium appearance.",
+      },
+      {
+        label: "Bottle Geometry",
+        value: "Designed for spill-free pouring.",
+      },
+      {
+        label: "Rectangular Body",
+        value: "Space-efficient for storage and shelf display.",
+      },
+      {
+        label: "Grip Design",
+        value: "Comfortable and consumer-friendly.",
+      },
+      {
+        label: "Color Options",
+        value: "Available in multiple colors as per requirement.",
+      },
+      {
+        label: "Closure Compatibility",
+        value: "Supports screw caps and flip-top caps.",
+      },
+      {
+        label: "Impact Resistance",
+        value: "Strong plastic construction for long service life.",
+      },
+      {
+        label: "Filling Line Compatible",
+        value: "Suitable for automated filling machines.",
+      },
+    ],
 
-  sizes: [
-    "500 ml",
-  ],
-},
+    sizes: [
+      "500 ml",
+    ],
+  },
   {
     id: 13,
     name: "Pharmaceutical rubber Dropper assembly",
@@ -838,51 +838,51 @@ const products = [
     ],
 
     features: [
-  {
-    label: "Durable HDPE Construction",
-    value: "Manufactured from high-quality HDPE material for strength and long-lasting performance.",
-  },
-  {
-    label: "Lightweight Design",
-    value: "Easy to handle, transport, and store while maintaining structural integrity.",
-  },
-  {
-    label: "Compact Cylindrical Body",
-    value: "Space-efficient shape suitable for shelf display and bulk packaging.",
-  },
-  {
-    label: "Short Shoulder Profile",
-    value: "Provides a smooth flow of liquids and powders during dispensing.",
-  },
-  {
-    label: "Narrow Neck Finish",
-    value: "Ensures controlled pouring and minimizes product spillage.",
-  },
-  {
-    label: "Secure Screw Cap Compatibility",
-    value: "Designed to fit tightly with ribbed caps for leak-resistant closure.",
-  },
-  {
-    label: "Excellent Chemical Resistance",
-    value: "Suitable for a wide range of chemical and agrochemical formulations.",
-  },
-  {
-    label: "Smooth Surface Finish",
-    value: "Ideal for labeling, screen printing, and branding applications.",
-  },
-  {
-    label: "Food-Grade Material Option",
-    value: "Can be produced using food-grade PET for edible products.",
-  },
-  {
-    label: "High Clarity or Custom Colors",
-    value: "Available in transparent or colored variants as per branding requirements.",
-  },
-  {
-    label: "Strong Base Support",
-    value: "Stable bottom design ensures secure standing on shelves and during transport.",
-  },
-],
+      {
+        label: "Durable HDPE Construction",
+        value: "Manufactured from high-quality HDPE material for strength and long-lasting performance.",
+      },
+      {
+        label: "Lightweight Design",
+        value: "Easy to handle, transport, and store while maintaining structural integrity.",
+      },
+      {
+        label: "Compact Cylindrical Body",
+        value: "Space-efficient shape suitable for shelf display and bulk packaging.",
+      },
+      {
+        label: "Short Shoulder Profile",
+        value: "Provides a smooth flow of liquids and powders during dispensing.",
+      },
+      {
+        label: "Narrow Neck Finish",
+        value: "Ensures controlled pouring and minimizes product spillage.",
+      },
+      {
+        label: "Secure Screw Cap Compatibility",
+        value: "Designed to fit tightly with ribbed caps for leak-resistant closure.",
+      },
+      {
+        label: "Excellent Chemical Resistance",
+        value: "Suitable for a wide range of chemical and agrochemical formulations.",
+      },
+      {
+        label: "Smooth Surface Finish",
+        value: "Ideal for labeling, screen printing, and branding applications.",
+      },
+      {
+        label: "Food-Grade Material Option",
+        value: "Can be produced using food-grade PET for edible products.",
+      },
+      {
+        label: "High Clarity or Custom Colors",
+        value: "Available in transparent or colored variants as per branding requirements.",
+      },
+      {
+        label: "Strong Base Support",
+        value: "Stable bottom design ensures secure standing on shelves and during transport.",
+      },
+    ],
 
     sizes: [
       "5 gm",

@@ -6,8 +6,40 @@ import ProductGallery from "../../components/Product/ProductGallery";
 import ProductDetails from "../../components/Product/ProductDetails";
 
 export default function ProductPage() {
-  const { id } = useParams();
-  const product = products.find((p) => p.id === Number(id));
+  const { id, variant } = useParams();
+
+const baseProduct = products.find(
+  (p) => p.id === Number(id)
+);
+
+if (!baseProduct) {
+  return (
+    <h2 className="text-center text-red-500">
+      Product not found
+    </h2>
+  );
+}
+
+let product = baseProduct;
+
+if (variant && baseProduct.variants) {
+  const selectedVariant = baseProduct.variants.find(
+    (item) => item.slug === variant
+  );
+
+  if (!selectedVariant) {
+    return (
+      <h2 className="text-center text-red-500 py-20">
+        Variant not found
+      </h2>
+    );
+  }
+
+  product = {
+    ...baseProduct,
+    ...selectedVariant,
+  };
+}
   const [selectedSize, setSelectedSize] = useState(product?.sizes?.[0] || "5 ml");
 
   if (!product) {

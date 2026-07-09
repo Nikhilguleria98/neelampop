@@ -194,86 +194,61 @@ const products = [
 },
 {
   id: 2,
-  name: "Measuring Hollow Spoon",
+  name: "Measuring Spoons",
   rating: 4.9,
   reviews: 38,
 
-  description:
-    "At Neelam Print O Pack, we offer a premium-quality Measuring Hollow Spoon designed for precision, durability, and convenience. Manufactured using high-grade non-toxic Polypropylene (PP), this scoop ensures accurate measurement of both dry and liquid materials. Its rectangular bowl design, ergonomic handle, and clear measurement markings make it ideal for pharmaceutical, nutraceutical, food, cosmetic, and industrial applications.",
-
-  images: [
-    { src: "/medicine_img/spoon1.jpeg", alt: "Measuring Spoon Front View" },
-    { src: "/medicine_img/spoon2.jpg", alt: "Measuring Spoon Side View" },
-    { src: "/medicine_img/spoon3.jpg", alt: "Measuring Spoon Packaging" },
-    { src: "/medicine_img/spoon4.jpg", alt: "Transparent Measuring Spoon" },
-    { src: "/medicine_img/spoon5.jpg", alt: "PP Measuring Spoon" }
-  ],
-
-  sizeImages: {
-    "10 ml": [
-      { src: "/medicine_img/spoon1.jpeg", alt: "10ml Measuring Spoon" },
-    
-    ]
-  },
-
-  specs: [
-    { label: "Capacity", value: "10ml" },
-    { label: "Material", value: "Polypropylene (PP)" },
-    { label: "Color", value: "Transparent" },
-    { label: "Custom Colors", value: "Available on Request" },
+  variants: [
     {
-      label: "Shape",
-      value:
-        "Rectangular Scoop with Flat Bottom and Measurement Markings"
+      slug: "measuring-hollow-spoon",
+      name: "Measuring Hollow Spoon",
+      description: "At Neelam Print O Pack, we offer a premium-quality Measuring Hollow Spoon...",
+      images: [
+        { src: "/medicine_img/spoon1.jpeg", alt: "Measuring Hollow Spoon" }
+      ],
+      specs: [
+        { label: "Capacity", value: "10ml" },
+        { label: "Material", value: "Polypropylene (PP)" },
+        { label: "Color", value: "Transparent" }
+      ],
+      applications: [
+        "Measuring powders, granules and liquids",
+        "Dosing pharmaceutical syrups",
+        "Protein powders and baby formula"
+      ],
+      features: [
+        "Accurate measurement markings",
+        "Rectangular scoop",
+        "Lightweight and durable"
+      ],
+      sizes: ["10 ml"]
     },
-    { label: "Reusable", value: "Yes" },
-    { label: "Food Grade", value: "Yes" },
-    { label: "Chemical Resistant", value: "Yes" }
-  ],
 
-  applications: [
-    "Measuring powders, granules and liquids",
-    "Dosing pharmaceutical syrups and suspensions",
-    "Filling and transferring materials without spillage",
-    "Portion control for food, supplements and chemicals",
-    "Measuring protein powders and baby formula",
-    "Dispensing Ayurvedic and herbal powders",
-    "Sampling in quality control laboratories",
-    "Cosmetic product handling",
-    "Filling sachets, containers and bottles",
-    "Measuring detergents and cleaning agents",
-    "Hospital dosage preparation",
-    "Home baking and spice measurement",
-    "Industrial pigment and additive handling",
-    "Educational and research applications"
-  ],
-
-  industryApplications: [
-    "Pharmaceutical Industry",
-    "Nutraceutical & Supplement Industry",
-    "Food & Beverage Industry",
-    "Cosmetic Industry",
-    "Veterinary Industry",
-    "Ayurvedic & Herbal Applications"
-  ],
-
-  features: [
-    "Accurate measurement markings",
-    "Rectangular scoop for easy filling",
-    "Lightweight and durable construction",
-    "Ergonomic handle design",
-    "Smooth finish for easy cleaning",
-    "Chemical resistant",
-    "Moisture resistant",
-    "Compact and easy to store",
-    "Reusable and cost-effective",
-    "Suitable for dry and liquid materials",
-    "Non-toxic food grade material"
-  ],
-
-  sizes: ["10 ml"],
-
-  tagline: "Measure Right, Every Time"
+    {
+      slug: "measuring-double-head-spoon",
+      name: "Measuring Double Head Spoon",
+      description: "Our premium range of oval measuring spoons is thoughtfully designed...",
+      images: [
+        { src: "/medicine_img/spoon2.jpg", alt: "Double Head Spoon" }
+      ],
+      specs: [
+        { label: "Capacity", value: "5ml and 2.5ml" },
+        { label: "Material", value: "Polypropylene (PP)" },
+        { label: "Color", value: "Transparent" }
+      ],
+      applications: [
+        "Measuring liquid medicines",
+        "Protein powders and supplements",
+        "Cosmetic products"
+      ],
+      features: [
+        "Ergonomic Oval Design",
+        "Precise Measurement",
+        "Food Grade Material"
+      ],
+      sizes: ["5 ml", "2.5 ml"]
+    }
+  ]
 },
  {
   id: 3,
@@ -393,97 +368,220 @@ const products = [
     ],
   },
 
- {
+{
   id: 5,
-  name: "30ml Round Ear-Eye Drop / Lotion Bottle",
+  name: "Ear-Eye Dropper & Lotion Bottles",
   rating: 4.8,
   reviews: 49,
 
-  description:
-    "Crafted to meet the highest standards of quality and functionality, our 30ml HDPE Ear/Eye Drop & Lotion Bottle is the perfect packaging solution for pharmaceutical and personal care formulations. Engineered with a precision nozzle dropper system, it ensures accurate dosage, leak-proof performance, and excellent product protection. The durable HDPE construction offers superior resistance to chemicals, moisture, and impact while maintaining portability and ease of use.",
+  variants: [
+    {
+      slug:  "30ml-round",
+      name: "30ml Round Ear-Eye Drop / Lotion Bottle",
 
-  images: [
-    { src: "/dropper.png", alt: "30ml Ear Eye Drop Bottle" },
-    { src: "/dropper2.png", alt: "HDPE Dropper Bottle" },
-    { src: "/dropper3.png", alt: "Dropper Cap Bottle" },
-    { src: "/dropper4.png", alt: "Lotion Bottle" },
-    { src: "/dropper5.png", alt: "Pharmaceutical Dropper Bottle" },
-  ],
+      description:
+        "Crafted to meet the highest standards of quality and functionality, our 30ml HDPE Ear/Eye Drop & Lotion Bottle is the perfect packaging solution for pharmaceutical and personal care formulations. Designed with a precision nozzle dropper system for accurate dosage, leak-proof performance, and superior product protection.",
 
-  sizeImages: {
-    "30 ml": [
-      { src: "/dropper.png", alt: "30ml Ear Eye Drop Bottle" },
-      { src: "/dropper2.png", alt: "30ml HDPE Bottle" },
-      { src: "/dropper3.png", alt: "30ml Dropper Bottle" },
-    ],
-  },
+      images: [
+        { src: "/medicine_img/dropper30-round.jpg", alt: "30ml Round Dropper Bottle" }
+      ],
 
-  specs: [
-    { label: "Capacity", value: "30ml" },
-    { label: "Shape", value: "Round" },
-    { label: "Bottle Material", value: "High Density Polyethylene (HDPE)" },
-    { label: "Bottle Colour", value: "Milky White" },
-    { label: "Cap Material", value: "Polypropylene (PP)" },
-    { label: "Cap Colour", value: "White" },
-    { label: "Cap Type", value: "Ribbed Nozzle Dropper Cap" },
-    { label: "Inner Material", value: "Polypropylene (PP)" },
-    { label: "Inner Type", value: "Nozzle / Dropper Tip" },
-    { label: "Application Area", value: "Pharmaceutical Industry" },
-    { label: "Supply Ability", value: "1000 Per Day" },
-    { label: "Delivery Time", value: "4-5 Days" },
-  ],
+      specs: [
+        { label: "Capacity", value: "30ml" },
+        { label: "Shape", value: "Round" },
+        { label: "Bottle Material", value: "HDPE" },
+        { label: "Bottle Colour", value: "Milky White" },
+        { label: "Cap Material", value: "PP" },
+        { label: "Cap Type", value: "Ribbed Nozzle Dropper Cap" }
+      ],
 
-  applications: [
-    "Eye drops (lubricants, antibiotics, anti-allergy solutions)",
-    "Ear drops (wax softeners and anti-infective solutions)",
-    "Nasal drops (decongestants and saline solutions)",
-    "Topical liquid medicines",
-    "Medicated lotions for skin conditions",
-    "Baby care liquids and medicated drops",
-    "Beauty serums and cosmetic treatments",
-    "Under-eye solutions",
-    "Scalp treatment lotions",
-    "Essential oils for external use",
-    "Ayurvedic treatment solutions",
-    "Herbal extracts and wellness formulations",
-    "Veterinary eye and ear drops",
-    "Liquid medications for animals"
-  ],
+      applications: [
+        "Eye Drops",
+        "Ear Drops",
+        "Nasal Drops",
+        "Topical Liquid Medicines",
+        "Medicated Lotions",
+        "Ayurvedic Solutions",
+        "Cosmetic Serums",
+        "Veterinary Applications"
+      ],
 
-  industryApplications: [
-    "Pharmaceutical Industry",
-    "Ayurvedic & Herbal Industry",
-    "Cosmetics Industry",
-    "Veterinary Applications"
-  ],
+      features: [
+        "Dimensionally Accurate",
+        "Leak-Proof Design",
+        "Food Grade Material",
+        "Dropper Tip for Accurate Dosage",
+        "Excellent Squeezability",
+        "Chemical Resistant",
+        "Safe Storage",
+        "Easy Dispensing"
+      ],
 
-  features: [
-    "Dimensionally accurate",
-    "Crack resistant",
-    "Food-grade raw material",
-    "Leak-proof and durable design",
-    "Fine finish",
-    "Dropper tip for accurate dosage",
-    "Safe storage",
-    "Easy dispensing",
-    "Controlled usage of liquid products",
-    "Lightweight and cost-effective",
-    "User-friendly dispensing",
-    "High chemical resistance",
-    "Suitable for labeling",
-    "Hygienic and safe",
-    "Excellent squeezability",
-    "Space efficient",
-    "Ergonomic design",
-    "Impact resistant",
-    "Smooth surface for printing and branding",
-    "Non-toxic and safe for pharmaceutical use"
-  ],
+      sizes: ["30 ml"]
+    },
 
-  sizes: ["30 ml"],
+    {
+     slug: "15ml-oval",
+      name: "15ml Oval Ear-Eye Drop / Lotion Bottle",
 
-  customization:
-    "Available with customized colours, tamper-evident caps, branding, labeling, and packaging options as per customer requirements."
+      description:
+        "Compact oval-shaped HDPE bottle designed for controlled dispensing of pharmaceutical, cosmetic, and personal care liquids. Features a precision nozzle and ergonomic grip.",
+
+      images: [
+        { src: "/medicine_img/dropper15-oval.jpg", alt: "15ml Oval Dropper Bottle" }
+      ],
+
+      specs: [
+        { label: "Capacity", value: "15ml" },
+        { label: "Shape", value: "Oval" },
+        { label: "Bottle Material", value: "HDPE" },
+        { label: "Bottle Colour", value: "Milky White" },
+        { label: "Cap Material", value: "PP" },
+        { label: "Cap Type", value: "Ribbed Nozzle Dropper Cap" }
+      ],
+
+      applications: [
+        "Eye Drops",
+        "Ear Drops",
+        "Nasal Drops",
+        "Beauty Serums",
+        "Essential Oils",
+        "Ayurvedic Formulations",
+        "Veterinary Medicines"
+      ],
+
+      features: [
+        "Ergonomic Oval Shape",
+        "Precision Nozzle Tip",
+        "Leak-Proof Screw Cap",
+        "Travel Friendly",
+        "Easy Squeeze Functionality",
+        "Hygienic Design",
+        "Customizable Surface"
+      ],
+
+      sizes: ["15 ml"]
+    },
+
+    {
+     slug: "20ml-oval",
+      name: "20ml Oval Ear-Eye Drop / Lotion Bottle",
+
+      description:
+        "Premium oval HDPE dropper bottle offering excellent handling, controlled dispensing, and leak-proof protection for sensitive formulations.",
+
+      images: [
+        { src: "/medicine_img/dropper20-oval.jpg", alt: "20ml Oval Dropper Bottle" }
+      ],
+
+      specs: [
+        { label: "Capacity", value: "20ml" },
+        { label: "Shape", value: "Oval" },
+        { label: "Bottle Material", value: "HDPE" },
+        { label: "Bottle Colour", value: "Milky White" },
+        { label: "Cap Type", value: "Ribbed Nozzle Dropper Cap" }
+      ],
+
+      applications: [
+        "Eye Drops",
+        "Ear Drops",
+        "Lotions",
+        "Serums",
+        "Herbal Extracts",
+        "Cosmetic Treatments"
+      ],
+
+      features: [
+        "Precision Nozzle",
+        "Leak Resistant",
+        "Chemical Resistant",
+        "Lightweight",
+        "Excellent Squeezability",
+        "Ergonomic Design"
+      ],
+
+      sizes: ["20 ml"]
+    },
+
+    {
+    slug: "20ml-flip-top",
+      name: "20ml Oval Flip-Top Dropper Bottle",
+
+      description:
+        "Ergonomic oval bottle with convenient flip-top cap for one-hand dispensing. Ideal for pharmaceutical liquids, sanitizers, lotions, and cosmetic formulations.",
+
+      images: [
+        { src: "/medicine_img/dropper20-fliptop.jpg", alt: "20ml Flip Top Bottle" }
+      ],
+
+      specs: [
+        { label: "Capacity", value: "20ml" },
+        { label: "Shape", value: "Oval" },
+        { label: "Bottle Material", value: "HDPE" },
+        { label: "Cap Material", value: "PP" },
+        { label: "Cap Type", value: "Flip Top" }
+      ],
+
+      applications: [
+        "Hand Sanitizers",
+        "Eye Drops",
+        "Ear Drops",
+        "Lotions",
+        "Essential Oils",
+        "Cosmetic Liquids"
+      ],
+
+      features: [
+        "Flip-Top Cap",
+        "One-Hand Operation",
+        "Leak Resistant",
+        "Travel Friendly",
+        "Easy Dispensing",
+        "Premium Appearance"
+      ],
+
+      sizes: ["20 ml"]
+    },
+
+    {
+      slug: "50ml-oval",
+      name: "50ml Oval Ear-Eye Drop / Lotion Bottle",
+
+      description:
+        "Large-capacity oval HDPE bottle designed for pharmaceutical, cosmetic, herbal, and veterinary liquid formulations requiring controlled dispensing.",
+
+      images: [
+        { src: "/medicine_img/dropper50-oval.jpg", alt: "50ml Oval Dropper Bottle" }
+      ],
+
+      specs: [
+        { label: "Capacity", value: "50ml" },
+        { label: "Shape", value: "Oval" },
+        { label: "Bottle Material", value: "HDPE" },
+        { label: "Bottle Colour", value: "Milky White" },
+        { label: "Cap Type", value: "Ribbed Nozzle Dropper Cap" }
+      ],
+
+      applications: [
+        "Pharmaceutical Liquids",
+        "Herbal Oils",
+        "Cosmetic Treatments",
+        "Veterinary Medicines",
+        "Personal Care Products"
+      ],
+
+      features: [
+        "Large Capacity",
+        "Leak-Proof Design",
+        "Excellent Squeezability",
+        "Durable Construction",
+        "Chemical Resistant",
+        "Easy Labeling Surface"
+      ],
+
+      sizes: ["50 ml"]
+    }
+  ]
 },
   {
     id: 6,

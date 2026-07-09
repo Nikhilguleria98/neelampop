@@ -5,26 +5,27 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [isJarsHovered, setIsJarsHovered] = useState(false);
-  const [isMobileJarsOpen, setIsMobileJarsOpen] = useState(false);
+const [hoveredMenu, setHoveredMenu] = useState(null);
+ const [mobileOpenMenu, setMobileOpenMenu] = useState(null);
   const dropdownRef = useRef(null);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-  const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
-    if (isDropdownOpen) {
-      setIsJarsHovered(false);
-      setIsMobileJarsOpen(false);
-    }
-  };
+ const toggleDropdown = () => {
+  setIsDropdownOpen(!isDropdownOpen);
+
+  if (isDropdownOpen) {
+    setIsMobileJarsOpen(false);
+    setHoveredMenu(null);
+  }
+};
 
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setIsDropdownOpen(false);
-        setIsJarsHovered(false);
-      }
+     if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+  setIsDropdownOpen(false);
+  setHoveredMenu(null);
+}
     };
 
     document.addEventListener("mousedown", handleClickOutside);
@@ -34,40 +35,183 @@ const Navbar = () => {
   }, []);
 
 
-  const categories = [
-    { name: "Pharma Dry syrup Bottles", path: "/products/1" },
-    { name: "Measuring Spoons", path: "/products/2" },
-    { name: "Lotion Bottles", path: "/products/3" },
-    { name: "Hand wash Bottles", path: "/products/4" },
-    { name: "Eye-Ear Dropper Bottle", path: "/products/5" },
-    { name: "Flip-off Seals", path: "/products/6" },
-    { name: "RoPP Caps for Pharma PET Bottles", path: "/products/7" },
-    { name: "ToiletCleaner", path: "/products/8" },
-    {
-      name: "Jars",
-      isParent: true,
-      submenu: [
-        { name: "Cream Jars", path: "/products/9" },
-        { name: "Fancy Jar for Protein Powder", path: "/products/16" },
-        { name: "Flip Type Cap Protein Jar", path: "/products/17" },
-        { name: "Gattu Jar", path: "/products/18" },
-        { name: "HDPE Cream Jar", path: "/products/19" },
-        { name: "HDPE Energy Drink / Isabgol Jar", path: "/products/20" },
-        { name: "Long Protein Powder Jar", path: "/products/21" },
-        { name: "Madetarian Jar", path: "/products/22" },
-        { name: "Pediasure Type Protein Powder Jar Set", path: "/products/23" },
-        { name: "Protein Jar with Silver Leaf", path: "/products/24" },
-        { name: "Protein Powder Jar Set", path: "/products/25" },
-        { name: "Sleeve Type Protein Jar Set", path: "/products/26" }
-      ]
-    },
-    { name: "Shampoo Bottles", path: "/products/10" },
-    { name: "Oil Bottles", path: "/products/11" },
-    { name: "Floor cleaner bottles", path: "/products/12" },
-    { name: "Pharmaceutical Rubber Dropper Assembly", path: "/products/13" },
-    { name: "Stopper CAM Lock fittings for Cold rooms PUF Panels", path: "/products/14" },
-    { name: "Churan Bottle Set", path: "/products/15" },
-  ];
+ const categories = [
+  { name: "Pharma Dry syrup Bottles", path: "/products/1" },
+
+  {
+    name: "Measuring Spoons",
+    isParent: true,
+    submenu: [
+      {
+        name: "Measuring Hollow Spoon",
+        path: "/products/2/measuring-hollow-spoon",
+      },
+      {
+        name: "Measuring Double Head Spoon",
+        path: "/products/2/measuring-double-head-spoon",
+      },
+    ],
+  },
+
+  { name: "Lotion Bottles", path: "/products/3" },
+
+  { name: "Hand wash Bottles", path: "/products/4" },
+
+  {
+    name: "Eye-Ear Dropper Bottle",
+    isParent: true,
+    submenu: [
+      {
+        name: "30ml Round Ear-Eye Drop / Lotion Bottle",
+        path: "/products/5/30ml-round",
+      },
+      {
+        name: "15ml Oval Ear-Eye Drop / Lotion Bottle",
+        path: "/products/5/15ml-oval",
+      },
+      {
+        name: "20ml Oval Ear-Eye Dropper / Lotion Bottle",
+        path: "/products/5/20ml-oval",
+      },
+      {
+        name: "20ml Oval Flip-Top Dropper Bottle",
+        path: "/products/5/20ml-flip-top",
+      },
+      {
+        name: "50ml Oval Ear-Eye Dropper / Lotion Bottle",
+        path: "/products/5/50ml-oval",
+      },
+    ],
+  },
+
+  { name: "Flip-off Seals", path: "/products/6" },
+
+  { name: "RoPP Caps for Pharma PET Bottles", path: "/products/7" },
+
+  {
+    name: "Toilet Cleaner",
+    isParent: true,
+    submenu: [
+      {
+        name: "Floor Cleaner / Angled Neck Floor Cleaner Bottle",
+        path: "/products/8/floor-cleaner",
+      },
+      {
+        name: "Angled Neck Toilet Cleaner Bottle",
+        path: "/products/8/angled-neck",
+      },
+    ],
+  },
+
+  {
+    name: "Jars",
+    isParent: true,
+    submenu: [
+      { name: "Cream Jars", path: "/products/9" },
+      { name: "Fancy Jar for Protein Powder", path: "/products/16" },
+      { name: "Flip Type Cap Protein Jar", path: "/products/17" },
+      { name: "Gattu Jar", path: "/products/18" },
+      { name: "HDPE Cream Jar", path: "/products/19" },
+      { name: "HDPE Energy Drink / Isabgol Jar", path: "/products/20" },
+      { name: "Long Protein Powder Jar", path: "/products/21" },
+      { name: "Madetarian Jar", path: "/products/22" },
+      { name: "Pediasure Type Protein Powder Jar Set", path: "/products/23" },
+      { name: "Protein Jar with Silver Leaf", path: "/products/24" },
+      { name: "Protein Powder Jar Set", path: "/products/25" },
+      { name: "Sleeve Type Protein Jar Set", path: "/products/26" },
+    ],
+  },
+
+  { name: "Shampoo Bottles", path: "/products/10" },
+
+  {
+    name: "Oil Bottles",
+    isParent: true,
+    submenu: [
+      {
+        name: "60ml HDPE Flat Oil/Lotion/Shampoo Bottles",
+        path: "/products/11/oil-1",
+      },
+      {
+        name: "60ml HDPE Oval Oil/Lotion/Shampoo Bottles",
+        path: "/products/11/oil-2",
+      },
+      {
+        name: "60ml HDPE Round Oil/Lotion/Shampoo Bottles",
+        path: "/products/11/oil-3",
+      },
+      {
+        name: "60ml HDPE Ujjala Type Oil/Lotion/Shampoo Bottles",
+        path: "/products/11/oil-4",
+      },
+      {
+        name: "100ml/19mm Banana Shape Oil/Lotion/Shampoo Bottles",
+        path: "/products/11/oil-5",
+      },
+      {
+        name: "100ml/19mm Liquid Bottles (Ujjala Type)",
+        path: "/products/11/oil-6",
+      },
+      {
+        name: "100ml/24mm Oil/Lotion/Shampoo Bottles (V Wash Type)",
+        path: "/products/11/oil-7",
+      },
+      {
+        name: "100ml/24mm Oil/Lotion/Shampoo Bottles",
+        path: "/products/11/oil-8",
+      },
+      {
+        name: "100ml/19mm Oil/Lotion/Shampoo Oval Bottles",
+        path: "/products/11/oil-9",
+      },
+      {
+        name: "Oil Lotion Shampoo Bottles",
+        path: "/products/11/oil-10",
+      },
+      {
+        name: "30ml Lintiment Bottle",
+        path: "/products/11/oil-11",
+      },
+      {
+        name: "50ml HDPE Flat Oil/Lotion Bottles",
+        path: "/products/11/oil-12",
+      },
+      {
+        name: "100ml/19mm Flat Liquid Bottles (Ujjala Type)",
+        path: "/products/11/oil-13",
+      },
+      {
+        name: "100ml/19mm Flat Oil/Lotion/Shampoo Bottles",
+        path: "/products/11/oil-14",
+      },
+      {
+        name: "100ml/19mm Oil/Lotion/Shampoo Round Bottles",
+        path: "/products/11/oil-15",
+      },
+      {
+        name: "100ml/19mm Classic Calamine Style Oil/Lotion/Shampoo Bottles",
+        path: "/products/11/oil-16",
+      },
+    ],
+  },
+
+  { name: "Floor cleaner bottles", path: "/products/12" },
+
+  {
+    name: "Pharmaceutical Rubber Dropper Assembly",
+    path: "/products/13",
+  },
+
+  {
+    name: "Stopper CAM Lock fittings for Cold rooms PUF Panels",
+    path: "/products/14",
+  },
+
+  {
+    name: "Churan Bottle Set",
+    path: "/products/15",
+  },
+];
 
   return (
     <nav className="bg-white shadow-sm border-b border-gray-200">
@@ -101,8 +245,8 @@ const Navbar = () => {
                         <div
                           key={index}
                           className="relative"
-                          onMouseEnter={() => setIsJarsHovered(true)}
-                          onMouseLeave={() => setIsJarsHovered(false)}
+                          onMouseEnter={() => setHoveredMenu(cat.name)}
+onMouseLeave={() => setHoveredMenu(null)}
                         >
                           <div className="flex justify-between items-center px-4 py-2 text-gray-700 hover:bg-gray-100 text-sm font-semibold cursor-pointer select-none">
                             <span>{cat.name}</span>
@@ -110,7 +254,7 @@ const Navbar = () => {
                           </div>
 
                           <div
-                            className={`absolute left-full top-0 w-80 bg-white border border-gray-200 rounded-md shadow-lg z-50 py-1 transition-opacity duration-200 ${isJarsHovered ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+                            className={`absolute left-full top-0 w-80 bg-white border border-gray-200 rounded-md shadow-lg z-50 py-1 transition-opacity duration-200 ${hoveredMenu === cat.name? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
                               }`}
                           >
                             {cat.submenu.map((subItem, idx) => (
@@ -119,7 +263,7 @@ const Navbar = () => {
                                 to={subItem.path}
                                 onClick={() => {
                                   setIsDropdownOpen(false);
-                                  setIsJarsHovered(false);
+                                    setHoveredMenu(null);
                                 }}
                                 className="block px-4 py-2 text-gray-700 hover:bg-gray-100 text-sm font-semibold transition-colors duration-200"
                               >
@@ -221,13 +365,17 @@ const Navbar = () => {
                         return (
                           <div key={index}>
                             <button
-                              onClick={() => setIsMobileJarsOpen(!isMobileJarsOpen)}
+                             onClick={() =>
+  setMobileOpenMenu(
+    mobileOpenMenu === cat.name ? null : cat.name
+  )
+}
                               className="w-full flex justify-between items-center px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-md text-sm font-semibold"
                             >
                               <span>{cat.name}</span>
-                              <ChevronDown className={`h-4 w-4 transform transition-transform duration-200 ${isMobileJarsOpen ? 'rotate-180' : ''}`} />
+                              <ChevronDown className={`h-4 w-4 transform transition-transform duration-200 ${mobileOpenMenu === cat.name ? 'rotate-180' : ''}`} />
                             </button>
-                            {isMobileJarsOpen && (
+                            {mobileOpenMenu === cat.name && (
                               <div className="ml-4 mt-1 space-y-1">
                                 {cat.submenu.map((subItem, idx) => (
                                   <Link

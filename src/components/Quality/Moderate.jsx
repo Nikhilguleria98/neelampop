@@ -1,102 +1,168 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 function Moderate() {
   const imageList = [
-    '/handanimation.png',
-    '/machineanimation.png',
-    '/toolanimation.png',
-    '/mathematicsanimation.png',
-    '/exportinganimation.png'
+    "/handanimation.png",
+    "/machineanimation.png",
+    "/toolanimation.png",
+    "/mathematicsanimation.png",
+    "/exportinganimation.png",
   ];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [active, setActive] = useState(0);
 
-  // Auto-rotate only for md and up
   useEffect(() => {
     const interval = setInterval(() => {
-      if (window.innerWidth >= 768) {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % imageList.length);
-      }
-    }, 5000);
+      setActive((prev) => (prev + 1) % imageList.length);
+    }, 4000);
+
     return () => clearInterval(interval);
   }, []);
 
-  const imageUrl = imageList[currentIndex];
+  const getArcPosition = (
+    index,
+    total,
+    radius,
+    centerX,
+    centerY
+  ) => {
+    const startAngle = Math.PI;
+    const endAngle = 2 * Math.PI;
+
+    const angle =
+      startAngle +
+      ((endAngle - startAngle) / (total - 1)) * index;
+
+    return {
+      x: centerX + radius * Math.cos(angle),
+      y: centerY + radius * Math.sin(angle),
+    };
+  };
 
   return (
-    <div className='min-h-screen w-full '>
+    <div className="w-full py-12 px-4">
       {/* Header */}
-      <div className='h-[32vh] w-[70%] m-auto mt-7'>
-        <h1 className='text-center font-sans font-bold text-2xl md:text-4xl'>
-          <span className='text-[#2592AD]'>NEELAM</span> Print'<span className='text-red-500'>o</span>' Pack
+      <div className="max-w-4xl mx-auto text-center">
+        <h1 className="font-bold text-2xl md:text-4xl">
+          <span className="text-[#2592AD]">NEELAM</span> Print'
+          <span className="text-red-500">o</span>' Pack
         </h1>
-        <h4 className='text-center font-sans mt-6'>
-          We are committed to manufacturing and supplying premium products in strict adherence to industry standards. Our quality assurance process ensures reliability, precision, and customer satisfaction.
-        </h4>
+
+        <p className="mt-6 text-gray-600">
+          We are committed to manufacturing and supplying premium products
+          in strict adherence to industry standards. Our quality assurance
+          process ensures reliability, precision, and customer satisfaction.
+        </p>
       </div>
 
-      <div className='w-[70%] m-auto  mt-[20%] md:mt-0 '>
-      <h2 className='text-center font-sans font-bold text-2xl md:text-3xl'>Multi-Stage Assurance</h2>
-        {/* ✅ Circle animation for md and lg only */}
-        <div id='animation-box' className='hidden md:block w-full h-[77vh] border-black border-2 rounded-t-full mt-12 relative border-b-0 '>
-          {/* Circle Buttons */}
-          <button
-            onClick={() => setCurrentIndex(0)}
-            className={`h-[50px] w-[50px] absolute top-[95%] left-[-3%] border-2 rounded-full leading-[2.1rem]
-              px-4 py-2 transition transform duration-300
-              ${currentIndex === 0 ? 'bg-[#2592AD] text-white border-[#2592AD]' : 'bg-white text-black border-black hover:bg-blue-500 hover:text-white hover:border-0 hover:scale-110'}`}
-          >1</button>
+      <div className="max-w-6xl mx-auto mt-12">
+        <h2 className="text-center text-2xl md:text-3xl font-bold mb-12">
+          Multi-Stage Assurance
+        </h2>
 
-          <button
-            onClick={() => setCurrentIndex(1)}
-            className={`h-[50px] w-[50px] absolute md:top-[30%] top-[27%] 2xl:left-[8%] xl:left-[8%] lg:left-[5%] md:left-[-1%] border-2 rounded-full leading-[2.1rem]
-              px-4 py-2 transition transform duration-300
-              ${currentIndex === 1 ? 'bg-[#2592AD] text-white border-[#2592AD]' : 'bg-white text-black border-black hover:bg-blue-500 hover:text-white hover:border-0 hover:scale-110'}`}
-          >2</button>
-
-          <button
-            onClick={() => setCurrentIndex(2)}
-            className={`h-[50px] w-[50px] absolute lg:top-[-7%]  xl:top-[-4%] md:top-[-3%]  left-[47.5%] border-2 rounded-full leading-[2.1rem]
-              px-4 py-2 transition transform duration-300
-              ${currentIndex === 2 ? 'bg-[#2592AD] text-white border-[#2592AD]' : 'bg-white text-black border-black hover:bg-blue-500 hover:text-white hover:border-0 hover:scale-110'}`}
-          >3</button>
-
-          <button
-            onClick={() => setCurrentIndex(3)}
-            className={`h-[50px] w-[50px] absolute md:top-[30%] top-[27%] 2xl:right-[8%] xl:right-[8%] lg:right-[5%] md:right-[-1%] border-2 rounded-full leading-[2.1rem]
-              px-4 py-2 transition transform duration-300
-              ${currentIndex === 3 ? 'bg-[#2592AD] text-white border-[#2592AD]' : 'bg-white text-black border-black hover:bg-blue-500 hover:text-white hover:border-0 hover:scale-110'}`}
-          >4</button>
-
-          <button
-            onClick={() => setCurrentIndex(4)}
-            className={`h-[50px] w-[50px] absolute top-[95%] right-[-3%] border-2 rounded-full leading-[2.1rem]
-              px-4 py-2 transition transform duration-300
-              ${currentIndex === 4 ? 'bg-[#2592AD] text-white border-[#2592AD]' : 'bg-white text-black border-black hover:bg-blue-500 hover:text-white hover:border-0 hover:scale-110'}`}
-          >5</button>
-
-          {/* Rotating Image */}
-          <div
-            className='h-[50vh] w-[50%] absolute top-[30%] left-[25%] bg-contain bg-center bg-no-repeat transform transition duration-300 hover:scale-110'
-            style={{ backgroundImage: `url(${imageUrl})` }}
-          ></div>
-        </div>
-
-        {/* ✅ Grid view for small screens only — without image titles */}
-        <div className='md:hidden grid grid-cols-1 sm:grid-cols-2 gap-4 mt-10'>
+        {/* Mobile Layout */}
+        <div className="md:hidden space-y-4">
           {imageList.map((img, index) => (
-            <div
+            <motion.div
               key={index}
-              className='w-full h-[200px] bg-contain bg-center bg-no-repeat border rounded-md shadow-md'
-              style={{ backgroundImage: `url(${img})` }}
-            ></div>
+              onClick={() => setActive(index)}
+              whileHover={{ scale: 1.02 }}
+              className={`border rounded-xl p-4 cursor-pointer transition-all ${
+                active === index
+                  ? "border-[#2592AD] bg-blue-50"
+                  : "border-gray-200"
+              }`}
+            >
+              <div className="flex items-center gap-4">
+                <div
+                  className={`w-10 h-10 rounded-full flex items-center justify-center text-white ${
+                    active === index
+                      ? "bg-[#2592AD]"
+                      : "bg-black"
+                  }`}
+                >
+                  {index + 1}
+                </div>
+
+                <div className="flex-1">
+                  <img
+                    src={img}
+                    alt={`Step ${index + 1}`}
+                    className="w-full h-40 object-contain"
+                  />
+                </div>
+              </div>
+            </motion.div>
           ))}
         </div>
-        <h1 className='text-center font-sans font-semibold  text-2xl md:text-4xl mt-10'>“Quality is bridging our hardwork and<br/> customer’s Trust”</h1>
+
+        {/* Desktop Arc Layout */}
+        <div className="hidden md:block relative w-full max-w-[900px] h-[500px] mx-auto">
+          {/* Arc Line */}
+          <svg className="absolute inset-0 w-full h-full">
+            <path
+              d="M 80 420 A 370 370 0 0 1 820 420"
+              fill="none"
+              stroke="#d1d5db"
+              strokeWidth="2"
+            />
+          </svg>
+
+          {/* Step Circles */}
+          {imageList.map((img, index) => {
+            const { x, y } = getArcPosition(
+              index,
+              imageList.length,
+              370,
+              450,
+              420
+            );
+
+            return (
+              <motion.div
+                key={index}
+                whileHover={{ scale: 1.15 }}
+                onClick={() => setActive(index)}
+                className={`absolute w-12 h-12 rounded-full flex items-center justify-center cursor-pointer text-white font-semibold ${
+                  active === index
+                    ? "bg-[#2592AD]"
+                    : "bg-black"
+                }`}
+                style={{
+                  left: x - 24,
+                  top: y - 24,
+                }}
+              >
+                {index + 1}
+              </motion.div>
+            );
+          })}
+
+          {/* Center Image */}
+          <motion.div
+            key={active}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="absolute inset-0 flex flex-col items-center justify-end pb-10"
+          >
+            <img
+              src={imageList[active]}
+              alt="Stage"
+              className="w-[400px] h-[280px] object-contain"
+            />
+          </motion.div>
+        </div>
+
+        <h1 className="text-center font-semibold text-2xl md:text-4xl mt-10">
+          “Quality is bridging our hardwork and
+          <br />
+          customer’s Trust”
+        </h1>
       </div>
     </div>
   );
 }
 
 export default Moderate;
-

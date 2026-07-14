@@ -89,7 +89,7 @@ const [hoveredMenu, setHoveredMenu] = useState(null);
   { name: "RoPP Caps for Pharma PET Bottles", path: "/products/7" },
 
   {
-    name: "Toilet Cleaner",
+    name: "Toilet/Floor Cleaner",
     isParent: true,
     submenu: [
       {
@@ -97,7 +97,7 @@ const [hoveredMenu, setHoveredMenu] = useState(null);
         path: "/products/8/floor-cleaner",
       },
       {
-        name: "Angled Neck Toilet Cleaner Bottle",
+        name: "Toilet Cleaner / Angled Neck Toilet Cleaner Bottle",
         path: "/products/8/angled-neck",
       },
     ],
@@ -160,20 +160,21 @@ const [hoveredMenu, setHoveredMenu] = useState(null);
         name: "100ml/24mm Oil/Lotion/Shampoo Bottles",
         path: "/products/11/oil-8",
       },
+     
       {
-        name: "100ml/19mm Oil/Lotion/Shampoo Oval Bottles",
+        name: "Oil Lotion Shampoo Bottles",
         path: "/products/11/oil-9",
       },
       {
-        name: "Oil Lotion Shampoo Bottles",
+        name: "30ml Lintiment Bottle",
         path: "/products/11/oil-10",
       },
       {
-        name: "30ml Lintiment Bottle",
+        name: "50ml HDPE Flat Oil/Lotion Bottles",
         path: "/products/11/oil-11",
       },
-      {
-        name: "50ml HDPE Flat Oil/Lotion Bottles",
+        {
+        name: "50ml HDPE Round Oil/Lotion Bottles",
         path: "/products/11/oil-12",
       },
       {
@@ -184,14 +185,21 @@ const [hoveredMenu, setHoveredMenu] = useState(null);
         name: "100ml/19mm Flat Oil/Lotion/Shampoo Bottles",
         path: "/products/11/oil-14",
       },
-      {
-        name: "100ml/19mm Oil/Lotion/Shampoo Round Bottles",
+       {
+        name: "100ml/19mm Oil/Lotion/Shampoo Oval Bottles",
         path: "/products/11/oil-15",
       },
       {
-        name: "100ml/19mm Classic Calamine Style Oil/Lotion/Shampoo Bottles",
+        name: "100ml/19mm Oil/Lotion/Shampoo Round Bottles",
         path: "/products/11/oil-16",
       },
+      {
+        name: "100ml/19mm Classic Calamine Style Oil/Lotion/Shampoo Bottles",
+        path: "/products/11/oil-17",
+      },
+    
+      
+      
     ],
   },
 

@@ -644,148 +644,141 @@ const products = [
     ],
   },
   {
-    id: 8,
-    name: "Toilet Cleaner Bottles",
-    rating: 4.8,
-    reviews: 49,
+  id: 8,
+  name: "Toilet Cleaner Bottles",
+  rating: 4.9,
+  reviews: 49,
 
-    description:
-      "Designed for efficiency, durability, and user convenience, our Ergonomic Angled Neck Toilet Cleaner Bottle is an ideal packaging solution for modern cleaning formulations. Engineered with a precision slant-neck design, the bottle allows effortless reach into difficult areas such as under toilet rims and tight corners, ensuring accurate and controlled dispensing of liquid or gel cleaners. Manufactured using high-quality, chemical-resistant plastic, this bottle offers excellent durability and compatibility with strong cleaning formulations, including acidic toilet cleaners and disinfectant liquids. The sturdy body structure, combined with a stable base and comfortable grip, ensures reliable handling during everyday use while maintaining a professional retail appearance. The smooth surface area supports premium labeling and branding, making it a perfect choice for companies looking to enhance shelf appeal and brand visibility. Suitable for both manual and automated filling lines, the bottle also offers customization options in color and capacity to meet diverse packaging requirements. With its combination of functional design, manufacturing quality, and aesthetic appeal, this bottle stands as a reliable and premium packaging solution for home care and sanitation products.",
+  variants: [
+    {
+      slug: "floor-cleaner",
 
-    images: [
-      { src: "/toiletCleaner.png", alt: "Toilet cleaner bottle front view" },
-      { src: "/toiletCleaner2.png", alt: "Toilet cleaner bottle side view" },
-      { src: "/toiletCleaner3.png", alt: "Toilet cleaner bottle angle view" },
-      { src: "/toiletCleaner4.png", alt: "Toilet cleaner bottle close-up" },
-      { src: "/toiletCleaner5.png", alt: "Toilet cleaner bottle packaging" },
-    ],
+      name: "Floor Cleaner / Angled Neck Floor Cleaner Bottle",
 
-    specs: [
-      {
-        label: "Other Names",
-        value: "Angled Spout Cleaning Bottle, Toilet Cleaner Neck Bottle, Tilt-Neck Liquid Cleaner Bottle, Ergonomic Slant-Neck Bottle, Precision Pour Toilet Cleaner Bottle, ErgoTilt Toilet Cleaner Bottle",
-      },
-      {
-        label: "Capacity",
-        value: "500 ml",
-      },
-      {
-        label: "Shape",
-        value: "Slant Neck / Bent Neck Bottle with Integrated Spout",
-      },
-      {
-        label: "Shape Description",
-        value:
-          "Tall rectangular bottle with an ergonomically angled neck and narrow dispensing spout designed for under-rim and hard-to-reach cleaning.",
-      },
-      {
-        label: "Bottle Colour",
-        value: "Blue and Red (Other colors available on request)",
-      },
-      {
-        label: "Bottle Material",
-        value: "High Density Polyethylene (HDPE)",
-      },
-      {
-        label: "Cap Colour",
-        value: "Red, Blue and other colors on request",
-      },
-      {
-        label: "Cap Material",
-        value: "Polypropylene (PP)",
-      },
-      {
-        label: "Inner Plug Colour",
-        value: "Natural",
-      },
-      {
-        label: "Inner Plug Material",
-        value: "Low Density Polyethylene (LDPE)",
-      },
-    ],
+      description:
+        "Designed for performance, convenience, and brand appeal, our Angled Neck Floor Cleaner Bottle is a smart packaging solution for modern home care and sanitation products. Manufactured from high-quality HDPE, this bottle offers excellent durability, chemical resistance, and lightweight handling, making it ideal for everyday use and large-scale distribution. The ergonomically designed slanted neck ensures controlled pouring and easy application, especially in hard-to-reach areas.",
 
-    applications: [
-      "Packaging of toilet cleaner liquids",
-      "Dispensing bathroom cleaning solutions",
-      "Storage and application of descaling liquids",
-      "Packaging of disinfectant and sanitizer liquids",
-      "Packaging of tile and floor cleaning chemicals",
-      "Controlled pouring of thick cleaning gels",
-    ],
+      images: [
+        {
+          src: "/medicine_img/floor-cleaner-bottle.jpg",
+          alt: "Floor Cleaner Bottle",
+        },
+      ],
 
-    industryApplications: [
-      "FMCG Cleaning Products Industry",
-      "Home Care & Household Cleaning Industry",
-      "Chemical & Detergent Manufacturing Industry",
-    ],
+      specs: [
+        { label: "Capacity", value: "500ml" },
+        { label: "Shape", value: "Slanted Shoulder Rectangular Bottle" },
+        { label: "Bottle Material", value: "HDPE" },
+        { label: "Bottle Colour", value: "Natural and White" },
+        { label: "Cap Material", value: "PP" },
+        { label: "Cap Colour", value: "Pink, Blue or Custom" },
+        { label: "Inner Plug Material", value: "LDPE" },
+      ],
 
-    features: [
-      {
-        label: "Ergonomic Angled Neck Design",
-        value: "Allows easy access to hard-to-reach areas such as under toilet rims.",
-      },
-      {
-        label: "Precision Dispensing Spout",
-        value: "Ensures controlled and targeted application of cleaning liquids.",
-      },
-      {
-        label: "User-Friendly Grip",
-        value: "Contoured body provides comfortable and secure handling.",
-      },
-      {
-        label: "Durable Plastic Construction",
-        value: "Manufactured from high-quality HDPE/PP material for long-lasting performance.",
-      },
-      {
-        label: "Chemical Resistant Material",
-        value: "Suitable for acidic and strong toilet cleaning formulations.",
-      },
-      {
-        label: "Leak-Resistant Closure",
-        value: "Secure cap design prevents leakage during storage and transport.",
-      },
-      {
-        label: "Stable Base Design",
-        value: "Flat bottom ensures upright stability on shelves and storage surfaces.",
-      },
-      {
-        label: "Lightweight Yet Strong",
-        value: "Easy to handle while maintaining structural durability.",
-      },
-      {
-        label: "Optimal Surface for Labeling",
-        value: "Smooth body area allows easy application of product labels and branding.",
-      },
-      {
-        label: "Easy Filling Compatibility",
-        value: "Designed for efficient filling on automated or manual production lines.",
-      },
-      {
-        label: "Reusable and Recyclable",
-        value: "Environmentally friendly plastic material supports recycling.",
-      },
-      {
-        label: "Efficient Liquid Flow",
-        value: "Internal design supports smooth dispensing of liquid or gel cleaners.",
-      },
-      {
-        label: "Compact Storage Design",
-        value: "Space-efficient shape suitable for packaging, shipping, and retail display.",
-      },
-      {
-        label: "Tamper-Evident Closure",
-        value: "Compatible with tamper-proof caps for enhanced product safety.",
-      },
-      {
-        label: "Customizable Colors & Sizes",
-        value: "Available in multiple colors and capacities to suit brand requirements.",
-      },
-    ],
+      applications: [
+        "Floor Cleaning Liquids",
+        "Toilet & Bathroom Cleaners",
+        "Surface Disinfectants",
+        "Multipurpose Household Cleaners",
+        "Industrial Cleaning Liquids",
+        "Kitchen Cleaning Solutions",
+        "Sanitizing Liquids",
+      ],
 
-    sizes: [
-      "500 ml",
-    ],
-  },
+      industryApplications: [
+        "Home Care & Household Cleaning Industry",
+        "Sanitation & Hygiene Products Industry",
+        "Hospital & Healthcare Industry",
+        "Hospitality Industry",
+      ],
+
+      features: [
+        "Ergonomic Angled Neck Design",
+        "High Quality HDPE Construction",
+        "Leak Resistant Threaded Neck",
+        "Stable Flat Base",
+        "Large Front Label Panel",
+        "Lightweight Yet Strong Structure",
+        "Excellent Chemical Compatibility",
+        "Smooth Surface Finish",
+        "Spill Control Geometry",
+        "Space Efficient Rectangular Body",
+        "Consumer Friendly Grip Design",
+        "Available in Multiple Colors",
+        "Compatible with Various Closures",
+        "Impact Resistant Material",
+        "Suitable for Automated Filling Lines",
+      ],
+
+      sizes: ["500 ml"],
+    },
+
+    {
+      slug: "angled-neck",
+
+      name: "Angled Neck Toilet Cleaner Bottle",
+
+      description:
+        "Designed for efficiency, durability, and user convenience, our Ergonomic Angled Neck Toilet Cleaner Bottle is an ideal packaging solution for modern cleaning formulations. Engineered with a precision slant-neck design, the bottle allows effortless reach into difficult areas such as under toilet rims and tight corners, ensuring accurate and controlled dispensing of liquid or gel cleaners.",
+
+      images: [
+        {
+          src: "/medicine_img/toilet-cleaner-bottle.jpg",
+          alt: "Angled Neck Toilet Cleaner Bottle",
+        },
+      ],
+
+      specs: [
+        { label: "Capacity", value: "500ml" },
+        {
+          label: "Shape",
+          value: "Slant Neck / Bent Neck Bottle with Integrated Spout",
+        },
+        { label: "Bottle Material", value: "HDPE" },
+        { label: "Bottle Colour", value: "Blue, Red or Custom" },
+        { label: "Cap Material", value: "PP" },
+        { label: "Cap Colour", value: "Red, Blue or Custom" },
+        { label: "Inner Plug Material", value: "LDPE" },
+      ],
+
+      applications: [
+        "Packaging of Toilet Cleaner Liquids",
+        "Bathroom Cleaning Solutions",
+        "Descaling Liquids",
+        "Disinfectant Liquids",
+        "Sanitizer Liquids",
+        "Tile & Floor Cleaning Chemicals",
+        "Controlled Pouring of Thick Cleaning Gels",
+      ],
+
+      industryApplications: [
+        "FMCG Cleaning Products Industry",
+        "Home Care & Household Cleaning Industry",
+        "Chemical & Detergent Manufacturing Industry",
+      ],
+
+      features: [
+        "Ergonomic Angled Neck Design",
+        "Precision Dispensing Spout",
+        "User Friendly Grip",
+        "Durable Plastic Construction",
+        "Chemical Resistant Material",
+        "Leak Resistant Closure",
+        "Stable Base Design",
+        "Lightweight Yet Strong",
+        "Optimal Surface for Labeling",
+        "Easy Filling Compatibility",
+        "Reusable and Recyclable",
+        "Efficient Liquid Flow",
+        "Compact Storage Design",
+        "Tamper Evident Closure Compatibility",
+        "Customizable Colors and Sizes",
+      ],
+
+      sizes: ["500 ml"],
+    },
+  ],
+},
   {
     id: 9,
     name: "Cream Jars",
@@ -849,35 +842,934 @@ const products = [
   },
 
   {
-    id: 11,
-    name: "Oil Bottles",
-    rating: 4.8,
-    reviews: 49,
-    description: "Versatile bottles ideal for edible, cosmetic, and therapeutic oils. Engineered for strength, leak resistance, and hygienic preservation of product quality.",
+  id: 11,
+  name: "Oil / Lotion / Shampoo Bottles",
+  rating: 4.8,
+  reviews: 49,
+
+  variants: [
+    {
+      slug: "oil-1",
+
+      name: "60ml HDPE Flat Oil / Lotion / Shampoo Bottle",
+
+      description:
+        "Compact and durable 60ml HDPE Flat Bottle designed for packaging oils, lotions, shampoos, and liquid formulations. Manufactured using high-quality HDPE material, it offers excellent durability, chemical resistance, and leak-proof performance. The flat ergonomic design provides better grip, easy handling, and increased labeling space while maintaining an attractive shelf appearance.",
+
+      images: [
+        {
+          src: "/medicine_img/oil-flat-1.jpg",
+          alt: "60ml HDPE Flat Oil Bottle",
+        },
+      ],
+
+      specs: [
+        { label: "Capacity", value: "60ml" },
+        { label: "Shape", value: "Flat" },
+        { label: "Bottle Colour", value: "Milky White" },
+        {
+          label: "Bottle Material",
+          value: "High Density Polyethylene (HDPE)",
+        },
+        { label: "Cap Colour", value: "White" },
+        {
+          label: "Cap Material",
+          value: "Polypropylene (PP)",
+        },
+        { label: "Cap Type", value: "Flip Top" },
+        { label: "Neck Size", value: "19mm" },
+      ],
+
+      applications: [
+        "Hair Oils",
+        "Hair Serums",
+        "Shampoos",
+        "Conditioners",
+        "Lotions",
+        "Creams",
+        "Body Oils",
+        "Face Serums",
+        "Liquid Medicines",
+        "Liniments",
+        "Topical Solutions",
+        "Herbal Oils",
+        "Ayurvedic Formulations",
+      ],
+
+      industryApplications: [
+        "Pharmaceutical Industry",
+        "Personal Care & Cosmetics Industry",
+        "Veterinary Industry",
+        "FMCG Industry",
+        "Herbal & Ayurvedic Industry",
+      ],
+
+      features: [
+        "Dimensionally Accurate",
+        "Crack Resistant",
+        "Food Grade Material",
+        "Leak Proof Design",
+        "Fine Finish",
+        "Controlled Dispensing",
+        "Safe Storage",
+        "Easy Dispensing",
+        "Lightweight and Cost Effective",
+        "High Chemical Resistance",
+        "Suitable For Labeling",
+        "Moisture Protection",
+        "Excellent Shelf Display",
+        "Flat Ergonomic Design",
+        "Compatible With Flip Top, Screw & Plug Closures",
+      ],
+
+      sizes: ["60 ml"],
+    },
+
+    {
+      slug: "oil-2",
+
+      name: "60ml HDPE Oval Oil / Lotion / Shampoo Bottle",
+
+      description:
+        "Our 60ml HDPE Oval Bottle with 19mm neck is a compact and versatile packaging solution designed for personal care, cosmetic, pharmaceutical, and herbal products. Manufactured from premium HDPE material, the bottle offers excellent durability, chemical resistance, and product protection. The ergonomic oval shape improves grip while enhancing shelf appeal.",
+
+      images: [
+        {
+          src: "/medicine_img/oil-oval-1.jpg",
+          alt: "60ml HDPE Oval Bottle",
+        },
+      ],
+
+      specs: [
+        { label: "Capacity", value: "60ml" },
+        { label: "Shape", value: "Oval" },
+        { label: "Bottle Colour", value: "Milky White" },
+        {
+          label: "Bottle Material",
+          value: "High Density Polyethylene (HDPE)",
+        },
+        { label: "Cap Colour", value: "White" },
+        {
+          label: "Cap Material",
+          value: "Polypropylene (PP)",
+        },
+        { label: "Cap Type", value: "Flip Top" },
+        { label: "Neck Size", value: "19mm" },
+      ],
+
+      applications: [
+        "Hair Oils",
+        "Hair Serums",
+        "Shampoos",
+        "Conditioners",
+        "Lotions",
+        "Creams",
+        "Body Oils",
+        "Face Serums",
+        "Liquid Medicines",
+        "Liniments",
+        "Topical Solutions",
+        "Herbal Oils",
+        "Ayurvedic Formulations",
+      ],
+
+      industryApplications: [
+        "Pharmaceutical Industry",
+        "Personal Care & Cosmetics Industry",
+        "Veterinary Industry",
+        "FMCG Industry",
+        "Herbal & Ayurvedic Industry",
+      ],
+
+      features: [
+        "Dimensionally Accurate",
+        "Crack Resistant",
+        "Food Grade Material",
+        "Leak Proof Design",
+        "Fine Finish",
+        "Controlled Dispensing",
+        "Safe Storage",
+        "Easy Dispensing",
+        "Lightweight and Cost Effective",
+        "High Chemical Resistance",
+        "Suitable For Labeling",
+        "Smooth Surface For Branding",
+        "Excellent Shelf Appeal",
+        "Comfortable Grip Design",
+        "Compatible With Flip Top, Disc Top & Screw Caps",
+      ],
+
+      sizes: ["60 ml"],
+    },
+
+    {
+      slug: "oil-3",
+
+      name: "60ml HDPE Round Oil / Lotion / Shampoo Bottle",
+
+      description:
+        "Premium quality HDPE 60ml Round Bottle with 19mm neck size specially designed for oils, lotions, shampoos, cosmetic liquids, pharmaceutical products, and herbal formulations. Manufactured using high-grade HDPE material for superior durability, leak resistance, and product safety while maintaining a professional appearance.",
+
+      images: [
+        {
+          src: "/medicine_img/oil-round-1.jpg",
+          alt: "60ml HDPE Round Bottle",
+        },
+      ],
+
+      specs: [
+        { label: "Capacity", value: "60ml" },
+        { label: "Shape", value: "Round" },
+        { label: "Bottle Colour", value: "Milky White" },
+        {
+          label: "Bottle Material",
+          value: "High Density Polyethylene (HDPE)",
+        },
+        { label: "Cap Colour", value: "White" },
+        {
+          label: "Cap Material",
+          value: "Polypropylene (PP)",
+        },
+        { label: "Cap Type", value: "Flip Top" },
+        { label: "Neck Size", value: "19mm" },
+      ],
+
+      applications: [
+        "Hair Oils",
+        "Hair Serums",
+        "Shampoos",
+        "Conditioners",
+        "Lotions",
+        "Creams",
+        "Body Oils",
+        "Face Serums",
+        "Liquid Medicines",
+        "Liniments",
+        "Topical Solutions",
+        "Herbal Oils",
+        "Ayurvedic Formulations",
+      ],
+
+      industryApplications: [
+        "Pharmaceutical Industry",
+        "Personal Care & Cosmetics Industry",
+        "Veterinary Industry",
+        "FMCG Industry",
+        "Herbal & Ayurvedic Industry",
+      ],
+
+      features: [
+        "Dimensionally Accurate",
+        "Crack Resistant",
+        "Food Grade Material",
+        "Leak Proof Design",
+        "Fine Finish",
+        "Controlled Dispensing",
+        "Safe Storage",
+        "Easy Dispensing",
+        "Lightweight and Cost Effective",
+        "Perfect Dispensing Control",
+        "High Chemical Resistance",
+        "Smooth Surface For Labeling",
+        "Hygienic and Safe",
+        "Impact Resistant",
+        "Compatible With Multiple Closures",
+      ],
+
+      sizes: ["60 ml"],
+    },
+    {
+  slug: "oil-4",
+
+  name: "60ml HDPE Ujjala Type Oil/Lotion/Shampoo Bottles",
+
+  description:
+    "Crafted from high-quality HDPE material, the 60ml Ujjala-type bottle is designed for safe, convenient, and efficient packaging of liquid formulations. Its ergonomic shape ensures a comfortable grip, while the narrow 19mm neck enables controlled dispensing with minimal spillage. The bottle offers excellent resistance to chemicals, moisture, and impact, making it a reliable choice across industries.",
+
+  images: [
+    {
+      src: "/medicine_img/oil-4.jpg",
+      alt: "60ml HDPE Ujjala Type Bottle",
+    },
+  ],
+
+  specs: [
+    { label: "Capacity", value: "60ml" },
+    { label: "Shape", value: "Ujjala Type" },
+    { label: "Bottle Colour", value: "Milky White" },
+    { label: "Bottle Material", value: "HDPE" },
+    { label: "Cap Colour", value: "White" },
+    { label: "Cap Material", value: "PP" },
+    { label: "Cap Type", value: "Flip Top" },
+    { label: "Neck Size", value: "19mm" },
+  ],
+
+  applications: [
+    "Hair Oils",
+    "Hair Serums",
+    "Shampoos",
+    "Conditioners",
+    "Body Lotions",
+    "Face Serums",
+    "Medicated Oils",
+    "Antiseptic Solutions",
+    "Herbal & Ayurvedic Formulations",
+  ],
+
+  industryApplications: [
+    "Pharmaceutical Industry",
+    "Personal Care & Cosmetics Industry",
+    "Veterinary Industry",
+    "FMCG Industry",
+    "Herbal & Ayurvedic Industry",
+  ],
+
+  features: [
+    "High Quality HDPE Material",
+    "Excellent Chemical Resistance",
+    "Leak Proof Design",
+    "Controlled Dispensing",
+    "Impact Resistant",
+    "Lightweight & Durable",
+    "Smooth Surface For Labeling",
+    "Travel Friendly",
+    "Hygienic & Safe",
+    "Custom Colors Available",
+  ],
+
+  sizes: ["60 ml"],
+},
+
+{
+  slug: "oil-5",
+
+  name: "100ml/19mm Banana Shape Oil/Lotion/Shampoo Bottles",
+
+  description:
+    "Premium quality HDPE banana-shaped bottle designed for efficient dispensing and attractive shelf appeal. Its ergonomic curved design ensures a comfortable grip, making it ideal for personal care and pharmaceutical liquid products. Made from high-quality HDPE, it ensures durability, leak resistance, and product safety.",
+
+  images: [
+    {
+      src: "/medicine_img/oil-5.jpg",
+      alt: "100ml Banana Shape Bottle",
+    },
+  ],
+
+  specs: [
+    { label: "Capacity", value: "100ml" },
+    { label: "Shape", value: "Banana Shape" },
+    { label: "Bottle Colour", value: "Milky White" },
+    { label: "Bottle Material", value: "HDPE" },
+    { label: "Cap Colour", value: "White" },
+    { label: "Cap Material", value: "PP" },
+    { label: "Inner Plug Material", value: "LDPE" },
+    { label: "Neck Size", value: "19mm" },
+  ],
+
+  applications: [
+    "Hair Oils",
+    "Hair Serums",
+    "Shampoos",
+    "Conditioners",
+    "Body Oils",
+    "Lotions",
+    "Face Serums",
+    "Medicated Oils",
+    "Ayurvedic Products",
+  ],
+
+  industryApplications: [
+    "Pharmaceutical Industry",
+    "Cosmetics Industry",
+    "Veterinary Industry",
+    "Herbal Industry",
+  ],
+
+  features: [
+    "Ergonomic Banana Shape",
+    "Comfortable Grip",
+    "Leak Resistant Design",
+    "Excellent Chemical Resistance",
+    "Durable HDPE Material",
+    "Controlled Dispensing",
+    "Impact Resistant",
+    "Lightweight Construction",
+    "Custom Color Options",
+    "Travel Friendly",
+  ],
+
+  sizes: ["100 ml"],
+},
+{
+  slug: "oil-6",
+
+  name: "100ml/19mm Liquid Bottles (Ujjala Type)",
+
+  description:
+    "Crafted with precision, the 100ml HDPE Ujjala-type Liquid Bottle (19mm neck) offers a perfect combination of strength, functionality, and sleek design. Engineered for controlled pouring, it is ideal for liquid formulations like fabric brighteners and specialty solutions.",
+
+  images: [
+    {
+      src: "/medicine_img/oil-6.jpg",
+      alt: "100ml Ujjala Type Bottle",
+    },
+  ],
+
+  specs: [
+    { label: "Capacity", value: "100ml" },
+    { label: "Shape", value: "Ujjala Type" },
+    { label: "Bottle Colour", value: "Milky White" },
+    { label: "Bottle Material", value: "HDPE" },
+    { label: "Cap Colour", value: "White" },
+    { label: "Cap Material", value: "PP" },
+    { label: "Cap Type", value: "Flip Top" },
+    { label: "Neck Size", value: "19mm" },
+  ],
+
+  applications: [
+    "Hair Oils",
+    "Shampoos",
+    "Lotions",
+    "Face Serums",
+    "Fabric Whiteners",
+    "Laundry Additives",
+    "Stain Removers",
+    "Cleaning Liquids",
+    "Industrial Solutions",
+    "Pesticides",
+    "Plant Growth Regulators",
+  ],
+
+  industryApplications: [
+    "Pharmaceutical Industry",
+    "Personal Care Industry",
+    "Veterinary Industry",
+    "Household Care Industry",
+    "Chemical Industry",
+    "Textile Industry",
+    "Agro Chemical Industry",
+  ],
+
+  features: [
+    "Controlled Dispensing",
+    "Compact 100ml Capacity",
+    "Leak Resistant Design",
+    "Excellent Chemical Resistance",
+    "Squeezable Body",
+    "Smooth Surface For Labeling",
+    "Lightweight Construction",
+    "Durable HDPE Material",
+    "Travel Friendly",
+    "Custom Colors Available",
+  ],
+
+  sizes: ["100 ml"],
+},
+{
+  slug: "oil-7",
+
+  name: "100ml / 24mm Oil/Lotion/Shampoo Bottles (V Wash Type)",
+
+  description:
+    "Premium curved HDPE bottle with flip-top cap, offering excellent durability, controlled dispensing, and premium shelf appeal for cosmetic and personal care formulations.",
+
+  images: [
+    {
+      src: "/medicine_img/oil-7.jpg",
+      alt: "V Wash Type Bottle",
+    },
+  ],
+
+  specs: [
+    { label: "Capacity", value: "100ml" },
+    { label: "Shape", value: "Slim Curvy Trapezoidal" },
+    { label: "Material", value: "HDPE" },
+    { label: "Cap Material", value: "PP" },
+    { label: "Cap Type", value: "Flip Top" },
+    { label: "Neck Size", value: "24mm" },
+  ],
+
+  applications: [
+    "Hair Oils",
+    "Shampoo",
+    "Conditioners",
+    "Body Lotions",
+    "Face Wash",
+    "Liquid Soap",
+    "Pharmaceutical Lotions",
+  ],
+
+  industryApplications: [
+    "Cosmetic Industry",
+    "Personal Care Industry",
+    "Pharmaceutical Industry",
+    "Ayurvedic Industry",
+    "Baby Care Industry",
+  ],
+
+  features: [
+    "Premium Design",
+    "Leak Resistant",
+    "Travel Friendly",
+    "Excellent Grip",
+    "Flip Top Dispensing",
+    "Custom Branding Support",
+    "Impact Resistant",
+    "Chemical Resistant",
+  ],
+
+  sizes: ["100 ml"],
+},
+{
+  slug: "oil-8",
+
+  name: "100ml / 24mm Oil/Lotion/Shampoo Bottles",
+
+  description:
+    "Premium HDPE pump bottle featuring elegant shelf appeal, ergonomic handling, and smooth controlled dispensing for cosmetics, pharmaceuticals, and personal care products.",
+
+  images: [
+    {
+      src: "/medicine_img/oil-8.jpg",
+      alt: "100ml Pump Bottle",
+    },
+  ],
+
+  specs: [
+    { label: "Capacity", value: "100ml" },
+    { label: "Shape", value: "Rectangular" },
+    { label: "Bottle Material", value: "HDPE" },
+    { label: "Neck Size", value: "24mm" },
+    { label: "Cap Type", value: "Pump" },
+  ],
+
+  applications: [
+    "Body Lotion",
+    "Body Wash",
+    "Hair Oil",
+    "Shampoo",
+    "Liquid Soap",
+    "Antiseptic Solutions",
+  ],
+
+  industryApplications: [
+    "Pharmaceutical Industry",
+    "Cosmetic Industry",
+    "Ayurvedic Industry",
+    "Household Care",
+  ],
+
+  features: [
+    "Pump Dispensing",
+    "Premium Shelf Appeal",
+    "Leak Resistant",
+    "Easy Labeling",
+    "Impact Resistant",
+    "Chemical Resistant",
+  ],
+
+  sizes: ["100 ml"],
+},
+
+{
+  slug: "oil-9",
+
+  name: "Oil Lotion Shampoo Bottles",
+
+  description:
+    "Premium range of HDPE Oil, Lotion and Shampoo bottles designed for safe, leak-proof, and convenient storage of liquid products. Suitable for cosmetic, pharmaceutical, and personal care applications.",
+
+  images: [
+    {
+      src: "/medicine_img/oil-10.jpg",
+      alt: "Oil Lotion Shampoo Bottles",
+    },
+  ],
+
+  specs: [
+    { label: "Capacity", value: "30ml, 50ml, 60ml, 100ml" },
+    { label: "Material", value: "HDPE" },
+    {
+      label: "Shapes",
+      value: "Flat, Round, Oval, Ujjala, Banana, Calamine",
+    },
+  ],
+
+  applications: [
+    "Hair Oils",
+    "Lotions",
+    "Body Oils",
+    "Moisturizers",
+    "Shampoos",
+    "Cosmetic Creams",
+    "Pharmaceutical Products",
+  ],
+
+  industryApplications: [
+    "Pharmaceutical Industry",
+    "Beauty Industry",
+    "Healthcare Industry",
+    "Ayurvedic Industry",
+    "Veterinary Industry",
+    "FMCG Industry",
+  ],
+
+  features: [
+    "Leak Proof",
+    "Food Grade Material",
+    "Controlled Dispensing",
+    "Strong & Durable",
+    "Moisture Protection",
+    "User Friendly Design",
+    "Multiple Closure Options",
+  ],
+
+  sizes: ["30 ml", "50 ml", "60 ml", "100 ml"],
+},
+{
+  slug: "oil-10",
+  name: "30ml Lintiment Bottle",
+  description:
+    "HDPE 30ml Liniment Bottle designed for external-use medicines, medicated oils and antiseptic liquids.",
+  sizes: ["30ml"],
+   images: [
+    {
+      src: "/medicine_img/oil-11.jpg",
+      alt: "30ml Lintiment Bottle",
+    },
+  ],
+  applications: [
+    "Medicated oils",
+    "Liniments",
+    "Antiseptic liquids",
+    "Veterinary products"
+  ],
+  features: [
+    "Compact design",
+    "Leak proof",
+    "Food grade material",
+    "Chemical resistant"
+  ],
+  specs: [
+    { label: "Capacity", value: "30ml" },
+    { label: "Shape", value: "Oval Liniment" },
+    { label: "Material", value: "HDPE" },
+    { label: "Neck Size", value: "19mm" }
+  ]
+},
+{
+  slug: "oil-11",
+  name: "50ml HDPE Flat Oil/Lotion Bottles",
+  description:
+    "Flat HDPE bottle suitable for oils, lotions, serums and pharmaceutical liquids.",
+  sizes: ["50ml"],
+  images: [
+    {
+      src: "/medicine_img/oil-12.jpg",
+      alt: "50ml HDPE Flat Oil/Lotion Bottles",
+    },
+  ],
+
+  applications: [
+    "Hair oils",
+    "Body lotions",
+    "Serums",
+    "Medicated solutions"
+  ],
+  features: [
+    "Flat design",
+    "Travel friendly",
+    "Leak proof",
+    "Easy storage",
+    "Excellent labeling area"
+  ],
+  specs: [
+    { label: "Capacity", value: "50ml" },
+    { label: "Shape", value: "Flat" },
+    { label: "Material", value: "HDPE" },
+    { label: "Neck Size", value: "19mm" }
+  ]
+},
+{
+  slug: "oil-12",
+  name: "50ml HDPE Round Oil/Lotion Bottles",
+  description:
+    "Round HDPE bottle ideal for oils, lotions, antiseptic liquids and herbal formulations.",
+  sizes: ["50ml"],
     images: [
-      { src: "/oilbottle.png", alt: "Syrup bottle and box mockup" },
-      { src: "/oilbottle2.png", alt: "Brown glass bottle" },
-      { src: "/oilbottle3.png", alt: "White medicine bottle" },
-      { src: "/oilbottle4.png", alt: "Label close-up" },
-      { src: "/oilbottle5.png", alt: "Packaging box" },
-    ],
-    specs: [
-      { label: "Color", value: "White" },
-      { label: "Usage", value: "Laboratory" },
-      { label: "Size", value: "Standard" },
-      { label: "Product Type", value: "Adaptors Bottles" },
-      { label: "Material", value: "PTFE" },
-      { label: "Application", value: "Industrial" },
-      { label: "Supply Ability", value: "1000 Per Day" },
-      { label: "Delivery Time", value: "4-5 Days" },
-    ],
-    sizes: [
-      "5 ml", "10 ml", "20 ml", "30 ml", "40 ml",
-      "50 ml", "60 ml", "70 ml", "80 ml",
-      "8 ml", "15 ml", "25 ml", "35 ml", "45 ml",
-      "55 ml", "65 ml", "75 ml", "85 ml",
-    ],
-  },
+    {
+      src: "/medicine_img/oil-13.jpg",
+      alt: "50ml HDPE Round Oil/Lotion Bottles",
+    },
+  ],
+  applications: [
+    "Hair oils",
+    "Face oils",
+    "Lotions",
+    "Antiseptics",
+    "Massage oils"
+  ],
+  features: [
+    "Round design",
+    "Leak proof",
+    "Lightweight",
+    "Impact resistant",
+    "Easy dispensing"
+  ],
+  specs: [
+    { label: "Capacity", value: "50ml" },
+    { label: "Shape", value: "Round" },
+    { label: "Material", value: "HDPE" },
+    { label: "Neck Size", value: "19mm" }
+  ]
+},
+{
+  slug: "oil-13",
+  name: "100ml/19mm Flat Liquid Bottles (Ujjala Type)",
+  description:
+    "Premium Flat Oval Ujjala Type HDPE bottle designed for fabric whiteners, detergents, liquid cleaners, oils, lotions and industrial liquids. Its ergonomic flat shape ensures easy handling and controlled dispensing.",
+  sizes: ["100ml"],
+   images: [
+    {
+      src: "/medicine_img/oil-14.jpg",
+      alt: "100ml/19mm Flat Liquid Bottles (Ujjala Type)",
+    },
+  ],
+  applications: [
+    "Fabric Whiteners",
+    "Detergents",
+    "Hair Oils",
+    "Shampoos",
+    "Lotions",
+    "Antiseptics",
+    "Agro Chemicals",
+    "Industrial Liquids"
+  ],
+  industryApplications: [
+    "Pharmaceutical Industry",
+    "Personal Care & Cosmetics",
+    "Veterinary Industry",
+    "Herbal & Ayurvedic Industry",
+    "Household & Fabric Care",
+    "Chemical Industry",
+    "Textile Industry",
+    "Agro Industry"
+  ],
+  features: [
+    "Flat oval ergonomic design",
+    "Controlled dispensing",
+    "Chemical resistant",
+    "Leak-proof construction",
+    "Squeezable body",
+    "Easy labeling",
+    "Space-saving storage",
+    "Lightweight HDPE"
+  ],
+  specs: [
+    { label: "Capacity", value: "100ml" },
+    { label: "Shape", value: "Flat Oval Ujjala Type" },
+    { label: "Material", value: "HDPE" },
+    { label: "Bottle Colour", value: "Milky White" },
+    { label: "Neck Size", value: "19mm" },
+    { label: "Cap Type", value: "Flip Top" }
+  ]
+},
+{
+  slug: "oil-14",
+  name: "100ml/19mm Flat Oil/Lotion/Shampoo Bottles",
+  description:
+    "Flat 100ml HDPE bottle specially designed for oils, lotions, shampoos and liquid formulations. Compact, durable and easy to store with excellent shelf presentation.",
+  sizes: ["100ml"],
+   images: [
+    {
+      src: "/medicine_img/oil-15.jpg",
+      alt: "100ml/19mm Flat Oil/Lotion/Shampoo Bottles",
+    },
+  ],
+  applications: [
+    "Hair Oils",
+    "Shampoos",
+    "Lotions",
+    "Liquid Soaps",
+    "Syrups",
+    "Antiseptics"
+  ],
+  industryApplications: [
+    "Pharmaceutical Industry",
+    "Personal Care Industry",
+    "Veterinary Industry",
+    "Herbal Industry",
+    "Household Care",
+    "FMCG"
+  ],
+  features: [
+    "Flat space-saving design",
+    "Excellent chemical resistance",
+    "Leak-proof construction",
+    "Controlled dispensing",
+    "Lightweight",
+    "Easy grip",
+    "Easy labeling",
+    "Compact storage"
+  ],
+  specs: [
+    { label: "Capacity", value: "100ml" },
+    { label: "Shape", value: "Flat" },
+    { label: "Material", value: "HDPE" },
+    { label: "Bottle Colour", value: "Milky White" },
+    { label: "Neck Size", value: "19mm" },
+    { label: "Cap Type", value: "Flip Top" }
+  ]
+},
+{
+  slug: "oil-15",
+
+  name: "100ml / 19mm Oil/Lotion/Shampoo Oval Bottles",
+
+  description:
+    "Premium quality oval HDPE bottle offering excellent aesthetics, ergonomic grip, and reliable performance for cosmetic, pharmaceutical, and FMCG products.",
+
+  images: [
+    {
+      src: "/medicine_img/oil-9.jpg",
+      alt: "100ml Oval Bottle",
+    },
+  ],
+
+  specs: [
+    { label: "Capacity", value: "100ml" },
+    { label: "Shape", value: "Oval" },
+    { label: "Bottle Material", value: "HDPE" },
+    { label: "Neck Size", value: "19mm" },
+    { label: "Cap Type", value: "Flip Top" },
+  ],
+
+  applications: [
+    "Hair Oils",
+    "Shampoo",
+    "Lotions",
+    "Liquid Soaps",
+    "Ayurvedic Products",
+    "Pharmaceutical Solutions",
+  ],
+
+  industryApplications: [
+    "Pharmaceutical Industry",
+    "Cosmetic Industry",
+    "Personal Care Industry",
+    "Household Care",
+  ],
+
+  features: [
+    "Ergonomic Oval Shape",
+    "Excellent Shelf Appeal",
+    "Leak Resistant",
+    "Easy Dispensing",
+    "Custom Branding",
+    "Lightweight",
+  ],
+
+  sizes: ["100 ml"],
+},
+{
+  slug: "oil-16",
+  name: "100ml/19mm Oil/Lotion/Shampoo Round Bottles",
+  description:
+    "Premium 100ml HDPE bottle featuring a flat oval/rectangular profile with rounded edges, ideal for personal care, cosmetic and pharmaceutical products.",
+  sizes: ["100ml"],
+  images: [
+    {
+      src: "/medicine_img/oil-16.jpg",
+      alt: "100ml Round Bottle",
+    },
+  ],
+
+  applications: [
+    "Hair Oils",
+    "Shampoos",
+    "Conditioners",
+    "Body Lotions",
+    "Face Wash",
+    "Hand Sanitizers",
+    "Massage Oils",
+    "Medicated Lotions"
+  ],
+  industryApplications: [
+    "Pharmaceutical & Healthcare",
+    "Personal Care Industry",
+    "Herbal Industry",
+    "FMCG",
+    "Industrial Chemicals"
+  ],
+  features: [
+    "Rounded ergonomic design",
+    "Excellent squeezability",
+    "Leak resistant",
+    "Easy labeling",
+    "Space efficient",
+    "Chemical resistant",
+    "Wide cap compatibility",
+    "Premium appearance"
+  ],
+  specs: [
+    { label: "Capacity", value: "100ml" },
+    { label: "Shape", value: "Flat Oval / Rounded Edge" },
+    { label: "Material", value: "HDPE" },
+    { label: "Bottle Colour", value: "Milky White" },
+    { label: "Neck Size", value: "19mm" },
+    { label: "Cap Type", value: "Flip Top" }
+  ]
+},
+{
+  slug: "oil-17",
+  name: "100ml/19mm Classic Calamine Style Oil/Lotion/Shampoo Bottles",
+  description:
+    "Elegant Classic Calamine Style HDPE bottle with ergonomic curved design. Suitable for oils, lotions, shampoos, medicated solutions and herbal formulations.",
+  sizes: ["100ml"],
+  images: [
+    {
+      src: "/medicine_img/oil-17.jpg",
+      alt: "100ml Classic Calamine Style Bottle",
+    },
+  ],
+
+  applications: [
+    "Hair Oils",
+    "Lotions",
+    "Shampoos",
+    "Liquid Soaps",
+    "Syrups",
+    "Antiseptic Solutions",
+    "Herbal Products"
+  ],
+  industryApplications: [
+    "Pharmaceutical Industry",
+    "Personal Care Industry",
+    "Cosmetics Industry",
+    "Herbal & Ayurvedic Industry"
+  ],
+  features: [
+    "Classic Calamine shape",
+    "Premium shelf appearance",
+    "Comfortable grip",
+    "Leak-proof design",
+    "Chemical resistant",
+    "Easy dispensing",
+    "Lightweight",
+    "Durable HDPE construction"
+  ],
+  specs: [
+    { label: "Capacity", value: "100ml" },
+    { label: "Shape", value: "Classic Calamine Style" },
+    { label: "Material", value: "HDPE" },
+    { label: "Bottle Colour", value: "Milky White" },
+    { label: "Neck Size", value: "19mm" },
+    { label: "Cap Type", value: "Flip Top" }
+  ]
+}
+  ]
+  
+},
   {
     id: 12,
     name: "Floor Cleaner Bottles",

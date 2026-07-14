@@ -31,7 +31,7 @@ const router = createBrowserRouter([
 
       {
   path: "products/:id/:variant?",
-  element: <ProductPage />,
+  element: <ProductPage/>,
 },
       {
         path: "quality",

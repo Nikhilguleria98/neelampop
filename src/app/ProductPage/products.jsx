@@ -778,38 +778,796 @@ const products = [
       sizes: ["500 ml"],
     },
   ],
+  
 },
-  {
-    id: 9,
-    name: "Cream Jars",
-    rating: 4.8,
-    reviews: 49,
-    description: "Compact, stylish jars suitable for creams, ointments, balms, and gels. Ensures airtight protection, extended shelf life, and premium appeal for skincare and pharma products.",
-    images: [
-      { src: "/jars1.png", alt: "Syrup bottle and box mockup" },
-      { src: "/jars2.png", alt: "Brown glass bottle" },
-      { src: "/jars3.png", alt: "White medicine bottle" },
-      { src: "/jars4.png", alt: "Label close-up" },
-      { src: "/jars5.png", alt: "Packaging box" },
-    ],
-    specs: [
-      { label: "Color", value: "White" },
-      { label: "Usage", value: "Laboratory" },
-      { label: "Size", value: "Standard" },
-      { label: "Product Type", value: "Adaptors Bottles" },
-      { label: "Material", value: "PTFE" },
-      { label: "Application", value: "Industrial" },
-      { label: "Supply Ability", value: "1000 Per Day" },
-      { label: "Delivery Time", value: "4-5 Days" },
-    ],
-    sizes: [
-      "5 ml", "10 ml", "20 ml", "30 ml", "40 ml",
-      "50 ml", "60 ml", "70 ml", "80 ml",
-      "8 ml", "15 ml", "25 ml", "35 ml", "45 ml",
-      "55 ml", "65 ml", "75 ml", "85 ml",
-    ],
+ {
+  id: 9,
+  name: "Jars",
+  rating: 4.9,
+  reviews: 42,
+
+  variants: [
+    {
+      slug: "cream-jar",
+      name: "HDPE Cream Jar Set",
+      image: "/products/jars/cream-jar.png",
+
+      specifications: {
+        capacity: "100 gm",
+        shape: "Round",
+        jarColor: "Milky White",
+        jarMaterial: "High Density Polyethylene (HDPE)",
+        capColor: "Coloured",
+        capMaterial: "Polypropylene (PP)",
+        innerLidColor: "Natural",
+        innerLidMaterial: "Low Density Polyethylene (LDPE)",
+      },
+
+      applicationAreas: [
+        "Pharmaceutical Industry",
+        "Cosmetic & Personal Care",
+        "Ayurvedic & Herbal Products",
+        "Dermatology Use",
+        "Veterinary Applications",
+      ],
+
+      applications: [
+        "Packaging medicated creams, ointments, balms, and gels",
+        "Face creams, under-eye creams, moisturizers, serums, and beauty balms",
+        "Product samples, promotional packs, and travel-size variants",
+        "Herbal creams, natural balms, and organic skincare formulations",
+      ],
+
+      features: [
+        "Premium HDPE Material",
+        "Lightweight & Compact",
+        "Secure & Leak-Resistant Closure",
+        "Excellent Product Protection",
+      ],
+
+      description:
+        "At Neelam Print O Pack, we bring you high-quality HDPE Cream Jar Sets designed to deliver reliability, safety, and aesthetic appeal for modern packaging needs.",
+
+      highlights: [
+        "Premium Grade HDPE",
+        "Leak Resistant Screw Cap",
+        "Moisture Protection",
+        "Travel Friendly",
+      ],
+
+      sizes: ["100 gm"],
+    },
+
+    {
+      slug: "fancy-jar",
+      name: "HDPE Fancy Jar",
+      image: "/products/jars/fancy-jar.png",
+
+      specifications: {
+        capacity: "200 gm",
+        shape: "Cylindrical",
+        shapeDescription:
+          "Cylindrical, round base, straight vertical sides, wide circular opening, and a lid with a colored rim.",
+        jarColor: "White",
+        jarMaterial: "High Density Polyethylene (HDPE)",
+        capColor: "Any Color",
+        capMaterial: "Polypropylene (PP)",
+        rimColor: "Any Color",
+        rimMaterial: "Polypropylene (PP)",
+      },
+
+      applicationAreas: [
+        "Pharmaceutical Industry",
+        "Food & Beverage",
+        "Nutraceutical & Health Supplements",
+        "Ayurvedic & Herbal Products",
+      ],
+
+      applications: [
+        "Protein powder and nutritional supplements",
+        "Health powders (herbal mixes, collagen, etc.)",
+        "Spices and seasoning blends",
+        "Dry fruits or snack portions",
+      ],
+
+      features: [
+        "Attractive fancy design",
+        "Strong and durable",
+        "Lightweight and easy to handle",
+        "Wide mouth opening for easy filling and scooping",
+      ],
+
+      tagline: "Luxury Outside. Power Inside.",
+
+      description:
+        "This refined premium storage jar is designed for brands that value elegance and sophistication.",
+
+      highlights: [
+        "Premium HDPE Construction",
+        "Luxury Matte Finish",
+        "Colored Accent Rim",
+        "Wide Mouth Design",
+      ],
+
+      sizes: ["200 gm"],
+    },
+    {
+  slug: "flip-type-cap-protein-powder-jar",
+  name: "HDPE Flip Type Cap Protein Powder Jar Set",
+  image: "/products/jars/flip-type-cap-protein-powder-jar.png",
+
+  description:
+    "Elevate your packaging standards with our premium-grade HDPE wide-mouth jar, designed to deliver both performance and visual appeal. Crafted with precision, this jar combines robust durability with a refined matte finish, offering a sophisticated look that enhances your product's shelf presence. The ergonomically designed wide-mouth opening ensures effortless filling, dispensing, and cleaning, while the reinforced rim provides a secure and reliable seal with compatible closures—safeguarding contents from moisture, contamination, and external elements. Built from high-quality HDPE, this jar offers superior chemical resistance, impact strength, and lightweight convenience, making it an ideal choice for demanding industrial as well as premium consumer applications.",
+
+  specs: [
+    { label: "Capacity", value: "200 gm" },
+    {
+      label: "Shape",
+      value: "Straight Cylindrical Body with Extended Rim",
+    },
+    {
+      label: "Alternative Shape",
+      value: "Wide-Mouth Cylindrical Jar",
+    },
+    {
+      label: "Jar Colour",
+      value: "Any Color",
+    },
+    {
+      label: "Jar Material",
+      value: "High Density Polyethylene (HDPE)",
+    },
+    {
+      label: "Cap Colour",
+      value: "Coloured",
+    },
+    {
+      label: "Cap Material",
+      value: "Polypropylene (PP)",
+    },
+  ],
+
+  applications: [
+    "Ointments, creams and gels",
+    "Tablets and capsules",
+    "Medical powders",
+    "Isabgol packaging",
+    "Face creams, moisturizers and scrubs",
+    "Hair masks, gels and wax",
+    "Body butter and lip balms",
+    "Travel-size cosmetic storage",
+    "Dry fruits, spices and condiments",
+    "Protein powder sample packs",
+    "Honey, jams and spreads",
+    "Ghee packaging",
+    "Grease, lubricants and adhesives",
+    "Pigments, dyes and chemical samples",
+    "Storage of screws and fittings",
+    "Buttons, beads and household items",
+    "DIY and craft materials",
+    "Travel containers for toiletries",
+  ],
+
+  industryApplications: [
+    "Pharmaceutical Industry",
+    "Cosmetic & Personal Care",
+    "Food & Nutraceutical",
+    "Industrial Applications",
+    "Household & General Use",
+    "Ayurvedic & Herbal Products",
+  ],
+
+  features: [
+    "Durable HDPE Construction",
+    "Lightweight and Strong",
+    "Wide Mouth Opening",
+    "Extended Rim for Secure Sealing",
+    "Smooth Surface Finish",
+    "Ideal for Labeling and Printing",
+    "Compact and Handy Design",
+    "Reusable and Eco-Friendly",
+    "Excellent Moisture Resistance",
+    "Impact Resistant Construction",
+    "Compatible with Snap-Fit Lids",
+    "Suitable for Heat-Seal Closures",
+  ],
+
+  highlights: [
+    "Premium HDPE Material",
+    "Wide Mouth Design",
+    "Secure Closure System",
+    "Moisture Protection",
+    "Chemical Resistant",
+    "Reusable Packaging",
+    "Branding Friendly Surface",
+    "Multi-Industry Applications",
+  ],
+
+  sizes: ["200 gm"],
+
+  tags: [
+    "Flip Type Cap Jar",
+    "Protein Powder Jar",
+    "HDPE Jar",
+    "Wide Mouth Jar",
+    "Nutraceutical Jar",
+    "Pharmaceutical Jar",
+    "Cosmetic Jar",
+    "Storage Container",
+    "Food Grade Packaging",
+  ],
+},
+{
+  slug: "gattu-jar",
+  name: "HDPE Gattu Jar Set",
+  image: "/products/jars/gattu-jar.png",
+
+  description:
+    "Elevate your packaging standards with our HDPE 200 gm Gattu Jar Set, thoughtfully engineered to deliver unmatched durability and product protection. Crafted from superior-grade HDPE, this jar set combines robustness with a refined finish, making it an ideal choice for brands that value both performance and presentation. Designed with a wide-mouth opening, it ensures effortless filling and smooth dispensing of creams, powders, and semi-solid formulations. The secure leak-proof closure preserves freshness and safeguards contents from moisture, dust, and contamination.",
+
+  specs: [
+    { label: "Capacity", value: "200 gm" },
+    {
+      label: "Shape",
+      value: "Round Cylindrical Wide-Mouth Jar with Dome Cap",
+    },
+    { label: "Jar Colour", value: "Milky White" },
+    {
+      label: "Jar Material",
+      value: "High Density Polyethylene (HDPE)",
+    },
+    { label: "Cap Colour", value: "Coloured" },
+    {
+      label: "Cap Material",
+      value: "Polypropylene (PP)",
+    },
+  ],
+
+  applications: [
+    "Spices, dry fruits, pickles, chutneys and honey",
+    "Ghee packaging",
+    "Herbal powders, balms and natural formulations",
+    "Cosmetic creams, gels, scrubs and hair masks",
+    "Pharmaceutical creams, powders and granules",
+    "Isabgol packaging",
+    "Household storage products",
+    "DIY materials and adhesives",
+    "Industrial greases and lubricants",
+    "Retail and bulk packaging",
+    "Chemical powders and pastes",
+  ],
+
+  industryApplications: [
+    "Pharmaceutical Industry",
+    "Food Industry",
+    "Cosmetic & Personal Care",
+    "Ayurvedic & Herbal Industry",
+    "Chemical Industry",
+    "Paint & Coating Industry",
+    "Household & Utility Products",
+  ],
+
+  features: [
+    "Premium Grade HDPE Material",
+    "Sturdy & Impact Resistant",
+    "Leak-Proof Secure Closure",
+    "Wide Mouth Design",
+    "Excellent Product Protection",
+    "Lightweight & User Friendly",
+    "Reusable & Eco-Friendly",
+    "Versatile Applications",
+    "Customizable Options",
+    "Hygienically Manufactured",
+  ],
+
+  highlights: [
+    "Premium HDPE Construction",
+    "Wide Mouth Design",
+    "Leak-Proof Closure",
+    "Moisture Protection",
+    "Impact Resistant",
+    "Custom Branding Available",
+  ],
+
+  sizes: ["200 gm"],
+},
+{
+  slug: "hdpe-energy-drink-isabgol-jar",
+  name: "HDPE Energy Drink / Isabgol Jar Set",
+  image: "/products/jars/hdpe-energy-drink-isabgol-jar.png",
+
+  tagline: "Power Packed Freshness, Sealed to Perform.",
+
+  description:
+    "Elevate your product packaging with the HDPE 100 gm Energy Drink Jar Set from Neelam Print O Pack, expertly designed to meet the dynamic demands of the nutraceutical and beverage industry. Crafted from high-quality HDPE material, this jar ensures superior strength, durability, and resistance. Built to preserve freshness and potency, the jar offers excellent protection against moisture and external contaminants. The secure leak-resistant closure system ensures safe storage and easy handling while the wide-mouth opening allows convenient filling, scooping and usage.",
+
+  specs: [
+    { label: "Capacity", value: "100 gm" },
+    {
+      label: "Shape",
+      value:
+        "Round Cylindrical Jar with Tapered Shoulder and Ribbed Screw Cap",
+    },
+    { label: "Jar Colour", value: "Milky White" },
+    {
+      label: "Jar Material",
+      value: "High Density Polyethylene (HDPE)",
+    },
+    { label: "Cap Colour", value: "Coloured" },
+    {
+      label: "Cap Material",
+      value: "Polypropylene (PP)",
+    },
+  ],
+
+  applications: [
+    "Energy drink powders",
+    "Protein supplements",
+    "Nutritional blends",
+    "Pre-workout powders",
+    "Post-workout powders",
+    "Stamina boosting formulations",
+    "Herbal energy powders",
+    "Ayurvedic wellness mixes",
+    "Dietary supplements",
+    "Immunity boosters",
+    "Therapeutic drink powders",
+    "Isabgol packaging",
+    "Glucose powders",
+    "Instant beverage premixes",
+    "Retail health products",
+  ],
+
+  industryApplications: [
+    "Pharmaceutical Nutraceuticals",
+    "Health & Nutrition Industry",
+    "Sports & Fitness Products",
+    "Ayurvedic & Herbal Formulations",
+    "Food & Beverage Sector",
+    "Institutional & Retail Packaging",
+  ],
+
+  features: [
+    "Premium Quality HDPE Material",
+    "Food Safe & Hygienic",
+    "Excellent Moisture Barrier",
+    "Airtight Leak Resistant Closure",
+    "Lightweight & Sturdy Design",
+    "Wide Mouth Opening",
+    "Compact & User Friendly",
+    "Smooth Surface Finish",
+    "Customizable Options",
+    "Versatile Usage",
+  ],
+
+  highlights: [
+    "Food Grade HDPE",
+    "Airtight Screw Cap",
+    "Moisture Protection",
+    "Wide Mouth Design",
+    "Premium Shelf Appeal",
+    "Custom Branding Options",
+  ],
+
+  sizes: ["100 gm"],
+},
+{
+  slug: "long-protein-powder-jar",
+  name: "HDPE Long Protein Powder Jar Set",
+  image: "/products/jars/long-protein-powder-jar.png",
+
+  description:
+    "Crafted for modern nutrition brands, the HDPE Long Protein Powder Jar Set (200 gm) by Neelam Print O Pack offers the perfect balance of durability, hygiene, and premium presentation. Manufactured using high-grade food-safe HDPE, this jar ensures exceptional strength while remaining lightweight and easy to handle. Its airtight sealing mechanism protects contents from moisture, air exposure, and contaminants, preserving freshness and nutritional value. The ergonomic long cylindrical body combined with a wide-mouth opening allows effortless filling, scooping, and cleaning. Ideal for protein powders, supplements, nutraceuticals, herbal formulations, and wellness products, this jar also supports custom branding, labeling, and color options for enhanced shelf appeal.",
+
+  specs: [
+    { label: "Capacity", value: "200 gm" },
+    { label: "Shape", value: "Straight-Sided Long Cylindrical Jar with Wide Mouth" },
+    { label: "Jar Colour", value: "Milky White" },
+    { label: "Jar Material", value: "High Density Polyethylene (HDPE)" },
+    { label: "Cap Colour", value: "Coloured" },
+    { label: "Cap Material", value: "Polypropylene (PP)" }
+  ],
+
+  applications: [
+    "Protein Powders",
+    "Dietary Supplements",
+    "Mass Gainers",
+    "Health Mixes",
+    "Medicinal Powders",
+    "Herbal Formulations",
+    "Isabgol Packaging",
+    "Pre-Workout Supplements",
+    "Post-Workout Supplements",
+    "Energy Powders",
+    "Flavoured Drink Mixes",
+    "Cocoa Powder",
+    "Milk Additives",
+    "Nutritional Blends",
+    "Herbal Powders",
+    "Organic Supplements",
+    "Beauty Supplements",
+    "Body Powders",
+    "Retail Packaging",
+    "Veterinary Formulations"
+  ],
+
+  industryApplications: [
+    "Nutraceutical Industry",
+    "Pharmaceutical Industry",
+    "Fitness & Wellness Industry",
+    "Food & Beverage Industry",
+    "Herbal & Ayurvedic Industry",
+    "Cosmetic & Personal Care Industry",
+    "Retail & Consumer Packaging",
+    "Veterinary & Animal Healthcare Industry"
+  ],
+
+  features: [
+    "Premium Food-Grade HDPE Construction",
+    "Airtight & Moisture-Resistant Closure",
+    "Strong & Impact-Resistant Design",
+    "Wide Mouth Opening",
+    "Lightweight & Travel-Friendly",
+    "Safe for Food & Supplements",
+    "Customizable Colors & Branding",
+    "Reusable & Eco-Friendly",
+    "Excellent Product Protection",
+    "Ideal Storage Capacity",
+    "Hygienically Manufactured",
+    "Suitable for Multiple Industries"
+  ],
+
+  highlights: [
+    "Food Grade HDPE",
+    "Airtight Freshness Protection",
+    "Wide Mouth Design",
+    "Impact Resistant Body",
+    "Custom Branding Available",
+    "Travel Friendly",
+    "Premium Shelf Appeal",
+    "Moisture Resistant Storage"
+  ],
+
+  sizes: ["200 gm"]
+},
+{
+  slug: "mediterranean-jar",
+  name: "HDPE Mediterranean Jar Set",
+  image: "/products/jars/mediterranean-jar.png",
+
+  description:
+    "Premium HDPE Mediterranean Jar Set designed for food, cosmetic, pharmaceutical and personal care applications. Combines elegant aesthetics with excellent product protection and durability.",
+
+  specs: [
+    { label: "Capacity", value: "200 gm" },
+    { label: "Shape", value: "Straight-Sided Round Jar" },
+    { label: "Shape Description", value: "Compact cylindrical wide-mouth jar with flat base" },
+    { label: "Jar Material", value: "HDPE" },
+    { label: "Cap Material", value: "PP" },
+    { label: "Jar Color", value: "Any Color" }
+  ],
+
+  applications: [
+    "Spices & Dry Fruits",
+    "Protein Supplements",
+    "Health Blends",
+    "Tablets & Capsules",
+    "Ayurvedic Formulations",
+    "Face Creams",
+    "Body Butters",
+    "Herbal Powders",
+    "Kitchen Storage",
+    "Industrial Granules"
+  ],
+
+  industryApplications: [
+    "Food & Nutraceutical Industry",
+    "Pharmaceutical Industry",
+    "Cosmetic & Personal Care",
+    "Wellness & Herbal Products",
+    "Industrial Packaging",
+    "Veterinary Industry"
+  ],
+
+  features: [
+    "Premium HDPE Construction",
+    "Mediterranean Inspired Design",
+    "Leak Resistant Closure",
+    "Wide Mouth Opening",
+    "Lightweight Yet Durable",
+    "Excellent Moisture Protection",
+    "Custom Branding Options",
+    "Food Grade Material",
+    "Easy Filling & Dispensing",
+    "Shelf Appeal Design"
+  ],
+
+  sizes: ["200 gm"]
+},
+
+{
+  slug: "pediasure-type-protein-powder-jar",
+  name: "HDPE Pediasure Type Protein Powder Jar Set",
+  image: "/products/jars/pediasure-type-protein-powder-jar.png",
+
+  description:
+    "Premium wide-mouth HDPE jar with elegant curved design, ideal for protein powders, cosmetics, creams, nutraceuticals and wellness products.",
+
+  specs: [
+    { label: "Capacity", value: "150 gm, 200 gm, 400 gm" },
+    { label: "Shape", value: "Curved Waist Cylindrical Jar" },
+    { label: "Jar Material", value: "HDPE" },
+    { label: "Cap Material", value: "PP" },
+    { label: "Cap Type", value: "Flat Round Screw Cap" },
+    { label: "Jar Color", value: "White" }
+  ],
+
+  applications: [
+    "Face Creams",
+    "Body Butter",
+    "Hair Masks",
+    "Hair Gel",
+    "Scrubs",
+    "Ayurvedic Creams",
+    "Medicinal Balms",
+    "Honey",
+    "Peanut Butter",
+    "Protein Powder",
+    "Dry Fruit Powder",
+    "Salon Products"
+  ],
+
+  industryApplications: [
+    "Cosmetics & Personal Care",
+    "Pharmaceutical Industry",
+    "Food & Nutraceutical Industry",
+    "Beauty & Salon Industry"
+  ],
+
+  features: [
+    "Wide Mouth Design",
+    "Leak Resistant Screw Cap",
+    "Impact Resistant Body",
+    "Large Labeling Area",
+    "Reusable & Recyclable",
+    "Portable Design",
+    "Multiple Lid Colors",
+    "Chemical Resistant",
+    "Moisture Resistant",
+    "Stackable Design"
+  ],
+
+  sizes: ["150 gm", "200 gm", "400 gm"]
+},
+
+{
+  slug: "protein-jar-with-silver-leaf",
+  name: "HDPE Protein Jar With Silver Leaf",
+  image: "/products/jars/protein-jar-with-silver-leaf.png",
+
+  description:
+    "Premium wide-mouth HDPE container featuring a decorative silver leaf band and secure screw cap closure. Ideal for food, nutraceutical, cosmetic and pharmaceutical packaging.",
+
+  specs: [
+    { label: "Capacity", value: "200 gm" },
+    { label: "Shape", value: "Wide Mouth Cylindrical Jar" },
+    { label: "Jar Material", value: "HDPE" },
+    { label: "Cap Material", value: "PP" },
+    { label: "Jar Color", value: "Any Color" }
+  ],
+
+  applications: [
+    "Protein Powders",
+    "Herbal Powders",
+    "Capsules",
+    "Tablets",
+    "Honey",
+    "Chocolate Spreads",
+    "Dry Fruits",
+    "Confectionery Products",
+    "Face Creams",
+    "Hair Masks",
+    "Veterinary Supplements",
+    "Pet Nutrition Products"
+  ],
+
+  industryApplications: [
+    "Pharmaceutical Industry",
+    "Nutraceutical Industry",
+    "Cosmetic Industry",
+    "Food Industry",
+    "Veterinary Industry",
+    "Ayurvedic Industry"
+  ],
+
+  features: [
+    "Premium Silver Band Lid",
+    "Food Grade HDPE",
+    "Wide Mouth Design",
+    "Strong Screw Cap Closure",
+    "Excellent Branding Surface",
+    "Moisture Resistant",
+    "Impact Resistant",
+    "Reusable Design",
+    "Customizable Colors",
+    "Premium Retail Appearance"
+  ],
+
+  sizes: ["200 gm"]
+},
+{
+  slug: "protein-powder-jar-set",
+  name: "HDPE Protein Powder Jar Set",
+  image: "/products/jars/protein-powder-jar-set.png",
+
+  description:
+    "The HDPE Protein Powder Jar Set is a premium wide-mouth cylindrical packaging solution designed for protein powders, supplements, pharmaceuticals, cosmetics, food products, veterinary formulations, agrochemicals, and industrial compounds. Manufactured from high-quality HDPE material, the jar delivers exceptional durability, impact resistance, and moisture protection while maintaining a lightweight structure. Its pedestal-base design enhances stability and shelf appeal, while the ribbed screw cap provides a secure and reliable seal against contamination and leakage. The smooth cylindrical body offers excellent branding and labeling space, making it ideal for retail and commercial packaging applications.",
+
+  specs: [
+    { label: "Capacity", value: "200 gm" },
+    {
+      label: "Shape",
+      value: "Cylindrical Shape with Slightly Flared Pedestal Base",
+    },
+    {
+      label: "Shape Description",
+      value:
+        "Round cylindrical jar with straight side walls, wide-mouth opening and pedestal-style base",
+    },
+    { label: "Jar Colour", value: "Any Color" },
+    {
+      label: "Jar Material",
+      value: "High Density Polyethylene (HDPE)",
+    },
+    { label: "Cap Colour", value: "Coloured" },
+    { label: "Cap Material", value: "Polypropylene (PP)" },
+    { label: "Cap Shape", value: "Round Ribbed Screw Cap" },
+  ],
+
+  applications: [
+    "Protein Powder Packaging",
+    "Dietary Supplements",
+    "Herbal Supplements",
+    "Health Powders",
+    "Tablets & Capsules",
+    "Veterinary Powders",
+    "Animal Feed Supplements",
+    "Dry Fruits",
+    "Spices & Seasonings",
+    "Candies & Confectionery",
+    "Beauty Powders",
+    "Hair Masks",
+    "Body Scrubs",
+    "Cosmetic Creams",
+    "Laboratory Powders",
+    "Industrial Compounds",
+    "Agricultural Nutrients",
+    "Pesticides & Agrochemicals",
+  ],
+
+  industryApplications: [
+    "Pharmaceutical Industry",
+    "Veterinary & Animal Health",
+    "Nutraceutical Industry",
+    "Cosmetics & Personal Care",
+    "Food & Confectionery",
+    "Chemical Industry",
+    "Agrochemical Industry",
+    "Industrial Packaging",
+  ],
+
+  features: [
+    "Wide Mouth Opening",
+    "Premium HDPE Construction",
+    "Durable & Impact Resistant",
+    "Secure Ribbed Screw Cap",
+    "Leak Resistant Closure",
+    "Pedestal Base Design",
+    "Premium Shelf Appearance",
+    "Moisture Resistant",
+    "Chemical Resistant",
+    "Smooth Label-Friendly Surface",
+    "Reusable & Recyclable",
+    "Food Grade Material Option",
+    "Lightweight Construction",
+    "Good Barrier Properties",
+    "Customizable Appearance",
+    "Multipurpose Packaging Solution",
+  ],
+
+  highlights: [
+    "Premium HDPE Material",
+    "Pedestal Base Design",
+    "Wide Mouth Access",
+    "Secure Screw Cap",
+    "Excellent Shelf Presence",
+    "Moisture Protection",
+    "Custom Branding Friendly",
+    "Suitable For Multiple Industries",
+  ],
+
+  sizes: ["200 gm"],
+
+  tagline: "Strong Protection, Smart Packaging.",
+},
+{
+  slug: "sleeve-type-protein-jar-set",
+  name: "HDPE Sleeve Type Protein Powder Jar Set",
+  image: "/products/jars/sleeve-type-protein-jar.png",
+
+  specifications: {
+    capacity: "200 gm",
+    shape: "Curved Waist Shape (Slim middle with wider top and bottom)",
+    shapeDescription:
+      "This jar features an ergonomic hourglass design with a narrow center and wider top and bottom sections, providing superior grip and an attractive premium appearance.",
+    jarColor: "Any Color",
+    jarMaterial: "High Density Polyethylene (HDPE)",
+    capColor: "Coloured",
+    capMaterial: "Polypropylene (PP)",
   },
 
+  applicationAreas: [
+    "Pharmaceutical Industry",
+    "Veterinary Industry",
+    "Food & Nutraceutical Industry",
+    "Cosmetics & Personal Care Industry",
+    "Chemical Industry",
+    "Household & Consumer Products",
+    "Ayurvedic Industry",
+  ],
+
+  applications: [
+    "Tablet and capsule packaging",
+    "Nutraceutical supplements",
+    "Protein powders and health supplements",
+    "Animal feed supplements and veterinary products",
+    "Hair masks, body scrubs, and cosmetic powders",
+    "Spices, seasoning blends, and dry food products",
+    "Industrial additives, pigments, and laboratory powders",
+    "Household cleaning powders and dry storage materials",
+  ],
+
+  features: [
+    "Ergonomic Hourglass Shape",
+    "Wide Mouth Opening",
+    "High-Quality HDPE Material",
+    "Moisture Resistant",
+    "Durable & Reusable",
+    "Leak-Resistant Closure Compatibility",
+    "Large Labeling Surface",
+    "Enhanced Grip Control",
+    "Impact & Drop Resistant",
+    "Food-Grade Material Option",
+    "Tamper-Evident Seal Compatibility",
+    "Excellent Barrier Properties",
+    "Smooth Surface Finish",
+    "Odor-Resistant Material",
+    "Custom Color Availability",
+    "UV Protection Option",
+    "Space-Efficient Storage",
+    "Bulk Manufacturing Friendly",
+  ],
+
+  description:
+    "The HDPE Sleeve Type Protein Powder Jar Set is a premium wide-mouth packaging solution featuring an ergonomic hourglass-shaped body for enhanced grip and handling. Manufactured from high-quality HDPE, it offers exceptional durability, moisture resistance, and product protection. The wide-mouth design ensures easy filling, scooping, and dispensing, making it ideal for protein powders, nutraceuticals, pharmaceuticals, cosmetics, veterinary products, and industrial applications. Its smooth surface provides excellent branding opportunities while maintaining a modern and professional shelf presence.",
+
+  tagline: "Designed for Grip. Built for Protection.",
+
+  highlights: [
+    "Ergonomic Waist-Grip Design",
+    "Premium HDPE Construction",
+    "Wide Mouth Access",
+    "Superior Moisture Protection",
+    "Strong & Lightweight",
+    "Custom Branding Ready",
+    "Reusable & Recyclable",
+    "Export Quality Packaging",
+  ],
+
+  sizes: ["200 gm"],
+}
+  ]
+},
   {
     id: 10,
     name: "Shampoo Bottles",

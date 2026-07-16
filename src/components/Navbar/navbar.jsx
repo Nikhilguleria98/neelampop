@@ -103,24 +103,56 @@ const [hoveredMenu, setHoveredMenu] = useState(null);
     ],
   },
 
-  {
-    name: "Jars",
-    isParent: true,
-    submenu: [
-      { name: "Cream Jars", path: "/products/9" },
-      { name: "Fancy Jar for Protein Powder", path: "/products/16" },
-      { name: "Flip Type Cap Protein Jar", path: "/products/17" },
-      { name: "Gattu Jar", path: "/products/18" },
-      { name: "HDPE Cream Jar", path: "/products/19" },
-      { name: "HDPE Energy Drink / Isabgol Jar", path: "/products/20" },
-      { name: "Long Protein Powder Jar", path: "/products/21" },
-      { name: "Madetarian Jar", path: "/products/22" },
-      { name: "Pediasure Type Protein Powder Jar Set", path: "/products/23" },
-      { name: "Protein Jar with Silver Leaf", path: "/products/24" },
-      { name: "Protein Powder Jar Set", path: "/products/25" },
-      { name: "Sleeve Type Protein Jar Set", path: "/products/26" },
-    ],
-  },
+ {
+  name: "Jars",
+  isParent: true,
+  submenu: [
+    {
+      name: "HDPE Cream Jar",
+      path: "/products/9/cream-jar",
+    },
+    {
+      name: "HDPE Fancy Jar",
+      path: "/products/9/fancy-jar",
+    },
+    {
+      name: "Flip Type Cap Protein Powder Jar",
+      path: "/products/9/flip-type-cap-protein-powder-jar",
+    },
+    {
+      name: "Gattu Jar",
+      path: "/products/9/gattu-jar",
+    },
+    {
+      name: "HDPE Energy Drink / Isabgol Jar",
+      path: "/products/9/hdpe-energy-drink-isabgol-jar",
+    },
+    {
+      name: "Long Protein Powder Jar",
+      path: "/products/9/long-protein-powder-jar",
+    },
+    {
+      name: "Mediterranean Jar",
+      path: "/products/9/mediterranean-jar",
+    },
+    {
+      name: "Pediasure Type Protein Powder Jar",
+      path: "/products/9/pediasure-type-protein-powder-jar",
+    },
+    {
+      name: "Protein Jar with Silver Leaf",
+      path: "/products/9/protein-jar-with-silver-leaf",
+    },
+    {
+      name: "Protein Powder Jar Set",
+      path: "/products/9/protein-powder-jar-set",
+    },
+    {
+      name: "Sleeve Type Protein Jar Set",
+      path: "/products/9/sleeve-type-protein-jar-set",
+    },
+  ],
+},
 
   { name: "Shampoo Bottles", path: "/products/10" },
 

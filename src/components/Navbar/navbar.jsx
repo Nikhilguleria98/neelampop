@@ -21,9 +21,11 @@ const Navbar = () => {
     }
   };
 
-  // Close desktop dropdowns on click outside
+  // Close desktop dropdowns on click outside (Fixed for Mobile responsive layout)
   useEffect(() => {
     const handleClickOutside = (event) => {
+      if (window.innerWidth < 1024) return;
+
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
         setIsDropdownOpen(false);
         setActiveParent(null);
@@ -145,14 +147,14 @@ const Navbar = () => {
   return (
     <nav className="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-16 gap-4">
 
-          {/* Left Desktop Menu */}
-          <div className="hidden lg:flex items-center space-x-8">
-            <Link to="/" className="text-gray-700 font-medium hover:text-[#2592AD] transition-colors duration-200">
+          {/* Left Desktop Menu: Scaled down text and layout gaps to accommodate medium monitors perfectly */}
+          <div className="hidden lg:flex items-center xl:space-x-8 lg:space-x-4">
+            <Link to="/" className="text-gray-700 font-medium hover:text-[#2592AD] transition-colors duration-200 xl:text-base lg:text-sm whitespace-nowrap">
               Home
             </Link>
-            <Link to="/about" className="text-gray-700 font-medium hover:text-[#2592AD] transition-colors duration-200">
+            <Link to="/about" className="text-gray-700 font-medium hover:text-[#2592AD] transition-colors duration-200 xl:text-base lg:text-sm whitespace-nowrap">
               About Us
             </Link>
 
@@ -160,7 +162,7 @@ const Navbar = () => {
             <div className="relative" ref={dropdownRef}>
               <button
                 onClick={toggleDropdown}
-                className={`flex items-center font-medium transition-colors duration-200 focus:outline-none ${
+                className={`flex items-center font-medium transition-colors duration-200 focus:outline-none xl:text-base lg:text-sm whitespace-nowrap ${
                   isDropdownOpen ? 'text-[#2592AD]' : 'text-gray-700 hover:text-[#2592AD]'
                 }`}
               >
@@ -168,7 +170,7 @@ const Navbar = () => {
                 <ChevronDown className={`ml-1 h-4 w-4 transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`} />
               </button>
 
-              {/* Box 1: Desktop Main Single Column Scrollable List */}
+              {/* Box 1: Desktop Main List Dropdown Container */}
               {isDropdownOpen && (
                 <div 
                   className="absolute left-0 mt-2 w-80 bg-white border border-gray-200 rounded-lg shadow-xl z-50 py-2 max-h-[65vh] overflow-y-auto custom-scrollbar"
@@ -185,8 +187,8 @@ const Navbar = () => {
                             activeParent === cat.name ? 'bg-slate-50 text-[#2592AD]' : 'text-gray-700 hover:bg-slate-50'
                           }`}
                         >
-                          <span>{cat.name}</span>
-                          <ChevronRight className="h-4 w-4 text-gray-400" />
+                          <span className="truncate pr-2">{cat.name}</span>
+                          <ChevronRight className="h-4 w-4 text-gray-400 shrink-0" />
                         </div>
                       );
                     }
@@ -237,31 +239,31 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* Logo Identity */}
-          <div className="flex-shrink-0">
+          {/* Logo Identity: Handles flexible shrinking on narrow layouts */}
+          <div className="flex-shrink-0 mx-auto lg:mx-0">
             <Link to="/">
-              <img src='/logo.png' alt="Company Logo" className="w-40 object-contain" />
+              <img src='/logo.png' alt="Company Logo" className="w-32 sm:w-40 max-w-full object-contain" />
             </Link>
           </div>
 
           {/* Right Desktop Nav Menu */}
-          <div className="hidden lg:flex items-center space-x-8">
-            <Link to="/quality" className="text-gray-700 font-medium hover:text-[#2592AD] transition-colors duration-200">
+          <div className="hidden lg:flex items-center xl:space-x-8 lg:space-x-4">
+            <Link to="/quality" className="text-gray-700 font-medium hover:text-[#2592AD] transition-colors duration-200 xl:text-base lg:text-sm whitespace-nowrap">
               Quality Assurance
             </Link>
-            <Link to="/values" className="text-gray-700 font-medium hover:text-[#2592AD] transition-colors duration-200">
+            <Link to="/values" className="text-gray-700 font-medium hover:text-[#2592AD] transition-colors duration-200 xl:text-base lg:text-sm whitespace-nowrap">
               Our Belief Values
             </Link>
             <Link
               to="/contact"
-              className="bg-[#2592AD] text-white px-6 py-2 rounded shadow-sm font-medium hover:bg-[#1f7c94] transition-all duration-200 inline-block text-sm"
+              className="bg-[#2592AD] text-white xl:px-6 lg:px-4 py-2 rounded shadow-sm font-medium hover:bg-[#1f7c94] transition-all duration-200 inline-block xl:text-sm lg:text-xs whitespace-nowrap"
             >
               Contact Us
             </Link>
           </div>
 
-          {/* Mobile Hamburguer Toggle Button */}
-          <div className="lg:hidden">
+          {/* Mobile Hamburguer Toggle Button: Visually placed on the absolute left on mobile screens */}
+          <div className="lg:hidden order-first">
             <button onClick={toggleMenu} className="text-gray-700 p-2 hover:bg-gray-100 rounded-md focus:outline-none">
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -291,7 +293,7 @@ const Navbar = () => {
               </button>
 
               {isDropdownOpen && (
-                <div className="ml-2 mt-1 pl-2 border-l border-gray-100 space-y-1 max-h-[55vh] overflow-y-auto custom-scrollbar bg-slate-50/50 p-1 rounded-md">
+                <div className="ml-1 mt-1 pl-1 border-l border-gray-100 space-y-1 max-h-[55vh] overflow-y-auto custom-scrollbar bg-slate-50/50 p-1 rounded-md">
                   {categories.map((cat, index) => {
                     if (cat.isParent) {
                       const isSubOpen = mobileOpenMenu === cat.name;
@@ -303,13 +305,13 @@ const Navbar = () => {
                               isSubOpen ? 'text-[#2592AD] bg-white shadow-xs' : 'text-gray-700'
                             }`}
                           >
-                            <span className="truncate pr-2">{cat.name}</span>
+                            <span className="block truncate pr-4 text-xs sm:text-sm">{cat.name}</span>
                             <ChevronDown className={`h-4 w-4 shrink-0 transition-transform text-gray-400 ${isSubOpen ? 'rotate-180' : '-rotate-90'}`} />
                           </button>
                           
                           {/* Subsections render sequentially in ONE main nested list stream */}
                           {isSubOpen && (
-                            <div className="ml-4 mt-1 pl-2 border-l border-gray-200 space-y-1">
+                            <div className="ml-2 mt-1 pl-2 border-l border-gray-200 space-y-1">
                               {cat.submenu.map((subItem, idx) => (
                                 <Link
                                   key={idx}
@@ -318,7 +320,7 @@ const Navbar = () => {
                                     setIsDropdownOpen(false);
                                     setIsMenuOpen(false);
                                   }}
-                                  className="block px-3 py-2 text-gray-600 hover:text-[#2592AD] text-xs font-semibold"
+                                  className="block px-3 py-2 text-gray-600 hover:text-[#2592AD] text-[11px] sm:text-xs font-semibold leading-normal break-words"
                                 >
                                   {subItem.name}
                                 </Link>
@@ -337,7 +339,7 @@ const Navbar = () => {
                           setIsDropdownOpen(false);
                           setIsMenuOpen(false);
                         }}
-                        className="block px-3 py-2 text-gray-700 hover:bg-white rounded-md text-sm font-semibold truncate"
+                        className="block px-3 py-2 text-gray-700 hover:bg-white rounded-md text-xs sm:text-sm font-semibold truncate"
                       >
                         {cat.name}
                       </Link>

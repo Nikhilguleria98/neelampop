@@ -2731,137 +2731,78 @@ const products = [
     ],
   },
   {
-    id: 15,
-    name: "Churan Bottle Set",
-    rating: 4.8,
-    reviews: 49,
+  id: 15,
+  name: "HDPE Churan Bottle",
+  rating: 4.9,
+  reviews: 42,
 
-    description:
-      "Our Safa-Type HDPE Bottle is a versatile and durable packaging solution designed to meet the diverse requirements of modern industries. Crafted from high-quality HDPE material, this bottle combines strength, lightweight handling, and excellent product protection, making it ideal for packaging powders, liquids, and concentrated formulations. Featuring a sleek cylindrical body with a short shoulder and narrow neck, the bottle ensures easy dispensing and efficient storage while maintaining a clean and professional appearance on retail shelves. Its smooth surface allows seamless labeling and branding, enhancing product visibility and brand identity. The secure screw-cap closure provides reliable leak resistance, preserving the integrity and freshness of the contents during storage and transportation. Engineered for reliability and performance, this bottle is widely used across pharmaceutical, herbal, agrochemical, food, veterinary, and household chemical industries.",
+  images: [
+    {
+      src: "/medicine_img/churan-bottle.png",
+      alt: "HDPE Churan Bottle",
+    },
+  ],
 
-    images: [
-      { src: "/churanbottle.png", alt: "HDPE Churan bottle and packaging" },
-      { src: "/churanbottle2.png", alt: "HDPE Churan bottle front view" },
-      { src: "/churanbottle3.png", alt: "HDPE Churan bottle side view" },
-      { src: "/churanbottl4.png", alt: "HDPE Churan bottle label close-up" },
-      { src: "/churanbottl5.png", alt: "HDPE Churan bottle packaging" },
-    ],
-
-    specs: [
-      {
-        label: "Capacity",
-        value: "100gm",
-      },
-      {
-        label: "Shape",
-        value:
-          "Cylindrical Straight Round Bottle with Short Shoulder and Narrow Neck",
-      },
-      {
-        label: "Bottle Colour",
-        value: "Colors available as per request",
-      },
-      {
-        label: "Bottle Material",
-        value: "High Density Polyethylene (HDPE)",
-      },
-      {
-        label: "Cap Colour",
-        value: "Colors available as per request",
-      },
-      {
-        label: "Cap Material",
-        value: "Polypropylene (PP)",
-      },
-    ],
-
-    applications: [
-      "Packaging of herbal powders (Churan, Ayurvedic formulations)",
-      "Liquid concentrates such as flavoring agents and syrups",
-      "Pesticides and agricultural nutrients",
-      "Veterinary liquid medicines",
-      "Liquid fertilizers and plant growth solutions",
-      "Pharmaceutical syrups and solutions",
-      "Personal care liquids such as hair oils or lotions",
-    ],
-
-    industryApplications: [
-      "Pharmaceutical Industry – syrups, medicinal liquids, herbal formulations",
-      "Ayurvedic & Herbal Industry – churan, herbal powders, tonics",
-      "Food & Beverage Industry – flavoring liquids, condiments, syrups",
-      "Agrochemical Industry – pesticides, fertilizers, plant nutrients",
-      "Veterinary Industry – livestock medicines and supplements",
-    ],
-
-    features: [
-      {
-        label: "Durable HDPE Construction",
-        value: "Manufactured from high-quality HDPE material for strength and long-lasting performance.",
-      },
-      {
-        label: "Lightweight Design",
-        value: "Easy to handle, transport, and store while maintaining structural integrity.",
-      },
-      {
-        label: "Compact Cylindrical Body",
-        value: "Space-efficient shape suitable for shelf display and bulk packaging.",
-      },
-      {
-        label: "Short Shoulder Profile",
-        value: "Provides a smooth flow of liquids and powders during dispensing.",
-      },
-      {
-        label: "Narrow Neck Finish",
-        value: "Ensures controlled pouring and minimizes product spillage.",
-      },
-      {
-        label: "Secure Screw Cap Compatibility",
-        value: "Designed to fit tightly with ribbed caps for leak-resistant closure.",
-      },
-      {
-        label: "Excellent Chemical Resistance",
-        value: "Suitable for a wide range of chemical and agrochemical formulations.",
-      },
-      {
-        label: "Smooth Surface Finish",
-        value: "Ideal for labeling, screen printing, and branding applications.",
-      },
-      {
-        label: "Food-Grade Material Option",
-        value: "Can be produced using food-grade PET for edible products.",
-      },
-      {
-        label: "High Clarity or Custom Colors",
-        value: "Available in transparent or colored variants as per branding requirements.",
-      },
-      {
-        label: "Strong Base Support",
-        value: "Stable bottom design ensures secure standing on shelves and during transport.",
-      },
-    ],
-
-    sizes: [
-      "5 gm",
-      "8 gm",
-      "10 gm",
-      "15 gm",
-      "20 gm",
-      "25 gm",
-      "30 gm",
-      "35 gm",
-      "40 gm",
-      "45 gm",
-      "50 gm",
-      "55 gm",
-      "60 gm",
-      "65 gm",
-      "70 gm",
-      "75 gm",
-      "80 gm",
-      "85 gm",
-      "100 gm",
-    ],
+  specifications: {
+    capacity: "100 gm",
+    shape: "Cylindrical Straight Round Bottle with Short Shoulder and Narrow Neck",
+    bottleColor: "Colors available as per request",
+    bottleMaterial: "High Density Polyethylene (HDPE)",
+    capColor: "Colors available as per request",
+    capMaterial: "Polypropylene (PP)",
   },
+
+  applicationAreas: [
+    "Pharmaceutical Industry",
+    "Ayurvedic & Herbal Industry",
+    "Food & Beverage Industry",
+    "Agrochemical Industry",
+    "Veterinary Industry",
+  ],
+
+  applications: [
+    "Packaging of herbal powders (Churan, Ayurvedic formulations)",
+    "Liquid concentrates such as flavoring agents and syrups",
+    "Pesticides and agricultural nutrients",
+    "Veterinary liquid medicines",
+    "Liquid fertilizers and plant growth solutions",
+    "Pharmaceutical syrups and solutions",
+    "Personal care liquids such as hair oils and lotions",
+  ],
+
+  features: [
+    "Durable HDPE Construction",
+    "Lightweight Design",
+    "Compact Cylindrical Body",
+    "Short Shoulder Profile",
+    "Narrow Neck Finish",
+    "Secure Screw Cap Compatibility",
+    "Excellent Chemical Resistance",
+    "Smooth Surface Finish",
+    "Food-Grade Material Option",
+    "Custom Color Availability",
+    "Strong Base Support",
+    "Leak-Resistant Packaging",
+  ],
+
+  description:
+    "Our HDPE Churan Bottle is a versatile and durable packaging solution designed to meet the requirements of pharmaceutical, herbal, agrochemical, veterinary, and food industries. Manufactured from high-quality HDPE material, it provides excellent strength, lightweight handling, and reliable product protection. The cylindrical body with a short shoulder and narrow neck ensures controlled dispensing and efficient storage while maintaining a professional appearance. Its smooth surface supports easy labeling and branding, while the secure screw-cap closure helps preserve product freshness and prevents leakage during storage and transportation. Combining durability, functionality, and visual appeal, this bottle is ideal for powders, syrups, liquid concentrates, fertilizers, veterinary medicines, and personal care products.",
+
+  tagline: "Packaging That Defines Premium.",
+
+  highlights: [
+    "100 gm Capacity",
+    "Premium HDPE Material",
+    "Leak-Resistant Closure",
+    "Excellent Chemical Resistance",
+    "Lightweight & Durable",
+    "Custom Color Options",
+    "Ideal for Herbal & Pharmaceutical Products",
+    "Professional Shelf Presence",
+  ],
+
+  sizes: ["100 gm"],
+}
 ]
 
 export default products

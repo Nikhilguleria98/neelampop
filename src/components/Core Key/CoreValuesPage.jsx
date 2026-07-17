@@ -49,7 +49,7 @@ export default function CoreValuesPage() {
         {/* Core Values */}
         <section>
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-light text-gray-800 mb-3 tracking-wide">
+            <h2 className="text-3xl md:text-4xl font-medium text-[#201f1f] -800 mb-3 tracking-wide ">
               Core Values
             </h2>
             <div className="w-16 h-0.5 bg-[#3799B0] mx-auto"></div>
@@ -97,7 +97,7 @@ export default function CoreValuesPage() {
             transition={{ duration: 0.8 }}
           >
             <div className="text-center mb-10">
-              <h2 className="text-3xl md:text-4xl font-light text-gray-800 mb-3 tracking-wide">
+              <h2 className="text-3xl md:text-4xl font-medium text-gray-800 mb-3 tracking-wide">
                 Beliefs
               </h2>
               <div className="w-16 h-0.5 bg-[#3799B0] mx-auto"></div>
@@ -131,7 +131,7 @@ export default function CoreValuesPage() {
             transition={{ duration: 0.8 }}
           >
             <div className="text-center mt-20 md:mt-0">
-              <h2 className="text-3xl md:text-4xl font-light text-gray-800 mb-3 tracking-wide">
+              <h2 className="text-3xl md:text-4xl font-medium text-gray-800 mb-3 tracking-wide">
                 Key Values
               </h2>
               <div className="w-16 h-0.5 bg-[#3799B0] mx-auto mb-10"></div>
@@ -177,7 +177,7 @@ export default function CoreValuesPage() {
               className="group "
             >
               <div className="text-center ">
-                <h2 className="text-3xl md:text-4xl font-light text-gray-800  tracking-wide">
+                <h2 className="text-3xl md:text-4xl font-medium text-gray-800  tracking-wide">
                   Mission
                 </h2>
                 <div className="w-16 h-0.5 bg-[#3799B0] mx-auto mt-3"></div>
@@ -200,7 +200,7 @@ export default function CoreValuesPage() {
               className="group "
             >
               <div className="text-center ">
-                <h2 className="text-3xl md:text-4xl font-light text-gray-800 mb-3 tracking-wide">
+                <h2 className="text-3xl md:text-4xl font-medium text-gray-800 mb-3 tracking-wide">
                   Vision
                 </h2>
                 <div className="w-16 h-0.5 bg-[#3799B0] mx-auto"></div>

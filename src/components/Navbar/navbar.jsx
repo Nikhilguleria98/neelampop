@@ -279,8 +279,8 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* Logo Identity: Handles flexible shrinking on narrow layouts */}
-          <div className="flex-shrink-0 mx-auto lg:mx-0">
+          {/* Logo Identity: Stays left-aligned on mobile and handles layout constraints smoothly */}
+          <div className="flex-shrink-0 lg:mx-0">
             <Link to="/">
               <img src='/logo.png' alt="Company Logo" className="w-32 sm:w-40 max-w-full object-contain" />
             </Link>
@@ -302,8 +302,8 @@ const Navbar = () => {
             </Link>
           </div>
 
-          {/* Mobile Hamburguer Toggle Button: Visually placed on the absolute left on mobile screens */}
-          <div className="lg:hidden order-first">
+          {/* Mobile Hamburguer Toggle Button: Safely shifts to the right side automatically via flex alignment */}
+          <div className="lg:hidden">
             <button onClick={toggleMenu} className="text-gray-700 p-2 hover:bg-gray-100 rounded-md focus:outline-none">
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>

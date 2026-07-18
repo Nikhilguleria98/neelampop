@@ -96,6 +96,10 @@ const Navbar = () => {
       ],
     },
     {
+  name: "Floor Cleaner Bottles",
+  path: "/products/12"
+},
+    {
       name: "Jars",
       isParent: true,
       submenu: [
@@ -136,10 +140,46 @@ const Navbar = () => {
         { name: "100ml/19mm Classic Calamine Style Oil/Lotion/Shampoo Bottles", path: "/products/11/oil-17" },
       ],
     },
-    { name: "Floor cleaner bottles", path: "/products/12" },
-    { name: "Pharmaceutical Rubber Dropper Assembly", path: "/products/13" },
-    { name: "Stopper CAM Lock fittings for Cold rooms PUF Panels", path: "/products/14" },
-    { name: "Churan Bottle Set", path: "/products/15" },
+
+    { name: "Floor cleaner bottles",
+     path: "/products/12" 
+    },
+
+    { name: "Pharmaceutical Rubber Dropper Assembly",
+       path: "/products/13"
+    },
+
+    { name: "Stopper CAM Lock fittings for Cold rooms PUF Panels",
+       path: "/products/14"
+    },
+
+    { name: "Churan Bottle Set",
+       path: "/products/15" 
+      },
+
+    {
+  name: "Tablet Containers",
+  path: "/products/16",
+},
+{
+  name:"Applicator For Piles",
+  path:"/products/17"
+},
+{
+  name: "Talcum Powder Bottles",
+  path: "/products/18",
+  isParent: true,
+  submenu: [
+    {
+      name: "10gms Flat Talcum Powder Bottle",
+      path: "/products/18/10gms-flat-talcum-powder-bottle",
+    },
+    {
+      name: "75gms Triangular Talcum Powder Bottle",
+      path: "/products/18/75gms-triangular-talcum-powder-bottle",
+    },
+  ],
+}
   ];
 
   const currentActiveData = categories.find(cat => cat.name === activeParent);

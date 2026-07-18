@@ -46,7 +46,7 @@ export default function Footer() {
               </div>
               <input
                 type="email"
-                defaultValue="kambojmehakpreetkaur@gmail.com"
+                defaultValue="abc123@gmail.com"
                 placeholder="Enter your manufacturing email"
                 className="w-full sm:flex-1 bg-transparent text-white placeholder:text-white/50 outline-none text-sm px-4 sm:px-2 py-2.5 sm:py-0 text-center sm:text-left"
               />
@@ -135,7 +135,7 @@ export default function Footer() {
                 <li className="flex items-start gap-3">
                   <Phone className="h-5 w-5 text-[#2592ad] shrink-0 mt-0.5" />
                   <a href="tel:+91XXXXXXXXX" className="hover:text-[#2592ad] transition-colors">
-                    +91-XXXXXXXXX
+                    +91-7807569493
                   </a>
                 </li>
                 <li className="flex items-start gap-3">

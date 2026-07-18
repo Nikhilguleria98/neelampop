@@ -790,7 +790,7 @@ const products = [
     {
       slug: "cream-jar",
       name: "HDPE Cream Jar Set",
-      image: "/products/jars/cream-jar.png",
+      images: [{ src: "/cream-jar.png", alt: "HDPE Cream Jar Set" }],
 
       specifications: {
         capacity: "100 gm",
@@ -841,7 +841,7 @@ const products = [
     {
       slug: "fancy-jar",
       name: "HDPE Fancy Jar",
-      image: "/products/jars/fancy-jar.png",
+      images: [{ src: "/fancy-jar.png", alt: "HDPE Fancy Jar" }],
 
       specifications: {
         capacity: "200 gm",
@@ -894,7 +894,7 @@ const products = [
     {
   slug: "flip-type-cap-protein-powder-jar",
   name: "HDPE Flip Type Cap Protein Powder Jar Set",
-  image: "/products/jars/flip-type-cap-protein-powder-jar.png",
+  images: [{ src: "/flip-type-cap-protein-powder-jar.png", alt: "HDPE Flip Type Cap Protein Powder Jar Set" }],
 
   description:
     "Elevate your packaging standards with our premium-grade HDPE wide-mouth jar, designed to deliver both performance and visual appeal. Crafted with precision, this jar combines robust durability with a refined matte finish, offering a sophisticated look that enhances your product's shelf presence. The ergonomically designed wide-mouth opening ensures effortless filling, dispensing, and cleaning, while the reinforced rim provides a secure and reliable seal with compatible closures—safeguarding contents from moisture, contamination, and external elements. Built from high-quality HDPE, this jar offers superior chemical resistance, impact strength, and lightweight convenience, making it an ideal choice for demanding industrial as well as premium consumer applications.",
@@ -1000,7 +1000,7 @@ const products = [
 {
   slug: "gattu-jar",
   name: "HDPE Gattu Jar Set",
-  image: "/products/jars/gattu-jar.png",
+  images: [{ src: "/gattu-jar.png", alt: "HDPE Gattu Jar Set" }],
 
   description:
     "Elevate your packaging standards with our HDPE 200 gm Gattu Jar Set, thoughtfully engineered to deliver unmatched durability and product protection. Crafted from superior-grade HDPE, this jar set combines robustness with a refined finish, making it an ideal choice for brands that value both performance and presentation. Designed with a wide-mouth opening, it ensures effortless filling and smooth dispensing of creams, powders, and semi-solid formulations. The secure leak-proof closure preserves freshness and safeguards contents from moisture, dust, and contamination.",
@@ -1074,7 +1074,7 @@ const products = [
 {
   slug: "hdpe-energy-drink-isabgol-jar",
   name: "HDPE Energy Drink / Isabgol Jar Set",
-  image: "/products/jars/hdpe-energy-drink-isabgol-jar.png",
+  images: [{ src: "/hdpe-energy-drink-isabgol-jar.png", alt: "HDPE Energy Drink / Isabgol Jar Set" }],
 
   tagline: "Power Packed Freshness, Sealed to Perform.",
 
@@ -1154,7 +1154,7 @@ const products = [
 {
   slug: "long-protein-powder-jar",
   name: "HDPE Long Protein Powder Jar Set",
-  image: "/products/jars/long-protein-powder-jar.png",
+  images: [{ src: "/long-protein-powder-jar.png", alt: "HDPE Long Protein Powder Jar Set" }],
 
   description:
     "Crafted for modern nutrition brands, the HDPE Long Protein Powder Jar Set (200 gm) by Neelam Print O Pack offers the perfect balance of durability, hygiene, and premium presentation. Manufactured using high-grade food-safe HDPE, this jar ensures exceptional strength while remaining lightweight and easy to handle. Its airtight sealing mechanism protects contents from moisture, air exposure, and contaminants, preserving freshness and nutritional value. The ergonomic long cylindrical body combined with a wide-mouth opening allows effortless filling, scooping, and cleaning. Ideal for protein powders, supplements, nutraceuticals, herbal formulations, and wellness products, this jar also supports custom branding, labeling, and color options for enhanced shelf appeal.",
@@ -1233,7 +1233,7 @@ const products = [
 {
   slug: "mediterranean-jar",
   name: "HDPE Mediterranean Jar Set",
-  image: "/products/jars/mediterranean-jar.png",
+  images: [{ src: "/mediterranean-jar.png", alt: "HDPE Mediterranean Jar Set" }],
 
   description:
     "Premium HDPE Mediterranean Jar Set designed for food, cosmetic, pharmaceutical and personal care applications. Combines elegant aesthetics with excellent product protection and durability.",
@@ -1288,7 +1288,7 @@ const products = [
 {
   slug: "pediasure-type-protein-powder-jar",
   name: "HDPE Pediasure Type Protein Powder Jar Set",
-  image: "/products/jars/pediasure-type-protein-powder-jar.png",
+  images: [{ src: "/pediasure-type-protein-powder-jar.png", alt: "HDPE Pediasure Type Protein Powder Jar Set" }],
 
   description:
     "Premium wide-mouth HDPE jar with elegant curved design, ideal for protein powders, cosmetics, creams, nutraceuticals and wellness products.",
@@ -1343,7 +1343,7 @@ const products = [
 {
   slug: "protein-jar-with-silver-leaf",
   name: "HDPE Protein Jar With Silver Leaf",
-  image: "/products/jars/protein-jar-with-silver-leaf.png",
+  images: [{ src: "/protein-jar-with-silver-leaf.png", alt: "HDPE Protein Jar With Silver Leaf" }],
 
   description:
     "Premium wide-mouth HDPE container featuring a decorative silver leaf band and secure screw cap closure. Ideal for food, nutraceutical, cosmetic and pharmaceutical packaging.",
@@ -1398,7 +1398,7 @@ const products = [
 {
   slug: "protein-powder-jar-set",
   name: "HDPE Protein Powder Jar Set",
-  image: "/products/jars/protein-powder-jar-set.png",
+  images: [{ src: "/protein-powder-jar-set.png", alt: "HDPE Protein Powder Jar Set" }],
 
   description:
     "The HDPE Protein Powder Jar Set is a premium wide-mouth cylindrical packaging solution designed for protein powders, supplements, pharmaceuticals, cosmetics, food products, veterinary formulations, agrochemicals, and industrial compounds. Manufactured from high-quality HDPE material, the jar delivers exceptional durability, impact resistance, and moisture protection while maintaining a lightweight structure. Its pedestal-base design enhances stability and shelf appeal, while the ribbed screw cap provides a secure and reliable seal against contamination and leakage. The smooth cylindrical body offers excellent branding and labeling space, making it ideal for retail and commercial packaging applications.",
@@ -1493,7 +1493,7 @@ const products = [
 {
   slug: "sleeve-type-protein-jar-set",
   name: "HDPE Sleeve Type Protein Powder Jar Set",
-  image: "/products/jars/sleeve-type-protein-jar.png",
+  images: [{ src: "/sleeve-type-protein-jar.png", alt: "HDPE Sleeve Type Protein Powder Jar Set" }],
 
   specifications: {
     capacity: "200 gm",
@@ -2529,147 +2529,72 @@ const products = [
   
 },
   {
-    id: 12,
-    name: "Floor Cleaner Bottles",
-    rating: 4.8,
-    reviews: 49,
+  id: 12,
+  name: "Floor Cleaner Bottles",
+  rating: 4.8,
+  reviews: 49,
 
-    description:
-      "Designed for performance, convenience, and brand appeal, our Angled Neck Floor Cleaner Bottle is a smart packaging solution for modern home care and sanitation products. Manufactured from high-quality HDPE, this bottle offers excellent durability, chemical resistance, and lightweight handling, making it ideal for everyday use and large-scale distribution. The ergonomically designed slanted neck ensures controlled pouring and easy application, especially in hard-to-reach areas such as corners and toilet rims. Its spacious front panel allows clear and attractive labeling, helping brands create strong shelf presence in retail environments. The sturdy base and compact rectangular shape provide stability and efficient storage during transport and display. Perfect for packaging floor cleaners, disinfectants, and multipurpose cleaning liquids, this bottle combines functional design, reliability, and professional aesthetics, making it an excellent choice for household, institutional, and industrial cleaning product manufacturers.",
+  description:
+    "Designed for performance, convenience, and brand appeal, our Angled Neck Floor Cleaner Bottle is a smart packaging solution for modern home care and sanitation products. Manufactured from high-quality HDPE, this bottle offers excellent durability, chemical resistance, and lightweight handling, making it ideal for everyday use and large-scale distribution. The ergonomically designed slanted neck ensures controlled pouring and easy application, especially in hard-to-reach areas such as corners and toilet rims. Its spacious front panel allows clear and attractive labeling, helping brands create strong shelf presence in retail environments. The sturdy base and compact rectangular shape provide stability and efficient storage during transport and display. Perfect for packaging floor cleaners, disinfectants, and multipurpose cleaning liquids, this bottle combines functional design, reliability, and professional aesthetics, making it an excellent choice for household, institutional, and industrial cleaning product manufacturers.",
 
-    images: [
-      { src: "/floorCleaner.png", alt: "Floor cleaner bottle front view" },
-      { src: "/floorCleaner2.png", alt: "Floor cleaner bottle side view" },
-      { src: "/floorCleaner3.png", alt: "Floor cleaner bottle angle view" },
-      { src: "/floorCleaner4.png", alt: "Floor cleaner bottle close-up" },
-      { src: "/floorCleaner5.png", alt: "Floor cleaner bottle packaging" },
-    ],
+  images: [
+    { src: "/floorCleaner.png", alt: "Floor cleaner bottle front view" },
+    { src: "/floorCleaner2.png", alt: "Floor cleaner bottle side view" },
+    { src: "/floorCleaner3.png", alt: "Floor cleaner bottle angle view" },
+    { src: "/floorCleaner4.png", alt: "Floor cleaner bottle close-up" },
+    { src: "/floorCleaner5.png", alt: "Floor cleaner bottle packaging" },
+  ],
 
-    specs: [
-      {
-        label: "Capacity",
-        value: "500ml",
-      },
-      {
-        label: "Shape",
-        value: "Slanted Shoulder Rectangular Bottle",
-      },
-      {
-        label: "Shape Description",
-        value:
-          "Rectangular body with ergonomic slanted shoulder and angled neck for easy pouring without spilling.",
-      },
-      {
-        label: "Bottle Colour",
-        value: "Natural and White",
-      },
-      {
-        label: "Bottle Material",
-        value: "High Density Polyethylene (HDPE)",
-      },
-      {
-        label: "Cap Colour",
-        value: "Pink, Blue and any color as per requirement",
-      },
-      {
-        label: "Cap Material",
-        value: "Polypropylene (PP)",
-      },
-      {
-        label: "Inner Plug Colour",
-        value: "Natural",
-      },
-      {
-        label: "Inner Plug Material",
-        value: "Low Density Polyethylene (LDPE)",
-      },
-    ],
+  specs: [
+    "Capacity: 500ml",
+    "Shape: Slanted Shoulder Rectangular Bottle",
+    "Shape Description: Rectangular body with ergonomic slanted shoulder and angled neck for easy pouring without spilling",
+    "Bottle Colour: Natural and White",
+    "Bottle Material: High Density Polyethylene (HDPE)",
+    "Cap Colour: Pink, Blue and any color as per requirement",
+    "Cap Material: Polypropylene (PP)",
+    "Inner Plug Colour: Natural",
+    "Inner Plug Material: Low Density Polyethylene (LDPE)",
+  ],
 
-    applications: [
-      "Floor Cleaning Liquids – Ideal for packaging phenyl and floor disinfectants.",
-      "Toilet & Bathroom Cleaners – Angled neck helps direct liquid under toilet rims and corners.",
-      "Surface Disinfectants – Suitable for liquid disinfectant solutions used on tiles and floors.",
-      "Multipurpose Household Cleaners – Used for packaging all-purpose liquid cleaning products.",
-      "Industrial Cleaning Liquids – Can hold chemical cleaning agents for factories and workshops.",
-      "Kitchen Cleaning Solutions – Packaging for liquid degreasers and kitchen surface cleaners.",
-      "Sanitizing Liquids – Used for hygiene and sanitation liquids in homes and institutions.",
-    ],
+  applications: [
+    "Floor Cleaning Liquids – Ideal for packaging phenyl and floor disinfectants",
+    "Toilet & Bathroom Cleaners – Angled neck helps direct liquid under toilet rims and corners",
+    "Surface Disinfectants – Suitable for liquid disinfectant solutions used on tiles and floors",
+    "Multipurpose Household Cleaners – Used for packaging all-purpose liquid cleaning products",
+    "Industrial Cleaning Liquids – Can hold chemical cleaning agents for factories and workshops",
+    "Kitchen Cleaning Solutions – Packaging for liquid degreasers and kitchen surface cleaners",
+    "Sanitizing Liquids – Used for hygiene and sanitation liquids in homes and institutions",
+  ],
 
-    industryApplications: [
-      "FMCG Cleaning Products Industry",
-      "Home Care & Household Cleaning Industry",
-      "Sanitation & Hygiene Products Industry",
-      "Hospital & Healthcare Industry",
-      "Hospitality Industry",
-    ],
+  industryApplications: [
+    "FMCG Cleaning Products Industry",
+    "Home Care & Household Cleaning Industry",
+    "Sanitation & Hygiene Products Industry",
+    "Hospital & Healthcare Industry",
+    "Hospitality Industry",
+  ],
 
-    features: [
-      {
-        label: "Ergonomic Angled Neck",
-        value: "Provides controlled and precise pouring.",
-      },
-      {
-        label: "HDPE Construction",
-        value: "Ensures durability and excellent chemical resistance.",
-      },
-      {
-        label: "Leak-Resistant Neck",
-        value: "Compatible with standard screw caps.",
-      },
-      {
-        label: "Stable Flat Base",
-        value: "Provides secure placement on shelves and storage areas.",
-      },
-      {
-        label: "Large Front Label Panel",
-        value: "Ideal for branding and product information.",
-      },
-      {
-        label: "Lightweight Structure",
-        value: "Easy to handle and transport.",
-      },
-      {
-        label: "Chemical Compatibility",
-        value: "Suitable for a wide range of cleaning formulations.",
-      },
-      {
-        label: "Surface Finish",
-        value: "Smooth finish for premium appearance.",
-      },
-      {
-        label: "Bottle Geometry",
-        value: "Designed for spill-free pouring.",
-      },
-      {
-        label: "Rectangular Body",
-        value: "Space-efficient for storage and shelf display.",
-      },
-      {
-        label: "Grip Design",
-        value: "Comfortable and consumer-friendly.",
-      },
-      {
-        label: "Color Options",
-        value: "Available in multiple colors as per requirement.",
-      },
-      {
-        label: "Closure Compatibility",
-        value: "Supports screw caps and flip-top caps.",
-      },
-      {
-        label: "Impact Resistance",
-        value: "Strong plastic construction for long service life.",
-      },
-      {
-        label: "Filling Line Compatible",
-        value: "Suitable for automated filling machines.",
-      },
-    ],
+  features: [
+    "Ergonomic Angled Neck – Provides controlled and precise pouring",
+    "HDPE Construction – Ensures durability and excellent chemical resistance",
+    "Leak-Resistant Neck – Compatible with standard screw caps",
+    "Stable Flat Base – Provides secure placement on shelves and storage areas",
+    "Large Front Label Panel – Ideal for branding and product information",
+    "Lightweight Structure – Easy to handle and transport",
+    "Chemical Compatibility – Suitable for a wide range of cleaning formulations",
+    "Surface Finish – Smooth finish for premium appearance",
+    "Bottle Geometry – Designed for spill-free pouring",
+    "Rectangular Body – Space-efficient for storage and shelf display",
+    "Grip Design – Comfortable and consumer-friendly",
+    "Color Options – Available in multiple colors as per requirement",
+    "Closure Compatibility – Supports screw caps and flip-top caps",
+    "Impact Resistance – Strong plastic construction for long service life",
+    "Filling Line Compatible – Suitable for automated filling machines",
+  ],
 
-    sizes: [
-      "500 ml",
-    ],
-  },
+  sizes: ["500 ml"],
+},
   {
     id: 13,
     name: "Pharmaceutical rubber Dropper assembly",
@@ -2700,37 +2625,81 @@ const products = [
       "55 ml", "65 ml", "75 ml", "85 ml",
     ],
   },
-  {
-    id: 14,
-    name: "Stopper CAM Lock fittings for Cold rooms PUF Panels",
-    rating: 4.8,
-    reviews: 49,
-    description: "Heavy-duty lock fittings ensuring airtight and insulated sealing of cold room panels. Provides maximum energy efficiency, durability, and long-term reliability in cold storage.",
-    images: [
+ {
+  id: 14,
+  name: "Plastic Cam Locks for PUF Panels",
+  rating: 4.8,
+  reviews: 34,
+
+  description:
+    "Engineered for reliability and precision, our Plastic HIPS Cam Lock Housing is designed to deliver secure and efficient locking performance across a wide range of housing and enclosure applications. Manufactured from high-quality High Impact Polystyrene (HIPS), this cam lock housing offers an excellent balance of strength, durability, and lightweight performance, making it ideal for modern residential and industrial hardware systems. The component features a precision-molded rectangular dual-chamber structure with a dedicated circular cam socket that ensures smooth cam rotation and dependable locking functionality. Reinforced ribs and a robust body design enhance structural stability, providing long-lasting performance even under repeated usage. Its corrosion-resistant plastic construction eliminates issues associated with metal rusting, making it suitable for environments where durability and maintenance-free operation are essential.",
+
+  images: [
       { src: "/stopperCAM.png", alt: "Syrup bottle and box mockup" },
       { src: "/stopperCAM2.png", alt: "Brown glass bottle" },
       { src: "/stopperCAM3.png", alt: "White medicine bottle" },
       { src: "/stopperCAM4.png", alt: "Label close-up" },
       { src: "/stopperCAM5.png", alt: "Packaging box" },
+      { src: "/stopperCAM6.png", alt: "Packaging box" },
     ],
-    specs: [
-      { label: "Color", value: "White" },
-      { label: "Usage", value: "Laboratory" },
-      { label: "Size", value: "Standard" },
-      { label: "Product Type", value: "Adaptors Bottles" },
-      { label: "Material", value: "PTFE" },
-      { label: "Application", value: "Industrial" },
-      { label: "Supply Ability", value: "1000 Per Day" },
-      { label: "Delivery Time", value: "4-5 Days" },
-    ],
-    sizes: [
-      "5 ml", "10 ml", "20 ml", "30 ml", "40 ml",
-      "50 ml", "60 ml", "70 ml", "80 ml",
-      "8 ml", "15 ml", "25 ml", "35 ml", "45 ml",
-      "55 ml", "65 ml", "75 ml", "85 ml",
-    ],
-  },
-  {
+
+  specs: [
+    "Material: High Impact Polystyrene (HIPS)",
+    "Available Sizes: 40mm, 60mm",
+    "Rectangular Cam Lock Housing",
+    "Dual-Chamber Molded Construction",
+    "Circular Cam Lock Socket",
+    "Rounded Edge Design",
+    "Integrated Mounting Tabs",
+    "Reinforced Ribbed Structure",
+  ],
+
+  applications: [
+    "Electrical Appliance Locking Systems",
+    "Water Purifier Assemblies",
+    "RO System Components",
+    "Plastic Cabinet Locking Mechanisms",
+    "Consumer Appliance Parts",
+    "Electrical Panel Covers",
+    "Water Dispenser Internal Assemblies",
+    "Industrial Equipment Covers",
+    "Plastic Enclosure Locking Systems",
+    "Modular Component Assembly",
+  ],
+
+  industryApplications: [
+    "Residential Construction Industry",
+    "Modular Furniture Manufacturing",
+    "Home Improvement & Hardware Industry",
+    "Electrical Enclosure Manufacturing",
+    "Kitchen & Interior Design Industry",
+    "Plastic Hardware Manufacturing",
+    "Home Appliance Housing Manufacturing",
+  ],
+
+  features: [
+    "High Impact Polystyrene (HIPS) Construction",
+    "Lightweight Yet Strong Design",
+    "Precision-Molded Structure",
+    "Corrosion-Resistant Material",
+    "Dual-Chamber Housing Design",
+    "Integrated Circular Cam Socket",
+    "Reinforced Ribbed Surface",
+    "Easy Installation System",
+    "Electrical Insulation Properties",
+    "Smooth Molded Finish",
+    "Chemical Resistance",
+    "Dimensional Stability",
+    "Low Maintenance Component",
+    "Cost-Effective Industrial Solution",
+    "Long Service Life",
+  ],
+
+  sizes: [
+    "40 mm",
+    "60 mm",
+  ],
+},{
   id: 15,
   name: "HDPE Churan Bottle",
   rating: 4.9,
@@ -2802,6 +2771,266 @@ const products = [
   ],
 
   sizes: ["100 gm"],
+},
+{
+  id: 16,
+  name: "HDPE Tablet Containers",
+  rating: 4.9,
+  reviews: 42,
+
+  description:
+    "Our Wide-Mouth Cylindrical Tablet Packer is thoughtfully engineered to meet the demanding standards of the pharmaceutical and nutraceutical packaging industry. Designed with precision and durability, this container offers a clean cylindrical profile and a wide-mouth opening that enables effortless filling, dispensing, and handling of tablets, capsules, and supplements. Manufactured using high-quality pharmaceutical-grade HDPE material, the container ensures excellent product protection against moisture, contamination, and external environmental factors. Its robust construction provides strength and reliability throughout the supply chain, while the smooth surface finish allows superior labeling and branding presentation. The container features a secure threaded neck compatible with screw caps and tamper-evident closures, ensuring product integrity and consumer safety. Its stable flat base and space-efficient cylindrical structure make it ideal for automated filling lines, storage, and transportation.",
+
+  images: [
+    { src: "/tabletContainer.png", alt: "HDPE Tablet Container Front View" },
+
+  ],
+
+  specs: [
+    "Capacity: Small 30cc, 30cc, 60cc",
+    "Shape: Straight Cylindrical Wide-Mouth Tablet Container",
+    "Shape Description: Cylindrical body with straight vertical walls",
+    "Flat Base: Stable standing design",
+    "Wide-Mouth Threaded Neck: Easy filling and dispensing of tablets and capsules",
+    "Short Neck Profile: Integrated smoothly with the body",
+    "Shoulder Type: Rounded shoulder transition",
+    "Closure Type: Screw-cap closure with ribbed cap compatibility",
+    "Bottle Colour: White and custom colors available",
+    "Bottle Material: High Density Polyethylene (HDPE)",
+    "Cap Colour: Any Color",
+    "Cap Material: Polypropylene (PP)",
+  ],
+
+  applications: [
+    "Packaging of pharmaceutical tablets",
+    "Storage of capsules and soft gels",
+    "Packaging of nutraceutical supplements",
+    "Ayurvedic and herbal medicines",
+    "Vitamin and mineral tablets",
+    "Veterinary tablets and supplements",
+    "Powdered health supplements (small quantities)",
+    "Sample medicine packaging",
+    "Food-grade nutraceutical pellets",
+  ],
+
+  industryApplications: [
+    "Pharmaceutical Industry",
+    "Nutraceutical & Dietary Supplement Industry",
+    "Ayurvedic & Herbal Medicine Industry",
+    "Veterinary Healthcare Industry",
+    "Biotechnology & Laboratory Industry",
+    "Healthcare & Medical Supply Industry",
+    "Food Supplement Manufacturing",
+  ],
+
+  features: [
+    "Wide-Mouth Design – Ensures easy filling, dispensing, and tablet retrieval",
+    "Durable HDPE Construction – Provides excellent strength and long-lasting performance",
+    "Lightweight Yet Sturdy – Ideal for efficient handling, storage, and transportation",
+    "Secure Screw-Thread Neck – Allows tight sealing with compatible screw caps",
+    "Moisture-Resistant Packaging – Helps protect tablets and capsules from humidity",
+    "Chemical-Resistant Material – Suitable for pharmaceutical and nutraceutical formulations",
+    "Smooth Surface Finish – Perfect for high-quality labeling and printing",
+    "Stable Flat Base – Ensures excellent standing stability during filling and storage",
+    "Compact Cylindrical Profile – Optimizes shelf space and carton packing efficiency",
+    "Tamper-Evident Closure Compatibility – Supports induction seal or TE caps for product safety",
+    "Food-Grade Material Options – Suitable for dietary supplements and nutraceutical products",
+    "Multiple Capacity Options – Available in various volumes to suit different packaging needs",
+    "Ergonomic Grip Design – Easy to handle for both manufacturers and end users",
+  ],
+
+  sizes: [
+    "Small 30cc",
+    "30cc",
+    "60cc",
+  ],
+},
+{
+  id: 17,
+  name: "Applicator for Piles",
+  rating: 4.9,
+  reviews: 38,
+
+  description:
+    "A precision-designed rectal applicator featuring a smooth tapered nozzle with a side slit for controlled and hygienic delivery of medicated creams and ointments. It ensures easy attachment to tubes, leak-proof usage, and comfortable application, making it ideal for pharmaceutical, Ayurvedic, healthcare, and veterinary purposes. Manufactured from high-quality Polypropylene (PP), the applicator provides safe, reliable, and convenient medication delivery.",
+
+  images: [
+    { src: "/pilesApplicator.png", alt: "Applicator for Piles Front View" },
+   
+  ],
+
+  specs: [
+    "Long tapered conical nozzle with side slit opening and screw base",
+    "White Colour",
+    "Polypropylene (PP) Material",
+    "Smooth rounded tip design",
+    "Protective cap included",
+    "Measurement markings available",
+  ],
+
+  applications: [
+    "Rectal application of ointments and creams",
+    "Treatment of piles (hemorrhoids)",
+    "Fissure and anal irritation relief",
+    "Targeted internal medication delivery",
+    "Ayurvedic medicinal applications",
+    "Healthcare and hospital use",
+    "Veterinary medication application",
+  ],
+
+  industryApplications: [
+    "Pharmaceutical Industry",
+    "Ayurvedic Medicine Products",
+    "Healthcare & Hospitals",
+    "Personal Care Industry",
+    "Veterinary Industry",
+  ],
+
+  features: [
+    "Smooth tapered tip for easy insertion",
+    "Side slit for controlled dispensing",
+    "Leak-proof screw fit",
+    "Hygienic protective cap",
+    "Durable medical-grade plastic construction",
+    "Reusable or disposable options available",
+    "Comfortable and safe application",
+    "Lightweight and easy to handle",
+    "Secure attachment to cream and ointment tubes",
+    "Suitable for professional healthcare use",
+  ],
+
+  sizes: [
+    "Standard Size",
+  ],
+},
+{
+  id: 18,
+  name: "Talcum Powder Bottles",
+  slug: "talcum-powder-bottles",
+
+  variants: [
+    {
+      slug: "10gms-flat-talcum-powder-bottle",
+
+      name: "10gms Flat Talcum Powder Bottle",
+      rating: 4.8,
+      reviews: 36,
+
+      description:
+        "Our 10gms Flat Talcum Powder Bottle is manufactured using premium-grade HDPE material and designed for safe, hygienic, and controlled dispensing of medicinal and personal care powders. The flat-profile bottle offers easy handling, efficient storage, and attractive shelf presentation. Combined with a secure screw cap and inner plug, it protects contents from moisture and contamination while ensuring convenient daily usage.",
+
+      images: [
+        { src: "/talcumBottle10g_1.png", alt: "10g Flat Talcum Powder Bottle" },
+      
+      ],
+
+      specs: [
+        "Capacity: 10gms",
+        "Shape: Flat",
+        "Bottle Colour: Milky White",
+        "Bottle Material: High Density Polyethylene (HDPE)",
+        "Cap Colours: White, Blue, Brown, Red",
+        "Cap Material: Polypropylene (PP)",
+        "Inner Plug Material: Low Density Polyethylene (LDPE)",
+      ],
+
+      applications: [
+        "Antiseptic powder packaging",
+        "Disinfectant powder packaging",
+        "Burn and wound care powders",
+        "Antifungal powders",
+        "Veterinary powder formulations",
+        "Medicinal dusting powders",
+      ],
+
+      industryApplications: [
+        "Pharmaceutical Industry",
+        "Cosmetic Industry",
+        "Healthcare & Medicine Industry",
+        "Veterinary Industry",
+        "Dermatological Manufacturing",
+        "Ayurvedic Industry",
+      ],
+
+      features: [
+        "Dimensionally accurate design",
+        "Crack-resistant construction",
+        "Food-grade raw material",
+        "Leak-proof packaging",
+        "Fine surface finish",
+        "Moisture-resistant body",
+        "Airtight cap closure",
+        "Ergonomic bottle design",
+        "Controlled powder dispensing",
+        "Wide neck for filling",
+        "Good labeling area",
+        "Shrink sleeve option available",
+      ],
+
+      sizes: ["10 gms"],
+    },
+
+    {
+      slug: "75gms-triangular-talcum-powder-bottle",
+
+      name: "75gms Triangular Talcum Powder Bottle",
+      rating: 4.9,
+      reviews: 42,
+
+      description:
+        "The 75gms Triangular Talcum Powder Bottle is a premium HDPE packaging solution designed for medicinal, cosmetic, and personal care powder products. Its unique triangular shape provides enhanced shelf visibility, comfortable handling, and effective branding opportunities. Equipped with a secure screw cap and inner plug, the bottle ensures product freshness, safety, and controlled dispensing.",
+
+      images: [
+        { src: "/talcumBottle75g_1.png", alt: "75g Triangular Talcum Powder Bottle" },
+      ],
+
+      specs: [
+        "Capacity: 75gms",
+        "Shape: Triangular",
+        "Bottle Colour: Milky White",
+        "Bottle Material: High Density Polyethylene (HDPE)",
+        "Cap Colours: Blue, Green, Red, Orange",
+        "Cap Material: Polypropylene (PP)",
+        "Inner Plug Material: Low Density Polyethylene (LDPE)",
+      ],
+
+      applications: [
+        "Antiseptic powders",
+        "Antifungal powders",
+        "Skin irritation treatment powders",
+        "Sweat rash powders",
+        "Veterinary powders",
+        "Medicinal dusting powders",
+      ],
+
+      industryApplications: [
+        "Pharmaceutical Industry",
+        "Cosmetic Industry",
+        "Healthcare & Medicine Industry",
+        "Veterinary Industry",
+        "Dermatological Manufacturing",
+        "Personal Care Industry",
+        "Ayurvedic Industry",
+      ],
+
+      features: [
+        "Dimensionally accurate design",
+        "Crack-resistant construction",
+        "Food-grade raw material",
+        "Leak-proof packaging",
+        "Fine surface finish",
+        "Moisture-resistant body",
+        "Airtight cap closure",
+        "Ergonomic bottle design",
+        "Controlled powder dispensing",
+        "Wide neck for filling",
+        "Large labeling area",
+        "Shrink sleeve option available",
+      ],
+
+      sizes: ["75 gms"],
+    },
+  ],
 }
 ]
 

@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Menu, X, ChevronDown, ChevronRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,8 +9,20 @@ const Navbar = () => {
   const [submenuCoords, setSubmenuCoords] = useState({ top: 0, left: 0, anchorBottom: false });
   const [mobileOpenMenu, setMobileOpenMenu] = useState(null);
 
+  const location = useLocation();
+
   const dropdownRef = useRef(null);
   const itemRefs = useRef({});
+
+  // Active page indicator helpers
+  const isActive = (path) => {
+    if (path === '/') {
+      return location.pathname === '/';
+    }
+    return location.pathname.startsWith(path);
+  };
+
+  const isProductActive = () => location.pathname.startsWith('/products');
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   
@@ -21,7 +33,7 @@ const Navbar = () => {
     }
   };
 
-  // Close desktop dropdowns on click outside (Fixed for Mobile responsive layout)
+  // Close desktop dropdowns on click outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (window.innerWidth < 1024) return;
@@ -96,9 +108,9 @@ const Navbar = () => {
       ],
     },
     {
-  name: "Floor Cleaner Bottles",
-  path: "/products/12"
-},
+      name: "Floor Cleaner Bottles",
+      path: "/products/12"
+    },
     {
       name: "Jars",
       isParent: true,
@@ -140,46 +152,45 @@ const Navbar = () => {
         { name: "100ml/19mm Classic Calamine Style Oil/Lotion/Shampoo Bottles", path: "/products/11/oil-17" },
       ],
     },
-
-    { name: "Floor cleaner bottles",
-     path: "/products/12" 
+    { 
+      name: "Floor cleaner bottles",
+      path: "/products/12" 
     },
-
-    { name: "Pharmaceutical Rubber Dropper Assembly",
-       path: "/products/13"
+    { 
+      name: "Pharmaceutical Rubber Dropper Assembly",
+      path: "/products/13"
     },
-
-    { name: "Stopper CAM Lock fittings for Cold rooms PUF Panels",
-       path: "/products/14"
+    { 
+      name: "Stopper CAM Lock fittings for Cold rooms PUF Panels",
+      path: "/products/14"
     },
-
-    { name: "Churan Bottle Set",
-       path: "/products/15" 
-      },
-
-    {
-  name: "Tablet Containers",
-  path: "/products/16",
-},
-{
-  name:"Applicator For Piles",
-  path:"/products/17"
-},
-{
-  name: "Talcum Powder Bottles",
-  path: "/products/18",
-  isParent: true,
-  submenu: [
-    {
-      name: "10gms Flat Talcum Powder Bottle",
-      path: "/products/18/10gms-flat-talcum-powder-bottle",
+    { 
+      name: "Churan Bottle Set",
+      path: "/products/15" 
     },
     {
-      name: "75gms Triangular Talcum Powder Bottle",
-      path: "/products/18/75gms-triangular-talcum-powder-bottle",
+      name: "Tablet Containers",
+      path: "/products/16",
     },
-  ],
-}
+    {
+      name:"Applicator For Piles",
+      path:"/products/17"
+    },
+    {
+      name: "Talcum Powder Bottles",
+      path: "/products/18",
+      isParent: true,
+      submenu: [
+        {
+          name: "10gms Flat Talcum Powder Bottle",
+          path: "/products/18/10gms-flat-talcum-powder-bottle",
+        },
+        {
+          name: "75gms Triangular Talcum Powder Bottle",
+          path: "/products/18/75gms-triangular-talcum-powder-bottle",
+        },
+      ],
+    }
   ];
 
   const currentActiveData = categories.find(cat => cat.name === activeParent);
@@ -189,12 +200,23 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 gap-4">
 
-          {/* Left Desktop Menu: Scaled down text and layout gaps to accommodate medium monitors perfectly */}
+          {/* Left Desktop Menu */}
           <div className="hidden lg:flex items-center xl:space-x-8 lg:space-x-4">
-            <Link to="/" className="text-gray-700 font-medium hover:text-[#2592AD] transition-colors duration-200 xl:text-base lg:text-sm whitespace-nowrap">
+            <Link 
+              to="/" 
+              className={`font-medium transition-colors duration-200 xl:text-base lg:text-sm whitespace-nowrap ${
+                isActive('/') ? 'text-[#2592AD] font-semibold' : 'text-gray-700 hover:text-[#2592AD]'
+              }`}
+            >
               Home
             </Link>
-            <Link to="/about" className="text-gray-700 font-medium hover:text-[#2592AD] transition-colors duration-200 xl:text-base lg:text-sm whitespace-nowrap">
+
+            <Link 
+              to="/about" 
+              className={`font-medium transition-colors duration-200 xl:text-base lg:text-sm whitespace-nowrap ${
+                isActive('/about') ? 'text-[#2592AD] font-semibold' : 'text-gray-700 hover:text-[#2592AD]'
+              }`}
+            >
               About Us
             </Link>
 
@@ -203,7 +225,7 @@ const Navbar = () => {
               <button
                 onClick={toggleDropdown}
                 className={`flex items-center font-medium transition-colors duration-200 focus:outline-none xl:text-base lg:text-sm whitespace-nowrap ${
-                  isDropdownOpen ? 'text-[#2592AD]' : 'text-gray-700 hover:text-[#2592AD]'
+                  isProductActive() || isDropdownOpen ? 'text-[#2592AD] font-semibold' : 'text-gray-700 hover:text-[#2592AD]'
                 }`}
               >
                 Comprehensive Product Range
@@ -218,17 +240,20 @@ const Navbar = () => {
                 >
                   {categories.map((cat, index) => {
                     if (cat.isParent) {
+                      const isSubActive = cat.submenu.some(sub => isActive(sub.path));
                       return (
                         <div
                           key={index}
                           ref={el => itemRefs.current[cat.name] = el}
                           onMouseEnter={() => handleParentHover(cat.name)}
                           className={`flex justify-between items-center px-4 py-2.5 text-sm font-semibold cursor-pointer select-none transition-colors ${
-                            activeParent === cat.name ? 'bg-slate-50 text-[#2592AD]' : 'text-gray-700 hover:bg-slate-50'
+                            activeParent === cat.name || isSubActive 
+                              ? 'bg-slate-50 text-[#2592AD]' 
+                              : 'text-gray-700 hover:bg-slate-50'
                           }`}
                         >
                           <span className="truncate pr-2">{cat.name}</span>
-                          <ChevronRight className="h-4 w-4 text-gray-400 shrink-0" />
+                          <ChevronRight className={`h-4 w-4 shrink-0 ${activeParent === cat.name || isSubActive ? 'text-[#2592AD]' : 'text-gray-400'}`} />
                         </div>
                       );
                     }
@@ -239,7 +264,11 @@ const Navbar = () => {
                         to={cat.path}
                         onClick={() => setIsDropdownOpen(false)}
                         onMouseEnter={() => handleParentHover(null)}
-                        className="block px-4 py-2.5 text-gray-700 hover:bg-slate-50 hover:text-[#2592AD] text-sm font-semibold transition-colors truncate"
+                        className={`block px-4 py-2.5 text-sm font-semibold transition-colors truncate ${
+                          isActive(cat.path) 
+                            ? 'bg-slate-50 text-[#2592AD] font-bold' 
+                            : 'text-gray-700 hover:bg-slate-50 hover:text-[#2592AD]'
+                        }`}
                       >
                         {cat.name}
                       </Link>
@@ -269,7 +298,11 @@ const Navbar = () => {
                         setIsDropdownOpen(false);
                         setActiveParent(null);
                       }}
-                      className="block px-4 py-2 text-gray-700 hover:bg-slate-50 hover:text-[#2592AD] text-xs font-semibold transition-colors duration-150"
+                      className={`block px-4 py-2 text-xs font-semibold transition-colors duration-150 ${
+                        isActive(subItem.path)
+                          ? 'bg-slate-50 text-[#2592AD] font-bold'
+                          : 'text-gray-700 hover:bg-slate-50 hover:text-[#2592AD]'
+                      }`}
                     >
                       {subItem.name}
                     </Link>
@@ -279,7 +312,7 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* Logo Identity: Stays left-aligned on mobile and handles layout constraints smoothly */}
+          {/* Logo Identity */}
           <div className="flex-shrink-0 lg:mx-0">
             <Link to="/">
               <img src='/logo.png' alt="Company Logo" className="w-32 sm:w-40 max-w-full object-contain" />
@@ -288,21 +321,37 @@ const Navbar = () => {
 
           {/* Right Desktop Nav Menu */}
           <div className="hidden lg:flex items-center xl:space-x-8 lg:space-x-4">
-            <Link to="/quality" className="text-gray-700 font-medium hover:text-[#2592AD] transition-colors duration-200 xl:text-base lg:text-sm whitespace-nowrap">
+            <Link 
+              to="/quality" 
+              className={`font-medium transition-colors duration-200 xl:text-base lg:text-sm whitespace-nowrap ${
+                isActive('/quality') ? 'text-[#2592AD] font-semibold' : 'text-gray-700 hover:text-[#2592AD]'
+              }`}
+            >
               Quality Assurance
             </Link>
-            <Link to="/values" className="text-gray-700 font-medium hover:text-[#2592AD] transition-colors duration-200 xl:text-base lg:text-sm whitespace-nowrap">
+
+            <Link 
+              to="/values" 
+              className={`font-medium transition-colors duration-200 xl:text-base lg:text-sm whitespace-nowrap ${
+                isActive('/values') ? 'text-[#2592AD] font-semibold' : 'text-gray-700 hover:text-[#2592AD]'
+              }`}
+            >
               Our Belief Values
             </Link>
+
             <Link
               to="/contact"
-              className="bg-[#2592AD] text-white xl:px-6 lg:px-4 py-2 rounded shadow-sm font-medium hover:bg-[#1f7c94] transition-all duration-200 inline-block xl:text-sm lg:text-xs whitespace-nowrap"
+              className={`xl:px-6 lg:px-4 py-2 rounded shadow-sm font-medium transition-all duration-200 inline-block xl:text-sm lg:text-xs whitespace-nowrap ${
+                isActive('/contact') 
+                  ? 'bg-[#1f7c94] text-white font-semibold' 
+                  : 'bg-[#2592AD] text-white hover:bg-[#1f7c94]'
+              }`}
             >
               Contact Us
             </Link>
           </div>
 
-          {/* Mobile Hamburguer Toggle Button: Safely shifts to the right side automatically via flex alignment */}
+          {/* Mobile Hamburger Toggle Button */}
           <div className="lg:hidden">
             <button onClick={toggleMenu} className="text-gray-700 p-2 hover:bg-gray-100 rounded-md focus:outline-none">
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -315,10 +364,23 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="lg:hidden border-t border-gray-200 bg-white shadow-inner max-h-[calc(100vh-4rem)] overflow-y-auto">
           <div className="px-2 pt-2 pb-3 space-y-1">
-            <Link to="/" onClick={() => setIsMenuOpen(false)} className="block px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium">
+            <Link 
+              to="/" 
+              onClick={() => setIsMenuOpen(false)} 
+              className={`block px-3 py-2 rounded-md font-medium ${
+                isActive('/') ? 'bg-[#2592AD]/10 text-[#2592AD] font-semibold' : 'text-gray-700 hover:bg-gray-50'
+              }`}
+            >
               Home
             </Link>
-            <Link to="/about" onClick={() => setIsMenuOpen(false)} className="block px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium">
+
+            <Link 
+              to="/about" 
+              onClick={() => setIsMenuOpen(false)} 
+              className={`block px-3 py-2 rounded-md font-medium ${
+                isActive('/about') ? 'bg-[#2592AD]/10 text-[#2592AD] font-semibold' : 'text-gray-700 hover:bg-gray-50'
+              }`}
+            >
               About Us
             </Link>
 
@@ -326,7 +388,9 @@ const Navbar = () => {
             <div>
               <button
                 onClick={toggleDropdown}
-                className="w-full flex justify-between items-center px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium text-left"
+                className={`w-full flex justify-between items-center px-3 py-2 rounded-md font-medium text-left ${
+                  isProductActive() ? 'text-[#2592AD] font-semibold' : 'text-gray-700 hover:bg-gray-50'
+                }`}
               >
                 <span>Comprehensive Product Range</span>
                 <ChevronDown className={`h-4 w-4 transform transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`} />
@@ -337,12 +401,13 @@ const Navbar = () => {
                   {categories.map((cat, index) => {
                     if (cat.isParent) {
                       const isSubOpen = mobileOpenMenu === cat.name;
+                      const isSubActive = cat.submenu.some(sub => isActive(sub.path));
                       return (
                         <div key={index} className="w-full">
                           <button
                             onClick={() => setMobileOpenMenu(isSubOpen ? null : cat.name)}
                             className={`w-full flex justify-between items-center px-3 py-2 rounded-md text-sm font-semibold text-left transition-colors ${
-                              isSubOpen ? 'text-[#2592AD] bg-white shadow-xs' : 'text-gray-700'
+                              isSubOpen || isSubActive ? 'text-[#2592AD] bg-white shadow-xs' : 'text-gray-700'
                             }`}
                           >
                             <span className="block truncate pr-4 text-xs sm:text-sm">{cat.name}</span>
@@ -360,7 +425,11 @@ const Navbar = () => {
                                     setIsDropdownOpen(false);
                                     setIsMenuOpen(false);
                                   }}
-                                  className="block px-3 py-2 text-gray-600 hover:text-[#2592AD] text-[11px] sm:text-xs font-semibold leading-normal break-words"
+                                  className={`block px-3 py-2 text-[11px] sm:text-xs font-semibold leading-normal break-words ${
+                                    isActive(subItem.path)
+                                      ? 'text-[#2592AD] font-bold bg-white/80 rounded'
+                                      : 'text-gray-600 hover:text-[#2592AD]'
+                                  }`}
                                 >
                                   {subItem.name}
                                 </Link>
@@ -379,7 +448,11 @@ const Navbar = () => {
                           setIsDropdownOpen(false);
                           setIsMenuOpen(false);
                         }}
-                        className="block px-3 py-2 text-gray-700 hover:bg-white rounded-md text-xs sm:text-sm font-semibold truncate"
+                        className={`block px-3 py-2 rounded-md text-xs sm:text-sm font-semibold truncate ${
+                          isActive(cat.path)
+                            ? 'text-[#2592AD] bg-white font-bold shadow-xs'
+                            : 'text-gray-700 hover:bg-white'
+                        }`}
                       >
                         {cat.name}
                       </Link>
@@ -389,10 +462,23 @@ const Navbar = () => {
               )}
             </div>
 
-            <Link to="/quality" onClick={() => setIsMenuOpen(false)} className="block px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium">
+            <Link 
+              to="/quality" 
+              onClick={() => setIsMenuOpen(false)} 
+              className={`block px-3 py-2 rounded-md font-medium ${
+                isActive('/quality') ? 'bg-[#2592AD]/10 text-[#2592AD] font-semibold' : 'text-gray-700 hover:bg-gray-50'
+              }`}
+            >
               Quality Assurance
             </Link>
-            <Link to="/values" onClick={() => setIsMenuOpen(false)} className="block px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-md font-medium">
+
+            <Link 
+              to="/values" 
+              onClick={() => setIsMenuOpen(false)} 
+              className={`block px-3 py-2 rounded-md font-medium ${
+                isActive('/values') ? 'bg-[#2592AD]/10 text-[#2592AD] font-semibold' : 'text-gray-700 hover:bg-gray-50'
+              }`}
+            >
               Our Belief Values
             </Link>
             
@@ -400,7 +486,11 @@ const Navbar = () => {
               <Link
                 to="/contact"
                 onClick={() => setIsMenuOpen(false)}
-                className="w-full text-center bg-[#2592AD] text-white px-6 py-2 rounded font-medium transition-colors duration-200 block text-sm shadow-sm"
+                className={`w-full text-center px-6 py-2 rounded font-medium transition-colors duration-200 block text-sm shadow-sm ${
+                  isActive('/contact')
+                    ? 'bg-[#1f7c94] text-white font-semibold'
+                    : 'bg-[#2592AD] text-white'
+                }`}
               >
                 Contact Us
               </Link>

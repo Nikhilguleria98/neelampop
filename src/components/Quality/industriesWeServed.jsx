@@ -55,9 +55,7 @@ export default function IndustriesServed() {
           viewport={{ once: true }}
           className="text-center mb-10"
         >
-          <span className="text-[#208a9f] font-semibold text-sm tracking-wider uppercase bg-teal-50 px-4 py-1.5 rounded-full border border-teal-200">
-            Tailored Packaging Solutions
-          </span>
+         
           <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mt-3">
             Industries We Serve
           </h2>

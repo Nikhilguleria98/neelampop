@@ -75,7 +75,49 @@ const Navbar = () => {
   };
 
   const categories = [
-    { name: "Pharma Dry syrup Bottles", path: "/products/1" },
+   {
+  name: "Pharma Dry Syrup Bottles",
+  isParent: true,
+  submenu: [
+    {
+      name: "Dry Scrup bottle Group",
+      path: "/products/1/group",
+    },
+
+    {
+      name: "10ml/25mm Dry Syrup Bottle",
+      path: "/products/1/10ml-25mm",
+    },
+    {
+      name: "15ml/25mm Dry Syrup Bottle",
+      path: "/products/1/15ml-25mm",
+    },
+    {
+      name: "30ml/25mm Dry Syrup Bottle",
+      path: "/products/1/30ml-25mm",
+    },
+    {
+      name: "30ml/28mm Dry Syrup Bottle",
+      path: "/products/1/30ml-28mm",
+    },
+    {
+      name: "50ml/28mm Dry Syrup Bottle",
+      path: "/products/1/50ml-28mm",
+    },
+    {
+      name: "60ml/25mm Dry Syrup Bottle",
+      path: "/products/1/60ml-25mm",
+    },
+    {
+      name: "60ml/28mm Dry Syrup Bottle",
+      path: "/products/1/60ml-28mm",
+    },
+    {
+      name: "100ml/25mm Dry Syrup Bottle",
+      path: "/products/1/100ml-25mm",
+    },
+  ],
+},
     {
       name: "Measuring Spoons",
       isParent: true,

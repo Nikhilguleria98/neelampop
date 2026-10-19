@@ -118,6 +118,79 @@ const Navbar = () => {
     },
   ],
 },
+
+{
+  name: "Pharma PET Bottles",
+  isParent: true,
+  submenu: [
+    {
+      name: "10ml Pharma PET Bottle - 22mm",
+      path: "/products/55/10ml-22mm",
+    },
+    {
+      name: "15ml Pharma PET Bottle - 22mm",
+      path: "/products/55/15ml-22mm",
+    },
+    {
+      name: "15ml Pharma PET Bottle - 25mm",
+      path: "/products/55/15ml-25mm",
+    },
+    {
+      name: "30ml Pharma PET Bottle - 25mm",
+      path: "/products/55/30ml-25mm",
+    },
+    {
+      name: "60ml Pharma PET Bottle - 22mm",
+      path: "/products/55/60ml-22mm",
+    },
+    {
+      name: "60ml Pharma PET Bottle - 25mm",
+      path: "/products/55/60ml-25mm",
+    },
+    {
+      name: "100ml Pharma PET Bottle - 22mm",
+      path: "/products/55/100ml-22mm",
+    },
+    {
+      name: "100ml Pharma PET Bottle - 25mm",
+      path: "/products/55/100ml-25mm",
+    },
+    {
+      name: "120ml Pharma PET Bottle - 25mm",
+      path: "/products/55/120ml-25mm",
+    },
+    {
+      name: "150ml Pharma PET Bottle - 25mm",
+      path: "/products/55/150ml-25mm",
+    },
+    {
+      name: "170ml Pharma PET Bottle - 25mm",
+      path: "/products/55/170ml-25mm",
+    },
+    {
+      name: "200ml Pharma PET Bottle - 25mm",
+      path: "/products/55/200ml-25mm",
+    },
+    {
+      name: "220ml Pharma PET Bottle - 25mm",
+      path: "/products/55/220ml-25mm",
+    },
+    {
+      name: "225ml Pharma PET Bottle - 25mm",
+      path: "/products/55/225ml-25mm",
+    },
+    {
+      name: "300ml Pharma PET Bottle - 25mm",
+      path: "/products/55/300ml-25mm",
+    },
+    {
+      name: "450/500ml Pharma PET Bottle - 25mm",
+      path: "/products/55/450-500ml-25mm",
+    },
+  ],
+},
+
+
     {
       name: "Measuring Spoons",
       isParent: true,

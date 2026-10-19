@@ -3202,8 +3202,348 @@ const products = [
 
       sizes: ["75 gms"],
     },
+    
+    
   ],
-}
+},
+
+{
+  id: 55,
+  name: "Pharma PET Bottles",
+  rating: 4.9,
+  reviews: 0,
+
+  description:
+    "Pharma PET bottles for packaging pharmaceutical syrups, cough mixtures, oral solutions, vitamins, dietary supplements, and Ayurvedic formulations. Available in multiple capacities and neck sizes.",
+
+  variants: [
+    {
+      slug: "10ml-22mm",
+      name: "10ml Pharma PET Bottle",
+      description: "10ml PET bottle with a 22mm neck size.",
+      tagline: "Compact pharmaceutical liquid packaging",
+
+      images: [
+        // { src: "/medicine_img/10ml-pet-bottle.jpeg", alt: "10ml Pharma PET Bottle" },
+      ],
+
+      specs: [
+        { label: "Capacity", value: "10ml" },
+        { label: "Neck Size", value: "22mm" },
+        { label: "Material", value: "PET (Polyethylene Terephthalate)" },
+        { label: "Available Colours", value: "Amber, clear and other colour options subject to availability" },
+      ],
+
+      applications: ["Pharmaceutical liquids", "Oral solutions"],
+      industryApplications: ["Pharmaceutical Industry"],
+      features: ["Lightweight construction", "Durable PET material"],
+      sizes: ["10ml"],
+    },
+
+    {
+      slug: "15ml-22mm",
+      name: "15ml Pharma PET Bottle - 22mm",
+      description: "15ml PET bottle with a 22mm neck size.",
+      tagline: "Small-capacity PET packaging",
+
+      images: [],
+      specs: [
+        { label: "Capacity", value: "15ml" },
+        { label: "Neck Size", value: "22mm" },
+        { label: "Material", value: "PET (Polyethylene Terephthalate)" },
+      ],
+      applications: ["Pharmaceutical liquid packaging"],
+      industryApplications: ["Pharmaceutical Industry"],
+      features: ["Lightweight PET construction"],
+      sizes: ["15ml"],
+    },
+
+    {
+      slug: "15ml-25mm",
+      name: "15ml Pharma PET Bottle - 25mm",
+      description: "15ml PET bottle with a 25mm neck size.",
+      tagline: "Small-capacity PET packaging",
+
+      images: [],
+      specs: [
+        { label: "Capacity", value: "15ml" },
+        { label: "Neck Size", value: "25mm" },
+        { label: "Material", value: "PET (Polyethylene Terephthalate)" },
+      ],
+      applications: ["Pharmaceutical liquid packaging"],
+      industryApplications: ["Pharmaceutical Industry"],
+      features: ["Lightweight PET construction"],
+      sizes: ["15ml"],
+    },
+
+    {
+      slug: "30ml-25mm",
+      name: "30ml Pharma PET Bottle",
+      description: "30ml PET bottle with a 25mm neck size.",
+      tagline: "Practical pharmaceutical packaging",
+
+      images: [],
+      specs: [
+        { label: "Capacity", value: "30ml" },
+        { label: "Neck Size", value: "25mm" },
+        { label: "Material", value: "PET (Polyethylene Terephthalate)" },
+      ],
+      applications: ["Pharmaceutical syrups", "Oral liquid formulations"],
+      industryApplications: ["Pharmaceutical Industry"],
+      features: ["Lightweight", "Durable packaging"],
+      sizes: ["30ml"],
+    },
+
+    {
+      slug: "60ml-22mm",
+      name: "60ml Pharma PET Bottle - 22mm",
+      description: "60ml PET bottle with a 22mm neck size.",
+      tagline: "Versatile liquid packaging",
+
+      images: [],
+      specs: [
+        { label: "Capacity", value: "60ml" },
+        { label: "Neck Size", value: "22mm" },
+        { label: "Material", value: "PET (Polyethylene Terephthalate)" },
+      ],
+      applications: ["Pharmaceutical syrups", "Oral solutions"],
+      industryApplications: ["Pharmaceutical Industry"],
+      features: ["Lightweight construction", "Recyclable PET material"],
+      sizes: ["60ml"],
+    },
+
+    {
+      slug: "60ml-25mm",
+      name: "60ml Pharma PET Bottle - 25mm",
+      description: "60ml PET bottle with a 25mm neck size.",
+      tagline: "Versatile liquid packaging",
+
+      images: [],
+      specs: [
+        { label: "Capacity", value: "60ml" },
+        { label: "Neck Size", value: "25mm" },
+        { label: "Material", value: "PET (Polyethylene Terephthalate)" },
+      ],
+      applications: ["Pharmaceutical syrups", "Oral solutions"],
+      industryApplications: ["Pharmaceutical Industry"],
+      features: ["Lightweight construction", "Recyclable PET material"],
+      sizes: ["60ml"],
+    },
+
+    {
+      slug: "100ml-22mm",
+      name: "100ml Pharma PET Bottle - 22mm",
+      description: "100ml PET bottle with a 22mm neck size.",
+      tagline: "Reliable pharmaceutical packaging",
+
+      images: [],
+      specs: [
+        { label: "Capacity", value: "100ml" },
+        { label: "Neck Size", value: "22mm" },
+        { label: "Material", value: "PET (Polyethylene Terephthalate)" },
+      ],
+      applications: ["Pharmaceutical syrups", "Oral solutions", "Supplements"],
+      industryApplications: ["Pharmaceutical Industry", "Nutraceutical Industry"],
+      features: ["Durable", "Lightweight", "Custom colour options subject to availability"],
+      sizes: ["100ml"],
+    },
+
+    {
+      slug: "100ml-25mm",
+      name: "100ml Pharma PET Bottle - 25mm",
+      description: "100ml PET bottle with a 25mm neck size.",
+      tagline: "Reliable pharmaceutical packaging",
+
+      images: [],
+      specs: [
+        { label: "Capacity", value: "100ml" },
+        { label: "Neck Size", value: "25mm" },
+        { label: "Material", value: "PET (Polyethylene Terephthalate)" },
+      ],
+      applications: ["Pharmaceutical syrups", "Oral solutions", "Supplements"],
+      industryApplications: ["Pharmaceutical Industry", "Nutraceutical Industry"],
+      features: ["Durable", "Lightweight", "Custom colour options subject to availability"],
+      sizes: ["100ml"],
+    },
+
+    {
+      slug: "120ml-25mm",
+      name: "120ml Pharma PET Bottle",
+      description: "120ml PET bottle with a 25mm neck size.",
+      tagline: "Everyday pharmaceutical packaging",
+
+      images: [],
+      specs: [
+        { label: "Capacity", value: "120ml" },
+        { label: "Neck Size", value: "25mm" },
+        { label: "Material", value: "PET (Polyethylene Terephthalate)" },
+        { label: "Listed Shapes", value: "Round, Oval (Dome), Brute and other listed styles, depending on model" },
+      ],
+      applications: ["Pharmaceutical syrups", "Cough mixtures", "Oral solutions"],
+      industryApplications: ["Pharmaceutical Industry"],
+      features: ["Lightweight", "Durable", "Shape options vary by model"],
+      sizes: ["120ml"],
+    },
+
+    {
+      slug: "150ml-25mm",
+      name: "150ml Pharma PET Bottle",
+      description: "150ml PET bottle with a 25mm neck size.",
+      tagline: "Flexible liquid packaging",
+
+      images: [],
+      specs: [
+        { label: "Capacity", value: "150ml" },
+        { label: "Neck Size", value: "25mm" },
+        { label: "Material", value: "PET (Polyethylene Terephthalate)" },
+        { label: "Listed Shapes", value: "Round, Oval (Dome), Double Brute, Microbrute and Flat, depending on model" },
+      ],
+      applications: ["Pharmaceutical syrups", "Ayurvedic formulations"],
+      industryApplications: ["Pharmaceutical Industry", "Ayurvedic and Herbal Industry"],
+      features: ["Lightweight", "Durable", "Multiple shape options"],
+      sizes: ["150ml"],
+    },
+
+    {
+      slug: "170ml-25mm",
+      name: "170ml Pharma PET Bottle",
+      description: "170ml PET bottle with a 25mm neck size.",
+      tagline: "Durable liquid packaging",
+
+      images: [],
+      specs: [
+        { label: "Capacity", value: "170ml" },
+        { label: "Neck Size", value: "25mm" },
+        { label: "Material", value: "PET (Polyethylene Terephthalate)" },
+        { label: "Listed Shapes", value: "Round and other listed round-bottle styles, depending on model" },
+      ],
+      applications: ["Pharmaceutical syrups", "Ayurvedic syrups"],
+      industryApplications: ["Pharmaceutical Industry", "Ayurvedic and Herbal Industry"],
+      features: ["Lightweight construction", "Durable PET material"],
+      sizes: ["170ml"],
+    },
+
+    {
+      slug: "200ml-25mm",
+      name: "200ml Pharma PET Bottle",
+      description: "200ml PET bottle with a 25mm neck size.",
+      tagline: "High-capacity liquid packaging",
+
+      images: [],
+      specs: [
+        { label: "Capacity", value: "200ml" },
+        { label: "Neck Size", value: "25mm" },
+        { label: "Material", value: "PET (Polyethylene Terephthalate)" },
+        { label: "Listed Shapes", value: "Round, Oval (Dome) and Brute styles, depending on model" },
+      ],
+      applications: ["Pharmaceutical liquids", "Cough mixtures", "Oral solutions"],
+      industryApplications: ["Pharmaceutical Industry"],
+      features: ["Lightweight", "Durable", "Recyclable PET material"],
+      sizes: ["200ml"],
+    },
+
+    {
+      slug: "220ml-25mm",
+      name: "220ml Pharma PET Bottle",
+      description: "220ml PET bottle with a 25mm neck size.",
+      tagline: "Practical liquid packaging",
+
+      images: [],
+      specs: [
+        { label: "Capacity", value: "220ml" },
+        { label: "Neck Size", value: "25mm" },
+        { label: "Material", value: "PET (Polyethylene Terephthalate)" },
+        { label: "Listed Shape", value: "Brute; confirm exact model availability" },
+      ],
+      applications: ["Pharmaceutical liquid packaging"],
+      industryApplications: ["Pharmaceutical Industry"],
+      features: ["Lightweight construction", "Durable PET material"],
+      sizes: ["220ml"],
+    },
+
+    {
+      slug: "225ml-25mm",
+      name: "225ml Pharma PET Bottle",
+      description: "225ml PET bottle with a 25mm neck size.",
+      tagline: "Versatile pharmaceutical packaging",
+
+      images: [],
+      specs: [
+        { label: "Capacity", value: "225ml" },
+        { label: "Neck Size", value: "25mm" },
+        { label: "Material", value: "PET (Polyethylene Terephthalate)" },
+      ],
+      applications: ["Pharmaceutical syrups", "Oral solutions"],
+      industryApplications: ["Pharmaceutical Industry"],
+      features: ["Lightweight", "Durable", "Custom options subject to availability"],
+      sizes: ["225ml"],
+    },
+
+    {
+      slug: "300ml-25mm",
+      name: "300ml Pharma PET Bottle",
+      description: "300ml PET bottle with a 25mm neck size.",
+      tagline: "Larger-volume liquid packaging",
+
+      images: [],
+      specs: [
+        { label: "Capacity", value: "300ml" },
+        { label: "Neck Size", value: "25mm" },
+        { label: "Material", value: "PET (Polyethylene Terephthalate)" },
+        { label: "Listed Shapes", value: "Round and Double Brute styles, depending on model" },
+      ],
+      applications: ["Pharmaceutical liquids", "Healthcare formulations"],
+      industryApplications: ["Pharmaceutical Industry"],
+      features: ["Lightweight construction", "Durable PET material"],
+      sizes: ["300ml"],
+    },
+
+    {
+      slug: "450-500ml-25mm",
+      name: "450/500ml Pharma PET Bottle",
+      description: "450/500ml PET bottle with a 25mm neck size.",
+      tagline: "Large-capacity liquid packaging",
+
+      images: [],
+      specs: [
+        { label: "Capacity", value: "450/500ml" },
+        { label: "Neck Size", value: "25mm" },
+        { label: "Material", value: "PET (Polyethylene Terephthalate)" },
+        { label: "Listed Shapes", value: "Round, Brute and Oval (Dome) styles, depending on model" },
+      ],
+      applications: ["Pharmaceutical liquid packaging", "Large-volume liquid formulations"],
+      industryApplications: ["Pharmaceutical Industry"],
+      features: ["Lightweight", "Durable", "Recyclable PET material"],
+      sizes: ["450/500ml"],
+    },
+  ],
+
+  features: [
+    "Lightweight and durable PET material",
+    "Available in clear and amber options",
+    "Transparent colours: red, green, yellow, orange and blue",
+    "Opaque colours: milky white, pink, yellow and orange",
+    "Multiple capacities, shapes and neck sizes",
+    "Recyclable packaging material",
+    "Closure compatibility depends on the bottle model",
+  ],
+
+  applications: [
+    "Pharmaceutical syrups",
+    "Cough mixtures",
+    "Vitamins and dietary supplements",
+    "Oral liquid solutions",
+    "Ayurvedic and herbal syrups",
+  ],
+
+  industryApplications: [
+    "Pharmaceutical Industry",
+    "Nutraceutical Industry",
+    "Ayurvedic and Herbal Industry",
+  ],
+},
+
+
 ]
 
 export default products

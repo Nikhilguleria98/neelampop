@@ -27,16 +27,16 @@ export default function CoreValuesPage() {
   ];
 
   const beliefs = [
-    "We believe in professionalism and ethics.",
-    "We add value to our customers' businesses.",
-    "We act with positivity and vision.",
+    " Professionalism and ethics.",
+    "Adding values to our customers' needs.",
+    "Positive action with positive Vision.",
     "We nurture long-term relationships built on respect and trust.",
   ];
 
   const keyValues = [
     { img: "Desier.png", title: "Desire for excellence" },
     { img: "teamwork.png", title: "Innovation and teamwork" },
-    { img: "build.png", title: "Trust and integrity" },
+    { img: "build.png", title: "Trust and faith build up" },
     { img: "customer.png", title: "Transparency with customers" },
   ];
 
@@ -98,7 +98,7 @@ export default function CoreValuesPage() {
           >
             <div className="mb-7 text-center">
               <h2 className="text-3xl md:text-4xl font-medium text-gray-800 mb-3 tracking-wide">
-                Beliefs
+                We Believe in
               </h2>
               <div className="w-16 h-0.5 bg-[#3799B0] mx-auto"></div>
             </div>
@@ -184,9 +184,9 @@ export default function CoreValuesPage() {
               </div>
               <div className="mt-6 flex min-h-[220px] items-center rounded-2xl border border-[#dce8d4] bg-[#f7faf4] p-6 shadow-lg transition-shadow duration-300 hover:shadow-xl">
                 <p className="text-center text-base font-light leading-7 text-gray-700">
-                  Our mission is to set new standards of quality and perfection by
-                  combining innovation, transparency, and reliability, ensuring
-                  every package adds value and builds customer trust.
+                  Setting new standards of quality and perfection
+With years of experience in manufacturing, Continuously building a reputation amongst customers through transparency and honesty
+
                 </p>
               </div>
             </motion.div>
@@ -207,11 +207,7 @@ export default function CoreValuesPage() {
               </div>
               <div className="mt-6 flex min-h-[220px] items-center rounded-2xl border border-[#dce8d4] bg-[#f7faf4] p-6 shadow-lg transition-shadow duration-300 hover:shadow-xl">
                 <p className="text-center text-base font-light leading-7 text-gray-700">
-                  Our vision is to be a globally trusted leader in plastic
-                  packaging, known for uncompromising quality, efficiency, and
-                  customer satisfaction, while continuously innovating to meet the
-                  evolving needs of diverse industries.
-                </p>
+                  To be a trusted and an eminent name in the world of plastic packaging known for its quality, efficiency and customer satisfaction.                </p>
               </div>
             </motion.div>
           </div>

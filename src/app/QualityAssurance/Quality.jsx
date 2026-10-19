@@ -9,6 +9,7 @@ function Quality() {
     <div className=''>
       <Hero/>
       <Moderate/>
+     
      <IndustriesServed/>
      <ManufacturingProcess/>
     </div>

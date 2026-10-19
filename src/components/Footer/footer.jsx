@@ -1,5 +1,5 @@
 import React from "react";
-import { AtSign, Mail, MapPin, Phone, Send } from "lucide-react";
+import { AtSign,Phone,Mail, MapPin, Send } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -45,7 +45,7 @@ export default function Footer() {
               </div>
               <input
                 type="email"
-                defaultValue="kambojmehakpreetkaur@gmail.com"
+                defaultValue="abc@gmail.com"
                 placeholder="Enter your manufacturing email"
                 className="w-full sm:flex-1 bg-transparent text-white placeholder:text-white/50 outline-none text-sm px-4 sm:px-2 py-2.5 sm:py-0 text-center sm:text-left"
               />

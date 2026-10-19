@@ -122,7 +122,7 @@ export default function ProductSlider() {
                 <img
                   src={slides[currentSlide].image || "/placeholder.svg"}
                   alt={slides[currentSlide].title}
-                  className="w-40 h-40 sm:w-48 sm:h-48 md:w-52 md:h-52 lg:w-60 lg:h-58 object-contain"
+                  className="w-40 h-40 sm:w-[250px] sm:h-[350px] md:w-[300px] md:h-[400px] lg:w-[400px] lg:h-[400px] object-contain"
                 />
               </div>
             </div>

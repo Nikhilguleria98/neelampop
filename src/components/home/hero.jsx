@@ -7,41 +7,68 @@ import { useNavigate } from "react-router-dom"
 const slides = [
   {
     id: 1,
-    title: "Floor Cleaners",
-    productPath: "/products/12",
+    title: "Telecom Dusting Powder",
+    productPath: "/products/1",
     description:
-      "Specially formulated floor cleaners ensure powerful cleaning, hygiene, and long-lasting freshness across residential, commercial, and industrial spaces. Designed to effectively remove dirt, stains, and germs, they help maintain a safe and spotless environment. With reliable performance and compliance with safety standards, these cleaners support your commitment to quality, care, and everyday cleanliness.",
+      "High-quality telecom dusting powder designed for reliable performance and effective cable maintenance. Ideal for telecom and industrial applications, it supports smooth operations and dependable results.",
     image: "/Home/h1.png",
     background: "/Home/bg1.png",
   },
   {
     id: 2,
-    title: "Cream Jars Set",
-    productPath: "/products/9",
+    title: "PET Bottles",
+    productPath: "/products/2",
     description:
-      "Elegantly designed cream jar sets provide safe, hygienic, and convenient storage for skincare, cosmetic, and personal care formulations. Built with durable materials to preserve product integrity, these jars ensure freshness while enhancing the user experience with easy accessibility and premium aesthetics. Their reliable design supports industry standards of safety and quality, reflecting your brand's commitment to excellence and customer care.",
+      "Durable and lightweight PET bottles designed for safe, convenient, and reliable packaging. Suitable for a wide range of industries, they offer excellent usability and a professional finish.",
     image: "/Home/h2.png",
     background: "/Home/bg2.png",
   },
   {
     id: 3,
-    title: "Lotion Bottles",
-    productPath: "/products/11",
+    title: "Pharma Packaging",
+    productPath: "/products/3",
     description:
-      "Durable lotion bottles ensure safe, hygienic, and easy dispensing for skincare and personal care products. Designed to preserve freshness and quality, they support your brand's commitment to reliability and customer care.",
-    image: "/Home/h4.png",
+      "Reliable pharmaceutical packaging solutions designed to support product protection, hygiene, and quality. Developed for pharmaceutical applications, these packaging products prioritize durability and dependable storage.",
+    image: "/Home/h3.png",
     background: "/Home/bg3.png",
   },
   {
     id: 4,
-    title: "Eye Dropper Set",
-    productPath: "/products/5",
+    title: "Lotion Bottles",
+    productPath: "/products/4",
     description:
-      "Precision-designed plastic eye droppers ensure safe, hygienic, and accurate liquid dispensing across pharmaceutical, laboratory, and personal care applications. Lightweight yet durable, these droppers help maintain product integrity and freshness, supporting your commitment to quality and patient care while complying with industry standards for safety and reliability.",
-    image: "/Home/h3.png",
+      "Durable lotion bottles designed for safe, hygienic, and convenient dispensing of skincare and personal care products. Their practical design helps preserve product quality while enhancing presentation.",
+    image: "/Home/h4.png",
     background: "/Home/bg5.png",
   },
-]
+  {
+    id: 5,
+    title: "Oil Bottles",
+    productPath: "/products/5",
+    description:
+      "High-quality oil bottles designed for secure storage and convenient dispensing. Suitable for various oil-based products, they combine functional design, durability, and reliable packaging performance.",
+    image: "/Home/h5.png",
+    background: "/Home/bg1.png",
+  },
+  {
+    id: 6,
+    title: "Shampoo Bottles",
+    productPath: "/products/6",
+    description:
+      "Versatile shampoo bottles designed for convenient dispensing, secure storage, and attractive product presentation. Ideal for haircare and personal care brands seeking practical and reliable packaging solutions.",
+    image: "/Home/h6.png",
+    background: "/Home/bg2.png",
+  },
+  {
+    id: 7,
+    title: "Jar Sets",
+    productPath: "/products/7",
+    description:
+      "Premium jar sets designed for hygienic storage and attractive packaging of creams, cosmetics, skincare products, and other personal care formulations. Their durable construction supports product protection and a polished brand presentation.",
+    image: "/Home/h7.png",
+    background: "/Home/bg3.png",
+  },
+];
 
 export default function ProductSlider() {
   const [currentSlide, setCurrentSlide] = useState(0)

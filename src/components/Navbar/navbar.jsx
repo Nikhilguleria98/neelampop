@@ -262,10 +262,10 @@ const Navbar = () => {
         { name: "100ml/19mm Classic Calamine Style Oil/Lotion/Shampoo Bottles", path: "/products/11/oil-17" },
       ],
     },
-    { 
-      name: "Floor cleaner bottles",
-      path: "/products/12" 
-    },
+    // { 
+    //   name: "Floor cleaner bottles",
+    //   path: "/products/12" 
+    // },
     { 
       name: "Pharmaceutical Rubber Dropper Assembly",
       path: "/products/13"

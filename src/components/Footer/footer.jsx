@@ -1,5 +1,5 @@
 import React from "react";
-import { Mail, MapPin, Send } from "lucide-react";
+import { AtSign, Mail, MapPin, Phone, Send } from "lucide-react";
 
 export default function Footer() {
   return (

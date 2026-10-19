@@ -1,70 +1,95 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect } from "react";
 
 export default function ProductGallery({ product, selectedSize }) {
   const [active, setActive] = useState(0);
-  
-  // Get images based on selected size
-  const getSizeImages = () => {
-    if (selectedSize && product.sizeImages && product.sizeImages[selectedSize]) {
-      return product.sizeImages[selectedSize];
-    }
-    // Fallback to default images if no size-specific images exist
-    return product.images || [];
-  };
 
-  const images = getSizeImages();
+  // Get images according to selected size
+  const images =
+    (selectedSize &&
+      product?.sizeImages?.[selectedSize]?.length > 0 &&
+      product.sizeImages[selectedSize]) ||
+    product?.images ||
+    [];
+
   const main = images[active];
 
-  // Reset active image when size changes
+  // Reset active image when size or images change
   useEffect(() => {
     setActive(0);
-  }, [selectedSize]);
+  }, [selectedSize, product]);
 
   return (
-    <section className="flex flex-col gap-3">
-      {/* Size indicator */}
+    <section className="flex w-full flex-col gap-3">
+      {/* Selected size */}
       <div className="text-sm text-gray-600">
-        Currently viewing: <span className="font-semibold text-[#2592AD]">{selectedSize}</span>
+        Currently viewing:{" "}
+        <span className="font-semibold text-[#2592AD]">
+          {selectedSize || "Default"}
+        </span>
       </div>
 
-      {/* Main image */}
-      <div className="flex h-64 w-full items-center justify-center overflow-hidden rounded-md border border-[#d9e6df] bg-[#f7faf4] sm:h-72 md:h-[320px] lg:h-[340px]">
-        {main ? (
-          <img
-            src={main.src}
-            alt={main.alt}
-            className="w-full h-full object-cover"
-          />
-        ) : (
-          <div className="text-gray-400">No image available</div>
-        )}
+      {/* Main image container */}
+     {/* Main image */}
+<div className="relative h-64 w-full overflow-hidden rounded-xl border border-[#d9e6df] bg-[#f7faf4] sm:h-72 md:h-[400px] lg:h-[440px]">
+
+  {main ? (
+    <>
+      {/* Background fills the entire container */}
+      <img
+        src={main.src}
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 h-full w-full scale-110 object-cover blur-2xl opacity-30"
+      />
+
+      {/* Full product image without cropping */}
+      <div className="absolute inset-0 flex items-center justify-center p-3 sm:p-4">
+        <img
+          src={main.src}
+          alt={main.alt || product?.name || "Product image"}
+          className="h-full w-full object-contain object-center"
+        />
       </div>
+    </>
+  ) : (
+    <div className="flex h-full items-center justify-center text-gray-400">
+      No image available
+    </div>
+  )}
+</div>
 
       {/* Thumbnail images */}
-      <div className="-mx-1 flex gap-2 overflow-x-auto px-1 py-1">
-        {images.map((img, idx) => (
-          <button
-            key={idx}
-            onClick={() => setActive(idx)}
-            className={`flex-shrink-0 rounded-md border transition-all ${
-              active === idx 
-                ? "ring-2 ring-[#2592AD] border-[#2592AD]" 
-                : "border-gray-300 hover:border-[#2592AD]"
-            }`}
-          >
-            <img
-              src={img.src}
-              alt={img.alt}
-              className="h-14 w-[4.5rem] rounded-md object-cover sm:h-16 sm:w-20"
-            />
-          </button>
-        ))}
-      </div>
+      {images.length > 0 && (
+        <div className="flex gap-3 overflow-x-auto px-1 py-2">
+          {images.map((img, idx) => (
+            <button
+              key={img.src || idx}
+              type="button"
+              onClick={() => setActive(idx)}
+              aria-label={`View image ${idx + 1}`}
+              aria-pressed={active === idx}
+              className={`flex h-[76px] w-[88px] flex-shrink-0 items-center justify-center overflow-hidden rounded-lg border bg-[#f7faf4] p-2 transition-all duration-200 sm:h-20 sm:w-24 ${
+                active === idx
+                  ? "border-[#2592AD] ring-2 ring-[#2592AD]/30"
+                  : "border-gray-200 hover:border-[#2592AD]"
+              }`}
+            >
+              <img
+                src={img.src}
+                alt={img.alt || `Product view ${idx + 1}`}
+                className="h-full w-full object-contain object-center"
+              />
+            </button>
+          ))}
+        </div>
+      )}
 
       {/* Image counter */}
-      <div className="text-xs text-gray-500 text-center">
-        Image {active + 1} of {images.length}
-      </div>
+      {images.length > 0 && (
+        <div className="text-center text-xs text-gray-500">
+          Image {active + 1} of {images.length}
+        </div>
+      )}
     </section>
   );
 }

@@ -2,16 +2,16 @@ import React from 'react'
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-slate-50/50">
+    <div className="min-h-screen bg-[#edf4e8]">
       {/* Header / Hero Section */}
-      <header className="bg-[#2592ad] px-6 py-12 sm:px-12 md:px-16 lg:py-20 overflow-hidden text-white">
-        <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-10">
+      <header className="overflow-hidden bg-[#2592ad] px-6 py-10 text-white sm:px-12 md:px-16 lg:py-14">
+        <div className="mx-auto flex max-w-7xl flex-col-reverse items-center justify-between gap-8 lg:flex-row">
           
           {/* Left side - Illustrations (Responsive Scaling) */}
           <div className="w-full lg:w-1/2 flex justify-center">
             <img 
               src="/about.png" 
-              alt="About Haseef Pack" 
+              alt="Neelam Print'o'Pack plastic packaging"
               className="w-full max-w-lg lg:max-w-xl h-auto object-contain drop-shadow-md" 
             />
           </div>
@@ -30,35 +30,23 @@ export default function Home() {
       </header>
 
       {/* Main Content */}
-      <main className="max-w-4xl mx-auto px-6 py-12 md:py-16">
-        <div className="space-y-8 md:space-y-12">
+      <main className="mx-auto max-w-4xl px-6 py-8 md:py-10">
+        <div className="space-y-5 md:space-y-7">
           
           {/* Precision in Every Package */}
-          <section className="flex gap-4 p-4 rounded-xl hover:bg-white hover:shadow-sm transition-all duration-200">
-            <div className="flex-shrink-0 mt-1.5">
-              <span className="relative flex h-3 w-3">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
-              </span>
-            </div>
+          <section className="flex gap-4 p-4 rounded-xl hover:bg-[#e5efdd] hover:shadow-sm transition-all duration-200">
+            <span className="mt-2 h-2.5 w-2.5 flex-shrink-0 rounded-full bg-[#2592ad]" aria-hidden="true"></span>
             <div>
               <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">Precision in Every Package</h3>
               <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-                Established in 2011 in Sialkot, Haseef Pack Pvt O Pack specializes over 15,000 sq. ft. of modern
-                production facilities, delivering premium plastic packaging solutions with accuracy and strict adherence
-                to industry standards.
+                Established in Baddi in 2011, Neelam Print'o'Pack manufactures plastic packaging with a focus on precision and reliable service. Our 15,000 sq. ft. production facility supports customers across a range of industries.
               </p>
             </div>
           </section>
 
           {/* Driven by Quality and Innovation */}
-          <section className="flex gap-4 p-4 rounded-xl hover:bg-white hover:shadow-sm transition-all duration-200">
-            <div className="flex-shrink-0 mt-1.5">
-              <span className="relative flex h-3 w-3">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
-              </span>
-            </div>
+          <section className="flex gap-4 p-4 rounded-xl hover:bg-[#e5efdd] hover:shadow-sm transition-all duration-200">
+            <span className="mt-2 h-2.5 w-2.5 flex-shrink-0 rounded-full bg-[#2592ad]" aria-hidden="true"></span>
             <div>
               <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">Driven by Quality and Innovation</h3>
               <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
@@ -70,35 +58,23 @@ export default function Home() {
           </section>
 
           {/* Serving Diverse Industries */}
-          <section className="flex gap-4 p-4 rounded-xl hover:bg-white hover:shadow-sm transition-all duration-200">
-            <div className="flex-shrink-0 mt-1.5">
-              <span className="relative flex h-3 w-3">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
-              </span>
-            </div>
+          <section className="flex gap-4 p-4 rounded-xl hover:bg-[#e5efdd] hover:shadow-sm transition-all duration-200">
+            <span className="mt-2 h-2.5 w-2.5 flex-shrink-0 rounded-full bg-[#2592ad]" aria-hidden="true"></span>
             <div>
               <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">Serving Diverse Industries</h3>
               <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-                Our expertise spans pharmaceuticals, FMCG, cosmetics, food, home care, and personal care industries. We
-                also manufacture plastic storage CAN lids for golf period, expanding into chemicals, oils, lubricants,
-                and agro industries to meet evolving needs.
+                We serve pharmaceutical, FMCG, cosmetics, food, and home care businesses with packaging designed for their product needs.
               </p>
             </div>
           </section>
 
           {/* Partnership Beyond Packaging */}
-          <section className="flex gap-4 p-4 rounded-xl hover:bg-white hover:shadow-sm transition-all duration-200">
-            <div className="flex-shrink-0 mt-1.5">
-              <span className="relative flex h-3 w-3">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
-              </span>
-            </div>
+          <section className="flex gap-4 p-4 rounded-xl hover:bg-[#e5efdd] hover:shadow-sm transition-all duration-200">
+            <span className="mt-2 h-2.5 w-2.5 flex-shrink-0 rounded-full bg-[#2592ad]" aria-hidden="true"></span>
             <div>
               <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">Partnership Beyond Packaging</h3>
               <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-                At Haseef Pack O Pack, we value long-term relationships built on trust, transparency, and excellence.
+                At Neelam Print'o'Pack, we value long-term relationships built on trust, transparency, and dependable service.
                 Our customer-centric approach ensures seamless communication, timely service, and solutions that align
                 with your growth vision.
               </p>
@@ -106,13 +82,8 @@ export default function Home() {
           </section>
 
           {/* Commitment to Excellence */}
-          <section className="flex gap-4 p-4 rounded-xl hover:bg-white hover:shadow-sm transition-all duration-200">
-            <div className="flex-shrink-0 mt-1.5">
-              <span className="relative flex h-3 w-3">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
-              </span>
-            </div>
+          <section className="flex gap-4 p-4 rounded-xl hover:bg-[#e5efdd] hover:shadow-sm transition-all duration-200">
+            <span className="mt-2 h-2.5 w-2.5 flex-shrink-0 rounded-full bg-[#2592ad]" aria-hidden="true"></span>
             <div>
               <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">Commitment to Excellence</h3>
               <p className="text-sm sm:text-base text-gray-600 leading-relaxed">

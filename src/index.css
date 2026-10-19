@@ -2,4 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body {
+  min-height: 100%;
+  background-color: #edf4e8;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+  line-height: 1.55;
+  letter-spacing: -0.01em;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Manrope", "Inter", ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: -0.03em;
+}
+
+button,
+[role="button"] {
+  font-family: "Manrope", "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+.lotion-bottle-typography {
+  font-family: "Times New Roman", Times, serif;
+  letter-spacing: normal;
+}
+
+.lotion-bottle-typography :is(h1, h2, h3, h4, h5, h6, button, a) {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 600;
+  letter-spacing: normal;
+}
+
 

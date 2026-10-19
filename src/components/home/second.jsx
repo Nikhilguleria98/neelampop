@@ -6,43 +6,43 @@ export default function HomePage() {
     navigate('/contact');  // Navigates to contact page
   };
   return (
-    <div className=" bg-white relative">
+    <div className="bg-[#edf4e8] relative">
       {/* Main content */}
-      <div className="relative z-10 flex flex-col items-center justify-center  px-4 pt-16">
+      <div className="relative z-10 flex flex-col items-center justify-center px-4 pt-12">
         <div className="max-w-4xl mx-auto text-center">
           {/* Header */}
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-8">About Company</h1>
+          <h1 className="mb-5 text-3xl font-bold text-gray-800 md:text-5xl">About Company</h1>
 
           {/* Description */}
-          <p className="text-gray-600 text-lg leading-relaxed mb-12 max-w-3xl mx-auto">
+          <p className="mx-auto mb-8 max-w-3xl text-base leading-7 text-gray-600 md:text-lg">
             Neelam Print'o'Pack, established in 2011 in Baddi, manufactures quality plastic packaging with precision and
             timely service. We serve pharmaceuticals, FMCG, cosmetics, food, and home care industries.
           </p>
 
           {/* Statistics Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12 max-w-2xl mx-auto">
+          <div className="mx-auto mb-8 grid max-w-2xl grid-cols-1 gap-4 md:grid-cols-2">
             {/* Year Established */}
-            <div className="bg-[#2592ad] text-white p-8 rounded-lg text-center">
-              <div className="text-3xl md:text-4xl font-bold mb-2">2011</div>
-              <div className="text-lg">Year Established</div>
+            <div className="rounded-lg bg-[#2592ad] p-6 text-center text-white">
+              <div className="mb-1 text-3xl font-bold md:text-4xl">2011</div>
+              <div className="text-base md:text-lg">Year Established</div>
             </div>
 
             {/* Production Facility */}
-            <div className="bg-[#2592ad] text-white p-8 rounded-lg text-center">
-              <div className="text-3xl md:text-4xl font-bold mb-2">15,000+ ft²</div>
-              <div className="text-lg">Production Facility</div>
+            <div className="rounded-lg bg-[#2592ad] p-6 text-center text-white">
+              <div className="mb-1 text-3xl font-bold md:text-4xl">15,000+ ft²</div>
+              <div className="text-base md:text-lg">Production Facility</div>
             </div>
 
             {/* Product Categories */}
-            <div className="bg-[#2592ad] text-white p-8 rounded-lg text-center">
-              <div className="text-3xl md:text-4xl font-bold mb-2">25+</div>
-              <div className="text-lg">Product Categories</div>
+            <div className="rounded-lg bg-[#2592ad] p-6 text-center text-white">
+              <div className="mb-1 text-3xl font-bold md:text-4xl">25+</div>
+              <div className="text-base md:text-lg">Product Categories</div>
             </div>
 
             {/* Quality Commitment */}
-            <div className="bg-[#2592ad] text-white p-8 rounded-lg text-center">
-              <div className="text-3xl md:text-4xl font-bold mb-2">100%</div>
-              <div className="text-lg">Quality Commitment</div>
+            <div className="rounded-lg bg-[#2592ad] p-6 text-center text-white">
+              <div className="mb-1 text-3xl font-bold md:text-4xl">100%</div>
+              <div className="text-base md:text-lg">Quality Commitment</div>
             </div>
           </div>
 
@@ -50,7 +50,7 @@ export default function HomePage() {
           <button
             variant="outline"
             size="lg"
-            className="border-2 border-gray-400 text-gray-700 hover:bg-gray-50 px-8 py-3 text-lg bg-transparent"
+            className="border-2 border-gray-400 text-gray-700 hover:bg-[#e5efdd] px-8 py-3 text-lg bg-transparent"
                           onClick={handleClick}
 
           >

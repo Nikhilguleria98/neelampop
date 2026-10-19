@@ -8,6 +8,7 @@ const slides = [
   {
     id: 1,
     title: "Floor Cleaners",
+    productPath: "/products/12",
     description:
       "Specially formulated floor cleaners ensure powerful cleaning, hygiene, and long-lasting freshness across residential, commercial, and industrial spaces. Designed to effectively remove dirt, stains, and germs, they help maintain a safe and spotless environment. With reliable performance and compliance with safety standards, these cleaners support your commitment to quality, care, and everyday cleanliness.",
     image: "/Home/h1.png",
@@ -16,6 +17,7 @@ const slides = [
   {
     id: 2,
     title: "Cream Jars Set",
+    productPath: "/products/9",
     description:
       "Elegantly designed cream jar sets provide safe, hygienic, and convenient storage for skincare, cosmetic, and personal care formulations. Built with durable materials to preserve product integrity, these jars ensure freshness while enhancing the user experience with easy accessibility and premium aesthetics. Their reliable design supports industry standards of safety and quality, reflecting your brand's commitment to excellence and customer care.",
     image: "/Home/h2.png",
@@ -24,6 +26,7 @@ const slides = [
   {
     id: 3,
     title: "Lotion Bottles",
+    productPath: "/products/11",
     description:
       "Durable lotion bottles ensure safe, hygienic, and easy dispensing for skincare and personal care products. Designed to preserve freshness and quality, they support your brand's commitment to reliability and customer care.",
     image: "/Home/h4.png",
@@ -32,6 +35,7 @@ const slides = [
   {
     id: 4,
     title: "Eye Dropper Set",
+    productPath: "/products/5",
     description:
       "Precision-designed plastic eye droppers ensure safe, hygienic, and accurate liquid dispensing across pharmaceutical, laboratory, and personal care applications. Lightweight yet durable, these droppers help maintain product integrity and freshness, supporting your commitment to quality and patient care while complying with industry standards for safety and reliability.",
     image: "/Home/h3.png",
@@ -104,8 +108,8 @@ export default function ProductSlider() {
               Send Inquiry
             </button>
             <button
-              className="border border-gray-400 text-gray-700 hover:bg-gray-50 px-6 py-2.5 sm:px-8 sm:py-3 rounded-none font-medium bg-transparent text-sm sm:text-base"
-              onClick={() => console.log("View Product clicked")}
+              className="border border-gray-400 text-gray-700 hover:bg-[#e5efdd] px-6 py-2.5 sm:px-8 sm:py-3 rounded-none font-medium bg-transparent text-sm sm:text-base"
+              onClick={() => navigate(slides[currentSlide].productPath)}
             >
               View Product
             </button>
@@ -148,8 +152,8 @@ export default function ProductSlider() {
       <div className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 lg:bottom-8 lg:right-8 z-20">
         <button
           className="w-12 h-12 sm:w-14 sm:h-14 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg transition-colors duration-200"
-          onClick={() => console.log("WhatsApp clicked")}
-          aria-label="Contact via WhatsApp"
+          onClick={handleClick}
+          aria-label="Send an inquiry"
         >
           <MessageCircle className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
         </button>

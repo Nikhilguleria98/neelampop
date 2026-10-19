@@ -21,14 +21,14 @@ export default function ProductGallery({ product, selectedSize }) {
   }, [selectedSize]);
 
   return (
-    <section className="flex flex-col gap-4">
+    <section className="flex flex-col gap-3">
       {/* Size indicator */}
       <div className="text-sm text-gray-600">
         Currently viewing: <span className="font-semibold text-[#2592AD]">{selectedSize}</span>
       </div>
 
       {/* Main image */}
-      <div className="w-full flex justify-center items-center overflow-hidden rounded-md border bg-white h-64 sm:h-80 md:h-96 lg:h-[380px]">
+      <div className="flex h-64 w-full items-center justify-center overflow-hidden rounded-md border border-[#d9e6df] bg-[#f7faf4] sm:h-72 md:h-[320px] lg:h-[340px]">
         {main ? (
           <img
             src={main.src}
@@ -41,7 +41,7 @@ export default function ProductGallery({ product, selectedSize }) {
       </div>
 
       {/* Thumbnail images */}
-      <div className="flex gap-3 overflow-x-auto py-1 px-1 -mx-1">
+      <div className="-mx-1 flex gap-2 overflow-x-auto px-1 py-1">
         {images.map((img, idx) => (
           <button
             key={idx}
@@ -55,7 +55,7 @@ export default function ProductGallery({ product, selectedSize }) {
             <img
               src={img.src}
               alt={img.alt}
-              className="h-16 w-20 sm:h-20 sm:w-24 object-cover rounded-md"
+              className="h-14 w-[4.5rem] rounded-md object-cover sm:h-16 sm:w-20"
             />
           </button>
         ))}

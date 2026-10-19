@@ -59,138 +59,310 @@ const products = [
     //     "55 ml", "65 ml", "75 ml", "85 ml",
     //   ],
 
-  
+
   id: 1,
   name: "Pharma Dry Syrup Bottles",
   rating: 4.8,
   reviews: 49,
 
-  description:
-    "Dry Syrup Bottles are specially designed pharmaceutical packaging solutions used for storing medicines that require reconstitution before administration. Manufactured from high-quality food-grade HDPE, these bottles provide moisture protection, leak-proof sealing, long shelf life, and accurate dosing for healthcare applications.",
-
-  images: [
-    { src: "/medicine_img/i1.jpg", alt: "Syrup bottle and box mockup" },
-    { src: "/medicine_img/i2.jpg", alt: "Brown glass bottle" },
-    { src: "/medicine_img/i3.jpg", alt: "White medicine bottle" },
-    { src: "/medicine_img/i4.jpg", alt: "Label close-up" },
-    { src: "/medicine_img/i5.jpg", alt: "Packaging box" },
-  ],
-
-  sizeImages: {
-    "10 ml": [
-      { src: "/medicine_img/i1.jpg", alt: "10ml Dry Syrup Bottle" },
-      { src: "/medicine_img/i2.jpg", alt: "10ml Bottle" },
-      { src: "/medicine_img/i3.jpg", alt: "10ml Packaging" },
-    ],
-
-    "15 ml": [
-      { src: "/medicine_img/i4.jpg", alt: "15ml Dry Syrup Bottle" },
-      { src: "/medicine_img/i5.jpg", alt: "15ml Bottle" },
-      { src: "/medicine_img/i6.jpg", alt: "15ml Packaging" },
-    ],
-
-    "30 ml": [
-      { src: "/medicine_img/i7.jpg", alt: "30ml Dry Syrup Bottle" },
-      { src: "/medicine_img/i8.jpg", alt: "30ml Bottle" },
-      { src: "/medicine_img/i9.jpg", alt: "30ml Packaging" },
-    ],
-
-    "50 ml": [
-      { src: "/medicine_img/i10.jpg", alt: "50ml Dry Syrup Bottle" },
-      { src: "/medicine_img/i11.jpg", alt: "50ml Bottle" },
-      { src: "/medicine_img/i12.jpg", alt: "50ml Packaging" },
-    ],
-
-    "60 ml": [
-      { src: "/medicine_img/i13.jpg", alt: "60ml Dry Syrup Bottle" },
-      { src: "/medicine_img/i14.jpg", alt: "60ml Bottle" },
-      { src: "/medicine_img/i15.jpg", alt: "60ml Packaging" },
-    ],
-
-    "100 ml": [
-      { src: "/medicine_img/i16.jpg", alt: "100ml Dry Syrup Bottle" },
-      { src: "/medicine_img/i1.jpg", alt: "100ml Bottle" },
-      { src: "/medicine_img/i2.jpg", alt: "100ml Packaging" },
-    ],
-  },
-
-  specs: [
+  variants: [
     {
-      label: "Bottle Material",
-      value: "High Density Polyethylene (HDPE)",
-    },
-    {
-      label: "Dosage Cup Material",
-      value: "Polypropylene (PP)",
-    },
-    {
-      label: "Bottle Color",
-      value: "Natural",
-    },
-    {
-      label: "Cap Colors",
-      value: "White, Blue, Red",
-    },
-    {
-      label: "Neck Sizes",
-      value: "25mm, 28mm",
-    },
-    {
-      label: "Dosage Cup",
-      value: "10ml Transparent",
-    },
-    {
-      label: "Cap Type",
-      value: "Screw Cap with Induction Seal Wad",
-    },
-    {
-      label: "Application Area",
-      value: "Pharmaceutical Industry",
-    },
-    {
-      label: "Supply Ability",
-      value: "1000 Per Day",
-    },
-    {
-      label: "Delivery Time",
-      value: "4-5 Days",
-    },
-  ],
+      slug: "group",
+      name: "Dry Syrup Bottle Group",
 
-  applications: [
-    "Storage of dry syrups and powders",
-    "Storage of liquid medicines",
-    "Storage of tablets and capsules",
-    "Food industry powder packaging",
-    "Cosmetic powder packaging",
-    "Products requiring reconstitution before use",
-  ],
+      description:
+        "Dry syrup bottles are primarily used in the pharmaceutical industry to store and dispense medications that require reconstitution with water before administration. They are especially useful for pediatric medicines due to their flexibility in dosing, improved stability, and longer shelf life compared to liquid syrups.",
 
-  industryApplications: [
-    "Pharmaceutical Industry",
-    "Nutraceutical & Supplement Industry",
-    "Healthcare (Hospitals)",
-    "Veterinary Industry",
-  ],
+      images: [
+        { src: "/image.png", alt: "Dry Syrup Bottle Group" },
+       
+      ],
 
-  features: [
-    "Dimensionally Accurate",
-    "Crack Resistant",
-    "High Quality Food Grade Raw Material",
-    "Airtight & Leak Proof",
-    "Fine Finish",
-    "Space For Shaking",
-    "Moisture Resistant Material",
-  ],
+      specs: [
+        { label: "Bottle Material", value: "High Density Polyethylene (HDPE)" },
+        { label: "Bottle Colour", value: "Natural" },
+        { label: "Cap Material", value: "Polypropylene (PP)" },
+        { label: "Cap Colours", value: "White, Blue, Red*" },
+        { label: "Cap Type", value: "Screw Cap with Induction Seal Wad" },
+        { label: "Dosage Cup", value: "10ml Transparent" },
+        { label: "Dosage Cup Material", value: "Polypropylene (PP)" },
+        { label: "Neck Sizes", value: "25mm, 28mm" },
+        { label: "Available Capacities", value: "10ml, 15ml, 30ml, 50ml, 60ml, 100ml" },
+        { label: "Application Area", value: "Pharmaceutical Industry" }
+      ],
 
-  sizes: [
-    "10 ml",
-    "15 ml",
-    "30 ml",
-    "50 ml",
-    "60 ml",
-    "100 ml",
-  ],
+      applications: [
+        "Storage of dry syrups and powders",
+        "Storage of liquid medicines",
+        "Storage of tablets and capsules",
+        "Food industry powder packaging",
+        "Cosmetic powder packaging",
+        "Products requiring reconstitution before use"
+      ],
+
+      industryApplications: [
+        "Pharmaceutical Industry",
+        "Nutraceutical & Supplement Industry",
+        "Healthcare (Hospitals)",
+        "Veterinary Industry"
+      ],
+
+      features: [
+        "Dimensionally Accurate",
+        "Crack Resistant",
+        "High Quality Food Grade Raw Material",
+        "Airtight & Leak Proof",
+        "Fine Finish",
+        "Space For Shaking",
+        "Moisture Resistant Material"
+      ],
+
+      sizes: [
+        "10ml / 25mm",
+        "15ml / 25mm",
+        "30ml / 25mm",
+        "30ml / 28mm",
+        "50ml / 28mm",
+        "60ml / 25mm",
+        "60ml / 28mm",
+        "100ml / 25mm"
+      ]
+    },
+
+    {
+      slug: "10ml-25mm",
+      name: "Dry Syrup Bottle 10ml / 25mm",
+
+      description:
+        "10ml Dry Syrup Bottle designed for pharmaceutical formulations requiring reconstitution before use. Provides excellent moisture protection, safe storage, and accurate dosage support.",
+
+      images: [
+        { src: "/image1.jpeg", alt: "10ml Dry Syrup Bottle" }
+      ],
+
+      specs: [
+        { label: "Capacity", value: "10ml" },
+        { label: "Neck Size", value: "25mm" },
+        { label: "Bottle Colour", value: "Natural" },
+        { label: "Bottle Material", value: "High Density Polyethylene (HDPE)" },
+        { label: "Cap Colours", value: "White, Blue, Red*" },
+        { label: "Cap Type", value: "Screw Cap with Induction Seal Wad" },
+        { label: "Dosage Cup", value: "10ml Transparent" },
+        { label: "Dosage Cup Material", value: "Polypropylene (PP)" }
+      ],
+
+      applications: [
+        "Storage of dry syrups and powders",
+        "Liquid medicines",
+        "Tablets and capsules",
+        "Food industry powder packaging",
+        "Cosmetic powder packaging"
+      ],
+
+      industryApplications: [
+        "Pharmaceutical Industry",
+        "Nutraceutical & Supplement Industry",
+        "Healthcare (Hospitals)",
+        "Veterinary Industry"
+      ],
+
+      features: [
+        "Dimensionally Accurate",
+        "Crack Resistant",
+        "High Quality Food Grade Raw Material",
+        "Airtight & Leak Proof",
+        "Fine Finish",
+        "Space For Shaking",
+        "Moisture Resistant Material"
+      ],
+
+      sizes: ["10ml"]
+    },
+
+    {
+      slug: "15ml-25mm",
+      name: "Dry Syrup Bottle 15ml / 25mm",
+
+      description:
+        "15ml pharmaceutical dry syrup bottle suitable for medicines requiring reconstitution before administration.",
+
+      images: [
+        { src: "/medicine_img/i1.jpg", alt: "15ml Dry Syrup Bottle" }
+      ],
+
+      specs: [
+        { label: "Capacity", value: "15ml" },
+        { label: "Neck Size", value: "25mm" },
+        { label: "Bottle Colour", value: "Natural" },
+        { label: "Bottle Material", value: "HDPE" },
+        { label: "Cap Colours", value: "White, Blue, Red*" },
+        { label: "Dosage Cup", value: "10ml Transparent" }
+      ],
+
+      applications: [
+        "Dry syrups",
+        "Liquid medicines",
+        "Tablets and capsules"
+      ],
+
+      industryApplications: [
+        "Pharmaceutical Industry",
+        "Healthcare",
+        "Veterinary Industry"
+      ],
+
+      features: [
+        "Dimensionally Accurate",
+        "Crack Resistant",
+        "Food Grade Material",
+        "Airtight & Leak Proof",
+        "Fine Finish",
+        "Space For Shaking",
+        "Moisture Resistant Material"
+      ],
+
+      sizes: ["15ml"]
+    },
+
+    {
+      slug: "30ml-25mm",
+      name: "Dry Syrup Bottle 30ml / 25mm",
+      images: [{ src: "/medicine_img/i1.jpg", alt: "30ml Bottle" }],
+      specs: [
+        { label: "Capacity", value: "30ml" },
+        { label: "Neck Size", value: "25mm" },
+        { label: "Material", value: "HDPE" }
+      ],
+      applications: [
+        "Dry syrups",
+        "Liquid medicines",
+        "Tablets and capsules"
+      ],
+      features: [
+        "Dimensionally Accurate",
+        "Crack Resistant",
+        "Leak Proof",
+        "Fine Finish",
+        "Moisture Resistant"
+      ],
+      sizes: ["30ml"]
+    },
+
+    {
+      slug: "30ml-28mm",
+      name: "Dry Syrup Bottle 30ml / 28mm",
+      images: [{ src: "/medicine_img/i2.jpg", alt: "30ml 28mm Bottle" }],
+      specs: [
+        { label: "Capacity", value: "30ml" },
+        { label: "Neck Size", value: "28mm" },
+        { label: "Material", value: "HDPE" }
+      ],
+      applications: [
+        "Dry syrups",
+        "Liquid medicines",
+        "Tablets and capsules"
+      ],
+      features: [
+        "Dimensionally Accurate",
+        "Crack Resistant",
+        "Leak Proof",
+        "Fine Finish"
+      ],
+      sizes: ["30ml"]
+    },
+
+    {
+      slug: "50ml-28mm",
+      name: "Dry Syrup Bottle 50ml / 28mm",
+      images: [{ src: "/medicine_img/i2.jpg", alt: "50ml Bottle" }],
+      specs: [
+        { label: "Capacity", value: "50ml" },
+        { label: "Neck Size", value: "28mm" },
+        { label: "Material", value: "HDPE" }
+      ],
+      applications: [
+        "Dry syrups",
+        "Liquid medicines",
+        "Tablets and capsules"
+      ],
+      features: [
+        "Dimensionally Accurate",
+        "Crack Resistant",
+        "Leak Proof",
+        "Fine Finish"
+      ],
+      sizes: ["50ml"]
+    },
+
+    {
+      slug: "60ml-25mm",
+      name: "Dry Syrup Bottle 60ml / 25mm",
+      images: [{ src: "/medicine_img/i1.jpg", alt: "60ml Bottle" }],
+      specs: [
+        { label: "Capacity", value: "60ml" },
+        { label: "Neck Size", value: "25mm" },
+        { label: "Material", value: "HDPE" }
+      ],
+      applications: [
+        "Dry syrups",
+        "Liquid medicines",
+        "Tablets and capsules"
+      ],
+      features: [
+        "Dimensionally Accurate",
+        "Crack Resistant",
+        "Leak Proof",
+        "Fine Finish"
+      ],
+      sizes: ["60ml"]
+    },
+
+    {
+      slug: "60ml-28mm",
+      name: "Dry Syrup Bottle 60ml / 28mm",
+      images: [{ src: "/medicine_img/i2.jpg", alt: "60ml 28mm Bottle" }],
+      specs: [
+        { label: "Capacity", value: "60ml" },
+        { label: "Neck Size", value: "28mm" },
+        { label: "Material", value: "HDPE" }
+      ],
+      applications: [
+        "Dry syrups",
+        "Liquid medicines",
+        "Tablets and capsules"
+      ],
+      features: [
+        "Dimensionally Accurate",
+        "Crack Resistant",
+        "Leak Proof",
+        "Fine Finish"
+      ],
+      sizes: ["60ml"]
+    },
+
+    {
+      slug: "100ml-25mm",
+      name: "Dry Syrup Bottle 100ml / 25mm",
+      images: [{ src: "/medicine_img/i1.jpg", alt: "100ml Bottle" }],
+      specs: [
+        { label: "Capacity", value: "100ml" },
+        { label: "Neck Size", value: "25mm" },
+        { label: "Material", value: "HDPE" }
+      ],
+      applications: [
+        "Dry syrups",
+        "Liquid medicines",
+        "Tablets and capsules"
+      ],
+      features: [
+        "Dimensionally Accurate",
+        "Crack Resistant",
+        "Leak Proof",
+        "Fine Finish"
+      ],
+      sizes: ["100ml"]
+    }
+  ]
 },
 {
   id: 2,
@@ -3030,8 +3202,348 @@ const products = [
 
       sizes: ["75 gms"],
     },
+    
+    
   ],
-}
+},
+
+{
+  id: 55,
+  name: "Pharma PET Bottles",
+  rating: 4.9,
+  reviews: 0,
+
+  description:
+    "Pharma PET bottles for packaging pharmaceutical syrups, cough mixtures, oral solutions, vitamins, dietary supplements, and Ayurvedic formulations. Available in multiple capacities and neck sizes.",
+
+  variants: [
+    {
+      slug: "10ml-22mm",
+      name: "10ml Pharma PET Bottle",
+      description: "10ml PET bottle with a 22mm neck size.",
+      tagline: "Compact pharmaceutical liquid packaging",
+
+      images: [
+        // { src: "/medicine_img/10ml-pet-bottle.jpeg", alt: "10ml Pharma PET Bottle" },
+      ],
+
+      specs: [
+        { label: "Capacity", value: "10ml" },
+        { label: "Neck Size", value: "22mm" },
+        { label: "Material", value: "PET (Polyethylene Terephthalate)" },
+        { label: "Available Colours", value: "Amber, clear and other colour options subject to availability" },
+      ],
+
+      applications: ["Pharmaceutical liquids", "Oral solutions"],
+      industryApplications: ["Pharmaceutical Industry"],
+      features: ["Lightweight construction", "Durable PET material"],
+      sizes: ["10ml"],
+    },
+
+    {
+      slug: "15ml-22mm",
+      name: "15ml Pharma PET Bottle - 22mm",
+      description: "15ml PET bottle with a 22mm neck size.",
+      tagline: "Small-capacity PET packaging",
+
+      images: [],
+      specs: [
+        { label: "Capacity", value: "15ml" },
+        { label: "Neck Size", value: "22mm" },
+        { label: "Material", value: "PET (Polyethylene Terephthalate)" },
+      ],
+      applications: ["Pharmaceutical liquid packaging"],
+      industryApplications: ["Pharmaceutical Industry"],
+      features: ["Lightweight PET construction"],
+      sizes: ["15ml"],
+    },
+
+    {
+      slug: "15ml-25mm",
+      name: "15ml Pharma PET Bottle - 25mm",
+      description: "15ml PET bottle with a 25mm neck size.",
+      tagline: "Small-capacity PET packaging",
+
+      images: [],
+      specs: [
+        { label: "Capacity", value: "15ml" },
+        { label: "Neck Size", value: "25mm" },
+        { label: "Material", value: "PET (Polyethylene Terephthalate)" },
+      ],
+      applications: ["Pharmaceutical liquid packaging"],
+      industryApplications: ["Pharmaceutical Industry"],
+      features: ["Lightweight PET construction"],
+      sizes: ["15ml"],
+    },
+
+    {
+      slug: "30ml-25mm",
+      name: "30ml Pharma PET Bottle",
+      description: "30ml PET bottle with a 25mm neck size.",
+      tagline: "Practical pharmaceutical packaging",
+
+      images: [],
+      specs: [
+        { label: "Capacity", value: "30ml" },
+        { label: "Neck Size", value: "25mm" },
+        { label: "Material", value: "PET (Polyethylene Terephthalate)" },
+      ],
+      applications: ["Pharmaceutical syrups", "Oral liquid formulations"],
+      industryApplications: ["Pharmaceutical Industry"],
+      features: ["Lightweight", "Durable packaging"],
+      sizes: ["30ml"],
+    },
+
+    {
+      slug: "60ml-22mm",
+      name: "60ml Pharma PET Bottle - 22mm",
+      description: "60ml PET bottle with a 22mm neck size.",
+      tagline: "Versatile liquid packaging",
+
+      images: [],
+      specs: [
+        { label: "Capacity", value: "60ml" },
+        { label: "Neck Size", value: "22mm" },
+        { label: "Material", value: "PET (Polyethylene Terephthalate)" },
+      ],
+      applications: ["Pharmaceutical syrups", "Oral solutions"],
+      industryApplications: ["Pharmaceutical Industry"],
+      features: ["Lightweight construction", "Recyclable PET material"],
+      sizes: ["60ml"],
+    },
+
+    {
+      slug: "60ml-25mm",
+      name: "60ml Pharma PET Bottle - 25mm",
+      description: "60ml PET bottle with a 25mm neck size.",
+      tagline: "Versatile liquid packaging",
+
+      images: [],
+      specs: [
+        { label: "Capacity", value: "60ml" },
+        { label: "Neck Size", value: "25mm" },
+        { label: "Material", value: "PET (Polyethylene Terephthalate)" },
+      ],
+      applications: ["Pharmaceutical syrups", "Oral solutions"],
+      industryApplications: ["Pharmaceutical Industry"],
+      features: ["Lightweight construction", "Recyclable PET material"],
+      sizes: ["60ml"],
+    },
+
+    {
+      slug: "100ml-22mm",
+      name: "100ml Pharma PET Bottle - 22mm",
+      description: "100ml PET bottle with a 22mm neck size.",
+      tagline: "Reliable pharmaceutical packaging",
+
+      images: [],
+      specs: [
+        { label: "Capacity", value: "100ml" },
+        { label: "Neck Size", value: "22mm" },
+        { label: "Material", value: "PET (Polyethylene Terephthalate)" },
+      ],
+      applications: ["Pharmaceutical syrups", "Oral solutions", "Supplements"],
+      industryApplications: ["Pharmaceutical Industry", "Nutraceutical Industry"],
+      features: ["Durable", "Lightweight", "Custom colour options subject to availability"],
+      sizes: ["100ml"],
+    },
+
+    {
+      slug: "100ml-25mm",
+      name: "100ml Pharma PET Bottle - 25mm",
+      description: "100ml PET bottle with a 25mm neck size.",
+      tagline: "Reliable pharmaceutical packaging",
+
+      images: [],
+      specs: [
+        { label: "Capacity", value: "100ml" },
+        { label: "Neck Size", value: "25mm" },
+        { label: "Material", value: "PET (Polyethylene Terephthalate)" },
+      ],
+      applications: ["Pharmaceutical syrups", "Oral solutions", "Supplements"],
+      industryApplications: ["Pharmaceutical Industry", "Nutraceutical Industry"],
+      features: ["Durable", "Lightweight", "Custom colour options subject to availability"],
+      sizes: ["100ml"],
+    },
+
+    {
+      slug: "120ml-25mm",
+      name: "120ml Pharma PET Bottle",
+      description: "120ml PET bottle with a 25mm neck size.",
+      tagline: "Everyday pharmaceutical packaging",
+
+      images: [],
+      specs: [
+        { label: "Capacity", value: "120ml" },
+        { label: "Neck Size", value: "25mm" },
+        { label: "Material", value: "PET (Polyethylene Terephthalate)" },
+        { label: "Listed Shapes", value: "Round, Oval (Dome), Brute and other listed styles, depending on model" },
+      ],
+      applications: ["Pharmaceutical syrups", "Cough mixtures", "Oral solutions"],
+      industryApplications: ["Pharmaceutical Industry"],
+      features: ["Lightweight", "Durable", "Shape options vary by model"],
+      sizes: ["120ml"],
+    },
+
+    {
+      slug: "150ml-25mm",
+      name: "150ml Pharma PET Bottle",
+      description: "150ml PET bottle with a 25mm neck size.",
+      tagline: "Flexible liquid packaging",
+
+      images: [],
+      specs: [
+        { label: "Capacity", value: "150ml" },
+        { label: "Neck Size", value: "25mm" },
+        { label: "Material", value: "PET (Polyethylene Terephthalate)" },
+        { label: "Listed Shapes", value: "Round, Oval (Dome), Double Brute, Microbrute and Flat, depending on model" },
+      ],
+      applications: ["Pharmaceutical syrups", "Ayurvedic formulations"],
+      industryApplications: ["Pharmaceutical Industry", "Ayurvedic and Herbal Industry"],
+      features: ["Lightweight", "Durable", "Multiple shape options"],
+      sizes: ["150ml"],
+    },
+
+    {
+      slug: "170ml-25mm",
+      name: "170ml Pharma PET Bottle",
+      description: "170ml PET bottle with a 25mm neck size.",
+      tagline: "Durable liquid packaging",
+
+      images: [],
+      specs: [
+        { label: "Capacity", value: "170ml" },
+        { label: "Neck Size", value: "25mm" },
+        { label: "Material", value: "PET (Polyethylene Terephthalate)" },
+        { label: "Listed Shapes", value: "Round and other listed round-bottle styles, depending on model" },
+      ],
+      applications: ["Pharmaceutical syrups", "Ayurvedic syrups"],
+      industryApplications: ["Pharmaceutical Industry", "Ayurvedic and Herbal Industry"],
+      features: ["Lightweight construction", "Durable PET material"],
+      sizes: ["170ml"],
+    },
+
+    {
+      slug: "200ml-25mm",
+      name: "200ml Pharma PET Bottle",
+      description: "200ml PET bottle with a 25mm neck size.",
+      tagline: "High-capacity liquid packaging",
+
+      images: [],
+      specs: [
+        { label: "Capacity", value: "200ml" },
+        { label: "Neck Size", value: "25mm" },
+        { label: "Material", value: "PET (Polyethylene Terephthalate)" },
+        { label: "Listed Shapes", value: "Round, Oval (Dome) and Brute styles, depending on model" },
+      ],
+      applications: ["Pharmaceutical liquids", "Cough mixtures", "Oral solutions"],
+      industryApplications: ["Pharmaceutical Industry"],
+      features: ["Lightweight", "Durable", "Recyclable PET material"],
+      sizes: ["200ml"],
+    },
+
+    {
+      slug: "220ml-25mm",
+      name: "220ml Pharma PET Bottle",
+      description: "220ml PET bottle with a 25mm neck size.",
+      tagline: "Practical liquid packaging",
+
+      images: [],
+      specs: [
+        { label: "Capacity", value: "220ml" },
+        { label: "Neck Size", value: "25mm" },
+        { label: "Material", value: "PET (Polyethylene Terephthalate)" },
+        { label: "Listed Shape", value: "Brute; confirm exact model availability" },
+      ],
+      applications: ["Pharmaceutical liquid packaging"],
+      industryApplications: ["Pharmaceutical Industry"],
+      features: ["Lightweight construction", "Durable PET material"],
+      sizes: ["220ml"],
+    },
+
+    {
+      slug: "225ml-25mm",
+      name: "225ml Pharma PET Bottle",
+      description: "225ml PET bottle with a 25mm neck size.",
+      tagline: "Versatile pharmaceutical packaging",
+
+      images: [],
+      specs: [
+        { label: "Capacity", value: "225ml" },
+        { label: "Neck Size", value: "25mm" },
+        { label: "Material", value: "PET (Polyethylene Terephthalate)" },
+      ],
+      applications: ["Pharmaceutical syrups", "Oral solutions"],
+      industryApplications: ["Pharmaceutical Industry"],
+      features: ["Lightweight", "Durable", "Custom options subject to availability"],
+      sizes: ["225ml"],
+    },
+
+    {
+      slug: "300ml-25mm",
+      name: "300ml Pharma PET Bottle",
+      description: "300ml PET bottle with a 25mm neck size.",
+      tagline: "Larger-volume liquid packaging",
+
+      images: [],
+      specs: [
+        { label: "Capacity", value: "300ml" },
+        { label: "Neck Size", value: "25mm" },
+        { label: "Material", value: "PET (Polyethylene Terephthalate)" },
+        { label: "Listed Shapes", value: "Round and Double Brute styles, depending on model" },
+      ],
+      applications: ["Pharmaceutical liquids", "Healthcare formulations"],
+      industryApplications: ["Pharmaceutical Industry"],
+      features: ["Lightweight construction", "Durable PET material"],
+      sizes: ["300ml"],
+    },
+
+    {
+      slug: "450-500ml-25mm",
+      name: "450/500ml Pharma PET Bottle",
+      description: "450/500ml PET bottle with a 25mm neck size.",
+      tagline: "Large-capacity liquid packaging",
+
+      images: [],
+      specs: [
+        { label: "Capacity", value: "450/500ml" },
+        { label: "Neck Size", value: "25mm" },
+        { label: "Material", value: "PET (Polyethylene Terephthalate)" },
+        { label: "Listed Shapes", value: "Round, Brute and Oval (Dome) styles, depending on model" },
+      ],
+      applications: ["Pharmaceutical liquid packaging", "Large-volume liquid formulations"],
+      industryApplications: ["Pharmaceutical Industry"],
+      features: ["Lightweight", "Durable", "Recyclable PET material"],
+      sizes: ["450/500ml"],
+    },
+  ],
+
+  features: [
+    "Lightweight and durable PET material",
+    "Available in clear and amber options",
+    "Transparent colours: red, green, yellow, orange and blue",
+    "Opaque colours: milky white, pink, yellow and orange",
+    "Multiple capacities, shapes and neck sizes",
+    "Recyclable packaging material",
+    "Closure compatibility depends on the bottle model",
+  ],
+
+  applications: [
+    "Pharmaceutical syrups",
+    "Cough mixtures",
+    "Vitamins and dietary supplements",
+    "Oral liquid solutions",
+    "Ayurvedic and herbal syrups",
+  ],
+
+  industryApplications: [
+    "Pharmaceutical Industry",
+    "Nutraceutical Industry",
+    "Ayurvedic and Herbal Industry",
+  ],
+},
+
+
 ]
 
 export default products

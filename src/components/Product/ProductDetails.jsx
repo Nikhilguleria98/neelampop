@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Star } from "lucide-react";
+import { Minus, Plus, Star } from "lucide-react";
 
 const AccordionItem = ({
   title,
@@ -8,20 +8,14 @@ const AccordionItem = ({
   onClick,
 }) => {
   return (
-    <div className="border-b-2 border-black">
+    <div className="border-b border-[#c9dfe3]">
       <button
-        className="flex w-full items-center justify-between p-4 text-base font-medium cursor-pointer hover:bg-gray-50 transition-colors"
+        className="flex w-full cursor-pointer items-center justify-between gap-4 px-2 py-3 text-sm font-semibold transition-colors hover:bg-[#e5efdd] sm:text-base"
         onClick={onClick}
       >
         {title}
 
-        <span
-          className={`transition-transform duration-300 text-3xl ${
-            isOpen ? "rotate-180" : ""
-          }`}
-        >
-          {isOpen ? "−" : "+"}
-        </span>
+        {isOpen ? <Minus size={19} aria-hidden="true" /> : <Plus size={19} aria-hidden="true" />}
       </button>
 
       <div
@@ -31,7 +25,7 @@ const AccordionItem = ({
             : "grid-rows-[0fr] opacity-0"
         }`}
       >
-        <div className="overflow-hidden px-4 pb-4">
+        <div className="overflow-hidden px-2 pb-3">
           {children}
         </div>
       </div>
@@ -53,10 +47,10 @@ const ProductDetails = ({
   };
 
   return (
-    <section className="flex flex-col gap-6 h-full">
+    <section className="flex h-full flex-col gap-4">
       {/* Header */}
-      <header className="space-y-2 lg:flex lg:items-center gap-3">
-        <h1 className="text-pretty text-2xl font-semibold">
+      <header className="flex flex-col gap-2 lg:flex-row lg:items-start lg:justify-between lg:gap-4">
+        <h1 className="text-pretty text-xl font-semibold leading-tight sm:text-2xl">
           {product.name}
 
           {selectedSize && (
@@ -68,7 +62,7 @@ const ProductDetails = ({
         </h1>
 
         {product.rating && (
-          <div className="flex items-center gap-2 text-sm">
+          <div className="flex shrink-0 items-center gap-1.5 text-xs sm:gap-2 sm:text-sm lg:pt-1">
             <div className="flex items-center gap-1">
               {[...Array(5)].map((_, index) => (
                 <Star
@@ -93,12 +87,12 @@ const ProductDetails = ({
 
       {/* Description */}
       {product.description && (
-        <p className="max-w-3xl leading-relaxed text-foreground">
+        <p className="max-w-3xl text-sm leading-6 text-foreground sm:text-[15px]">
           {product.description}
         </p>
       )}
 
-      <div className="h-[2px] w-full bg-black"></div>
+      <div className="h-px w-full bg-[#c9dfe3]"></div>
 
       {/* Specifications */}
       {product.specifications && (
@@ -107,7 +101,7 @@ const ProductDetails = ({
           isOpen={openIndex === 0}
           onClick={() => toggleAccordion(0)}
         >
-          <div className="mt-3 text-sm leading-6 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3">
+          <div className="mt-2 grid grid-cols-1 gap-x-6 gap-y-2 text-sm leading-5 sm:grid-cols-2">
             {Object.entries(
               product.specifications
             ).map(([key, value]) => (
@@ -138,7 +132,7 @@ const ProductDetails = ({
           isOpen={openIndex === 2}
           onClick={() => toggleAccordion(2)}
         >
-          <ul className="list-disc pl-5 space-y-2 text-sm text-gray-700">
+          <ul className="list-disc space-y-1.5 pl-5 text-sm leading-5 text-gray-700">
             {product.applications.map(
               (item, idx) => (
                 <li key={idx}>{item}</li>
@@ -156,7 +150,7 @@ const ProductDetails = ({
           isOpen={openIndex === 3}
           onClick={() => toggleAccordion(3)}
         >
-          <ul className="list-disc pl-5 space-y-2 text-sm text-gray-700">
+          <ul className="list-disc space-y-1.5 pl-5 text-sm leading-5 text-gray-700">
             {product.applicationAreas.map(
               (item, idx) => (
                 <li key={idx}>{item}</li>
@@ -173,7 +167,7 @@ const ProductDetails = ({
           isOpen={openIndex === 4}
           onClick={() => toggleAccordion(4)}
         >
-          <ul className="list-disc pl-5 space-y-2 text-sm text-gray-700">
+          <ul className="list-disc space-y-1.5 pl-5 text-sm leading-5 text-gray-700">
             {product.features.map(
               (feature, idx) => (
                 <li key={idx}>{feature}</li>
@@ -190,7 +184,7 @@ const ProductDetails = ({
           isOpen={openIndex === 5}
           onClick={() => toggleAccordion(5)}
         >
-          <ul className="list-disc pl-5 space-y-2 text-sm text-gray-700">
+          <ul className="list-disc space-y-1.5 pl-5 text-sm leading-5 text-gray-700">
             {product.highlights.map(
               (item, idx) => (
                 <li key={idx}>{item}</li>
@@ -207,12 +201,12 @@ const ProductDetails = ({
           isOpen={openIndex === 1}
           onClick={() => toggleAccordion(1)}
         >
-          <div className="mt-3 text-sm leading-6">
-            <p className="text-gray-600 mb-4">
+          <div className="mt-2 text-sm leading-5">
+            <p className="mb-2 text-gray-600">
               Select a size:
             </p>
 
-            <div className="grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-6 gap-3">
+            <div className="grid grid-cols-3 gap-2.5 sm:grid-cols-5 lg:grid-cols-6">
               {product.sizes.map(
                 (size, idx) => (
                   <button
@@ -220,7 +214,7 @@ const ProductDetails = ({
                     onClick={() =>
                       onSizeChange(size)
                     }
-                    className={`px-3 py-2 border rounded-md transition-all duration-200 text-xs sm:text-sm ${
+                    className={`rounded-md border px-3 py-1.5 text-xs transition-all duration-200 sm:text-sm ${
                       selectedSize === size
                         ? "bg-[#2592AD] text-white border-[#2592AD]"
                         : "hover:border-[#2592AD]"
@@ -236,10 +230,10 @@ const ProductDetails = ({
       )}
 
       {/* Inquiry */}
-      <div className="mt-auto pt-6 border-t border-gray-200">
-        <button className="inline-flex items-center justify-center bg-[#2592AD] px-8 py-3 text-sm font-medium text-white hover:bg-[#1d7a95] transition-colors duration-300 w-full sm:w-auto">
+      <div className="mt-2 border-t border-[#c9dfe3] pt-4">
+        <a href="/contact" className="inline-flex w-full items-center justify-center bg-[#2592AD] px-7 py-2.5 text-sm font-medium text-white transition-colors duration-300 hover:bg-[#1d7a95] sm:w-auto">
           SEND INQUIRY
-        </button>
+        </a>
       </div>
     </section>
   );

@@ -20,12 +20,15 @@ function ContactForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log("Form submitted:", formData)
-    // Handle form submission here
+    const subject = encodeURIComponent(`Packaging inquiry from ${formData.name}`)
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\n\n${formData.message}`
+    )
+    window.location.href = `mailto:neelampop@gmail.com?subject=${subject}&body=${body}`
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 relative overflow-hidden">
+    <div className="min-h-screen bg-[#edf4e8] relative overflow-hidden">
       {/* Background dotted pattern */}
       <div
         className="absolute inset-0"
@@ -37,28 +40,17 @@ function ContactForm() {
         }}
       />
 
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 py-12">
+      <div className="relative z-10 flex min-h-screen flex-col items-center justify-center px-4 py-8">
         {/* Header Section */}
-        <div className="text-center mb-8">
-          <h1 className="text-5xl font-bold text-gray-900 mb-4">Let's Connect</h1>
-          <p className="text-gray-600 text-2xl ">
+        <div className="mb-6 text-center">
+          <h1 className="mb-2 text-3xl font-bold text-gray-900 md:text-4xl">Let's Connect</h1>
+          <p className="text-base text-gray-600 md:text-lg">
             We're here to answer your queries and support your packaging needs.
           </p>
         </div>
 
         {/* Contact Info */}
-        <div className="flex flex-wrap justify-center gap-8 mb-12 text-lg text-gray-600">
-          <div className="flex items-center gap-2">
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-              />
-            </svg>
-            <span>+91-xxxxx xxxx</span>
-          </div>
+        <div className="mb-8 flex flex-wrap justify-center gap-x-6 gap-y-3 text-sm text-gray-600 md:text-base">
           <div className="flex items-center gap-2">
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path
@@ -86,7 +78,7 @@ function ContactForm() {
 
         {/* Contact Form */}
         <div className="w-full max-w-md">
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form onSubmit={handleSubmit} className="space-y-3">
             <div>
               <input
                 type="text"
@@ -94,7 +86,7 @@ function ContactForm() {
                 placeholder="Name"
                 value={formData.name}
                 onChange={handleInputChange}
-                className="w-full px-4 py-3 bg-white border border-gray-300 rounded-md text-gray-700 placeholder:text-gray-500 focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500"
+                className="w-full px-4 py-2.5 bg-[#f7faf4] border border-gray-300 rounded-md text-gray-700 placeholder:text-gray-500 focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500"
                 required
               />
             </div>
@@ -106,7 +98,7 @@ function ContactForm() {
                 placeholder="Email"
                 value={formData.email}
                 onChange={handleInputChange}
-                className="w-full px-4 py-3 bg-white border border-gray-300 rounded-md text-gray-700 placeholder:text-gray-500 focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500"
+                className="w-full px-4 py-2.5 bg-[#f7faf4] border border-gray-300 rounded-md text-gray-700 placeholder:text-gray-500 focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500"
                 required
               />
             </div>
@@ -118,7 +110,7 @@ function ContactForm() {
                 placeholder="Phone number"
                 value={formData.phone}
                 onChange={handleInputChange}
-                className="w-full px-4 py-3 bg-white border border-gray-300 rounded-md text-gray-700 placeholder:text-gray-500 focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500"
+                className="w-full px-4 py-2.5 bg-[#f7faf4] border border-gray-300 rounded-md text-gray-700 placeholder:text-gray-500 focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500"
                 required
               />
             </div>
@@ -130,7 +122,7 @@ function ContactForm() {
                 value={formData.message}
                 onChange={handleInputChange}
                 rows={4}
-                className="w-full px-4 py-3 bg-white border border-gray-300 rounded-md text-gray-700 placeholder:text-gray-500 resize-none focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500"
+                className="w-full px-4 py-2.5 bg-[#f7faf4] border border-gray-300 rounded-md text-gray-700 placeholder:text-gray-500 resize-none focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500"
                 required
               />
             </div>
@@ -138,7 +130,7 @@ function ContactForm() {
             <div className="pt-2">
               <button
                 type="submit"
-                className="w-full bg-teal-600 hover:bg-teal-700 text-white font-medium py-3 px-6 rounded-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"
+                className="w-full rounded-md bg-[#2592ad] px-6 py-2.5 font-medium text-white transition-colors duration-200 hover:bg-[#1f7c94] focus:outline-none focus:ring-2 focus:ring-[#2592ad] focus:ring-offset-2"
               >
                 Submit
               </button>

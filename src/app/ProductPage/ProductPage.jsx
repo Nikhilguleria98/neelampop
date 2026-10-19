@@ -1,6 +1,6 @@
 // ProductPage.jsx
 import { useParams } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import products from "./products";
 import ProductGallery from "../../components/Product/ProductGallery";
 import ProductDetails from "../../components/Product/ProductDetails";
@@ -8,42 +8,22 @@ import ProductDetails from "../../components/Product/ProductDetails";
 export default function ProductPage() {
   const { id, variant } = useParams();
 
-const baseProduct = products.find(
-  (p) => p.id === Number(id)
-);
-
-if (!baseProduct) {
-  return (
-    <h2 className="text-center text-red-500">
-      Product not found
-    </h2>
-  );
-}
-
-let product = baseProduct;
-
-if (variant && baseProduct.variants) {
-  const selectedVariant = baseProduct.variants.find(
-    (item) => item.slug === variant
-  );
-
-  if (!selectedVariant) {
-    return (
-      <h2 className="text-center text-red-500 py-20">
-        Variant not found
-      </h2>
-    );
-  }
-
-  product = {
-    ...baseProduct,
-    ...selectedVariant,
-  };
-}
+  const baseProduct = products.find((item) => item.id === Number(id));
+  const selectedVariant = baseProduct?.variants?.find((item) => item.slug === variant);
+  const variantNotFound = Boolean(variant && baseProduct?.variants && !selectedVariant);
+  const product = selectedVariant ? { ...baseProduct, ...selectedVariant } : baseProduct;
   const [selectedSize, setSelectedSize] = useState(product?.sizes?.[0] || "5 ml");
 
-  if (!product) {
-    return <h2 className="text-center text-red-500">Product not found</h2>;
+  useEffect(() => {
+    setSelectedSize(product?.sizes?.[0] || "5 ml");
+  }, [id, variant]);
+
+  if (!baseProduct) {
+    return <h2 className="py-16 text-center text-red-500">Product not found</h2>;
+  }
+
+  if (variantNotFound) {
+    return <h2 className="py-16 text-center text-red-500">Variant not found</h2>;
   }
 
   const handleSizeChange = (size) => {
@@ -51,7 +31,7 @@ if (variant && baseProduct.variants) {
   };
 
   return (
-    <main className="mx-auto grid grid-cols-1 gap-8 p-10 md:grid-cols-[40%_1px_1fr]">
+    <main className={`${baseProduct.id === 3 ? "lotion-bottle-typography " : ""}mx-auto grid max-w-[1600px] grid-cols-1 items-start gap-6 px-4 py-6 sm:px-6 md:grid-cols-[minmax(0,0.82fr)_1px_minmax(0,1.18fr)] md:gap-5 lg:gap-8 lg:px-8 lg:py-8`}>
       {/* Left: Gallery */}
       <div>
         <ProductGallery 
@@ -61,7 +41,7 @@ if (variant && baseProduct.variants) {
       </div>
 
       {/* Divider */}
-      <div className="bg-black" />
+      <div className="hidden h-full min-h-[24rem] bg-[#c9dfe3] md:block" />
 
       {/* Right: Details */}
       <div>

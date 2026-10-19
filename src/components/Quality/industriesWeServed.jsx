@@ -13,47 +13,47 @@ const industries = [
   {
     id: 1,
     title: "Pharmaceuticals & Healthcare",
-    desc: "US-FDA compliant PET and Glass bottles designed for syrup, tablets, and medical packaging.",
+      desc: "Plastic bottles and containers for syrup, tablets, and other healthcare products.",
     icon: Pill,
-    badge: "Medical Grade",
+      badge: "Healthcare packaging",
     image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?q=80&w=1200&auto=format&fit=crop",
   },
   {
     id: 2,
     title: "Cosmetics & Personal Care",
-    desc: "Premium frosted glass and high-clarity PET containers for lotions, serums, and fragrances.",
+      desc: "Plastic containers for lotions, serums, and other personal care products.",
     icon: Sparkles,
-    badge: "Luxury Finish",
+      badge: "Personal care",
     image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=1200&auto=format&fit=crop",
   },
   {
     id: 3,
     title: "Food & Beverage",
-    desc: "BPA-free, food-grade containers engineered for hot-fill juices, oil, and condiment packaging.",
+      desc: "Plastic packaging for food, beverage, oil, and condiment products.",
     icon: Wine,
-    badge: "100% BPA Free",
+      badge: "Food packaging",
     image: "https://images.unsplash.com/photo-1527661591475-527312dd65f5?q=80&w=1200&auto=format&fit=crop",
   },
   {
     id: 4,
     title: "Agro & Industrial Chemicals",
-    desc: "Chemical-resistant, leak-proof HDPE containers designed for tough liquid formulations.",
+      desc: "Plastic containers for agro and industrial chemical products.",
     icon: Droplet,
-    badge: "Heavy Duty",
+      badge: "Industrial packaging",
     image: "https://images.unsplash.com/photo-1585842378054-ee2e52f94ba2?q=80&w=1200&auto=format&fit=crop",
   },
 ];
 
 export default function IndustriesServed() {
   return (
-    <section className="bg-[#f8fafc] text-slate-800 font-sans py-16 px-4 sm:px-6 lg:px-8">
+    <section className="bg-[#edf4e8] px-4 py-12 font-sans text-slate-800 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-10"
+          className="mb-8 text-center"
         >
          
           <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mt-3">
@@ -90,7 +90,7 @@ export default function IndustriesServed() {
               const Icon = item.icon;
               return (
                 <SwiperSlide key={item.id} className="w-[300px] sm:w-[360px]">
-                  <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-slate-100 transition-all duration-300 hover:shadow-xl">
+                  <div className="bg-[#f7faf4] rounded-2xl shadow-lg overflow-hidden border border-slate-100 transition-all duration-300 hover:shadow-xl">
                     <div className="relative h-48 overflow-hidden">
                       <img 
                         src={item.image} 
@@ -101,7 +101,7 @@ export default function IndustriesServed() {
                         {item.badge}
                       </span>
                     </div>
-                    <div className="p-6">
+                    <div className="p-5">
                       <div className="w-10 h-10 bg-teal-50 text-[#208a9f] rounded-lg flex items-center justify-center mb-3">
                         <Icon className="w-5 h-5" />
                       </div>

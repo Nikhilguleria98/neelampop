@@ -43,7 +43,7 @@ export default function LotionBottlesPage() {
   ];
 
   return (
-    <div className="font-serif">
+    <div className="font-sans">
       {/* Title */}
       <section className="text-center py-10">
         <h1 className="text-3xl font-bold">Lotion Bottles</h1>
@@ -71,7 +71,7 @@ export default function LotionBottlesPage() {
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent flex flex-col justify-end items-center text-center p-4 text-white">
               <h3 className="font-semibold text-lg mb-1">{product.name}</h3>
               <p className="text-sm mb-3">{product.size}</p>
-              <button className="mb-2 border border-white text-white px-4 py-2  text-sm bg-transparent hover:bg-white hover:text-black transition">
+              <button className="mb-2 border border-white text-white px-4 py-2  text-sm bg-transparent hover:bg-[#e5efdd] hover:text-black transition">
                 View Details
               </button>
             </div>

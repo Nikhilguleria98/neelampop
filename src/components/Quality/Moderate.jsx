@@ -41,23 +41,22 @@ function Moderate() {
   };
 
   return (
-    <div className="w-full py-12 px-4">
+    <div className="w-full px-4 py-10">
       {/* Header */}
       <div className="max-w-4xl mx-auto text-center">
-        <h1 className="font-bold text-2xl md:text-4xl">
-          <span className="text-[#2592AD]">NEELAM</span> Print'
-          <span className="text-red-500">o</span>' Pack
+        <h1 className="text-2xl font-bold md:text-4xl">
+          <span className="text-[#2592AD]">NEELAM</span> Print'<span className="text-red-500">o</span>'Pack
         </h1>
 
-        <p className="mt-6 text-gray-600">
+        <p className="mx-auto mt-4 max-w-3xl text-gray-600 leading-6">
           We are committed to manufacturing and supplying premium products
           in strict adherence to industry standards. Our quality assurance
           process ensures reliability, precision, and customer satisfaction.
         </p>
       </div>
 
-      <div className="max-w-6xl mx-auto mt-12">
-        <h2 className="text-center text-2xl md:text-3xl font-bold mb-12">
+      <div className="mx-auto mt-9 max-w-6xl">
+        <h2 className="mb-8 text-center text-2xl font-bold md:text-3xl">
           Multi-Stage Assurance
         </h2>
 
@@ -98,7 +97,7 @@ function Moderate() {
         </div>
 
         {/* Desktop Arc Layout */}
-        <div className="hidden md:block relative w-full max-w-[900px] h-[500px] mx-auto">
+        <div className="relative mx-auto hidden h-[420px] w-full max-w-[900px] md:block">
           {/* Arc Line */}
           <svg className="absolute inset-0 w-full h-full">
             <path
@@ -155,11 +154,7 @@ function Moderate() {
           </motion.div>
         </div>
 
-        <h1 className="text-center font-semibold text-2xl md:text-4xl mt-10">
-          “Quality is bridging our hardwork and
-          <br />
-          customer’s Trust”
-        </h1>
+        <h2 className="mt-7 text-center text-xl font-semibold text-slate-800 md:text-3xl">Quality connects our hard work with customer trust.</h2>
       </div>
     </div>
   );

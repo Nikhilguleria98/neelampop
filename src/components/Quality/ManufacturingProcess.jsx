@@ -15,37 +15,37 @@ const processSteps = [
   {
     id: 1,
     title: "Polymer Selection",
-    desc: "Sourcing premium grade PET, HDPE, and eco-friendly recycled resins.",
+    desc: "Selecting PET and HDPE materials to suit different packaging requirements.",
     icon: FlaskConical,
   },
   {
     id: 2,
     title: "Preform Injection",
-    desc: "Molding raw resins into high-precision preforms with defect-free necking.",
+    desc: "Forming preforms to support consistent bottle dimensions.",
     icon: Factory,
   },
   {
     id: 3,
     title: "Stretch Blow Molding",
-    desc: "Automated high-speed blowers expanding preforms to accurate bottle dimensions.",
+    desc: "Shaping bottles to the required capacity and design.",
     icon: Cpu,
   },
   {
     id: 4,
     title: "Custom Printing & Labeling",
-    desc: "High-precision screen printing, UV coating, and full shrink sleeving.",
+    desc: "Applying printing and labels according to order specifications.",
     icon: Palette,
   },
   {
     id: 5,
     title: "Quality Control & Leak Test",
-    desc: "Automated drop tests, pressure checks, and wall-thickness inspection.",
+    desc: "Checking products for consistency and inspecting bottles for leaks.",
     icon: ShieldCheck,
   },
   {
     id: 6,
-    title: "Sterile Packaging & Shipping",
-    desc: "Dust-free shrink bundling and pallet packaging for secure delivery.",
+    title: "Packaging & Shipping",
+    desc: "Preparing finished products for packing and dispatch.",
     icon: Truck,
   },
 ];
@@ -57,14 +57,14 @@ export default function ManufacturingProcess() {
   const visibleSteps = showAll ? processSteps : processSteps.slice(0, 3);
 
   return (
-    <section className="bg-[#f8fafc] text-slate-800 font-sans py-16 px-4 sm:px-6 lg:px-8">
+    <section className="bg-[#edf4e8] px-4 py-12 font-sans text-slate-800 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="mb-9 text-center"
         >
           <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900">
             Our Manufacturing Process
@@ -75,7 +75,7 @@ export default function ManufacturingProcess() {
         </motion.div>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
           <AnimatePresence>
             {visibleSteps.map((item) => {
               const Icon = item.icon;
@@ -86,15 +86,15 @@ export default function ManufacturingProcess() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.4 }}
-                  className="group bg-white rounded-2xl p-8 text-center shadow-md border border-slate-100 flex flex-col items-center justify-center cursor-pointer transition-all duration-300 hover:bg-[#2592ad] hover:shadow-xl hover:-translate-y-1"
+                  className="group flex cursor-pointer flex-col items-center justify-center rounded-2xl border border-[#dce8d4] bg-[#f7faf4] p-6 text-center shadow-md transition-all duration-300 hover:-translate-y-1 hover:bg-[#2592ad] hover:shadow-xl"
                 >
                   {/* Icon Box */}
-                  <div className="w-16 h-16 bg-blue-50 text-[#3B82F6] rounded-xl flex items-center justify-center mb-6 transition-colors duration-300 group-hover:bg-white/20 group-hover:text-white">
+                  <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-[#e8f3f5] text-[#2592ad] transition-colors duration-300 group-hover:bg-white/20 group-hover:text-white">
                     <Icon className="w-8 h-8" />
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-xl font-bold text-slate-900 mb-3 transition-colors duration-300 group-hover:text-white">
+                  <h3 className="mb-2 text-lg font-bold text-slate-900 transition-colors duration-300 group-hover:text-white">
                     {item.title}
                   </h3>
 
@@ -109,7 +109,7 @@ export default function ManufacturingProcess() {
         </div>
 
         {/* Show More / Show Less Button */}
-        <div className="text-center mt-12">
+        <div className="mt-8 text-center">
           <button
             onClick={() => setShowAll(!showAll)}
             className="inline-flex items-center gap-2 bg-[#2592ad] hover:bg-[#72c2bc] text-slate-800 hover:text-white font-medium px-6 py-2.5 rounded-lg transition-colors shadow-sm focus:outline-none"

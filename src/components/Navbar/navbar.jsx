@@ -1,18 +1,39 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Menu, X, ChevronDown, ChevronRight } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [activeParent, setActiveParent] = useState(null);
-  const [submenuCoords, setSubmenuCoords] = useState({ top: 0, left: 0, anchorBottom: false });
   const [mobileOpenMenu, setMobileOpenMenu] = useState(null);
 
   const location = useLocation();
 
   const dropdownRef = useRef(null);
-  const itemRefs = useRef({});
+  const dropdownCloseTimer = useRef(null);
+
+  const cancelDropdownClose = () => {
+    if (dropdownCloseTimer.current) {
+      window.clearTimeout(dropdownCloseTimer.current);
+      dropdownCloseTimer.current = null;
+    }
+  };
+
+  const closeProductDropdown = () => {
+    cancelDropdownClose();
+    setIsDropdownOpen(false);
+    setActiveParent(null);
+  };
+
+  const scheduleDropdownClose = () => {
+    cancelDropdownClose();
+    dropdownCloseTimer.current = window.setTimeout(() => {
+      setIsDropdownOpen(false);
+      setActiveParent(null);
+      dropdownCloseTimer.current = null;
+    }, 350);
+  };
 
   // Active page indicator helpers
   const isActive = (path) => {
@@ -28,9 +49,7 @@ const Navbar = () => {
   
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
-    if (!isDropdownOpen) {
-      setActiveParent(null);
-    }
+    setActiveParent(null);
   };
 
   // Close desktop dropdowns on click outside
@@ -39,40 +58,16 @@ const Navbar = () => {
       if (window.innerWidth < 1024) return;
 
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setIsDropdownOpen(false);
-        setActiveParent(null);
+        closeProductDropdown();
       }
     };
 
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
+      cancelDropdownClose();
     };
   }, []);
-
-  // Controls desktop right-side flyout position & handles bottom collision
-  const handleParentHover = (catName) => {
-    if (!catName) {
-      setActiveParent(null);
-      return;
-    }
-    
-    setActiveParent(catName);
-    const itemEl = itemRefs.current[catName];
-    if (itemEl) {
-      const rect = itemEl.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
-      const expectedBoxHeight = 320; 
-      
-      const hitsBottomLimit = rect.top + expectedBoxHeight > windowHeight;
-
-      setSubmenuCoords({
-        top: hitsBottomLimit ? rect.bottom : rect.top,
-        left: rect.right + 4,
-        anchorBottom: hitsBottomLimit
-      });
-    }
-  };
 
   const categories = [
    {
@@ -235,11 +230,25 @@ const Navbar = () => {
     }
   ];
 
-  const currentActiveData = categories.find(cat => cat.name === activeParent);
+  const currentActiveData = categories.find(cat => cat.name === activeParent && cat.isParent);
 
   return (
-    <nav className="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="sticky top-0 z-[100] border-b border-[#c5dfe7] bg-[#e8f3f5] shadow-sm">
+      <div
+        className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+        ref={dropdownRef}
+        onMouseEnter={cancelDropdownClose}
+        onMouseLeave={() => {
+          if (window.innerWidth >= 1024) {
+            scheduleDropdownClose();
+          }
+        }}
+        onKeyDown={(event) => {
+          if (event.key === 'Escape') {
+            closeProductDropdown();
+          }
+        }}
+      >
         <div className="flex justify-between items-center h-16 gap-4">
 
           {/* Left Desktop Menu */}
@@ -263,9 +272,13 @@ const Navbar = () => {
             </Link>
 
             {/* Desktop Dropdown Trigger */}
-            <div className="relative" ref={dropdownRef}>
+            <div className="relative">
               <button
-                onClick={toggleDropdown}
+                onClick={() => setIsDropdownOpen(true)}
+                onMouseEnter={() => setIsDropdownOpen(true)}
+                onFocus={() => setIsDropdownOpen(true)}
+                aria-expanded={isDropdownOpen}
+                aria-controls="product-mega-menu"
                 className={`flex items-center font-medium transition-colors duration-200 focus:outline-none xl:text-base lg:text-sm whitespace-nowrap ${
                   isProductActive() || isDropdownOpen ? 'text-[#2592AD] font-semibold' : 'text-gray-700 hover:text-[#2592AD]'
                 }`}
@@ -274,83 +287,6 @@ const Navbar = () => {
                 <ChevronDown className={`ml-1 h-4 w-4 transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`} />
               </button>
 
-              {/* Box 1: Desktop Main List Dropdown Container */}
-              {isDropdownOpen && (
-                <div 
-                  className="absolute left-0 mt-2 w-80 bg-white border border-gray-200 rounded-lg shadow-xl z-50 py-2 max-h-[65vh] overflow-y-auto custom-scrollbar"
-                  onMouseLeave={() => handleParentHover(null)}
-                >
-                  {categories.map((cat, index) => {
-                    if (cat.isParent) {
-                      const isSubActive = cat.submenu.some(sub => isActive(sub.path));
-                      return (
-                        <div
-                          key={index}
-                          ref={el => itemRefs.current[cat.name] = el}
-                          onMouseEnter={() => handleParentHover(cat.name)}
-                          className={`flex justify-between items-center px-4 py-2.5 text-sm font-semibold cursor-pointer select-none transition-colors ${
-                            activeParent === cat.name || isSubActive 
-                              ? 'bg-slate-50 text-[#2592AD]' 
-                              : 'text-gray-700 hover:bg-slate-50'
-                          }`}
-                        >
-                          <span className="truncate pr-2">{cat.name}</span>
-                          <ChevronRight className={`h-4 w-4 shrink-0 ${activeParent === cat.name || isSubActive ? 'text-[#2592AD]' : 'text-gray-400'}`} />
-                        </div>
-                      );
-                    }
-
-                    return (
-                      <Link
-                        key={index}
-                        to={cat.path}
-                        onClick={() => setIsDropdownOpen(false)}
-                        onMouseEnter={() => handleParentHover(null)}
-                        className={`block px-4 py-2.5 text-sm font-semibold transition-colors truncate ${
-                          isActive(cat.path) 
-                            ? 'bg-slate-50 text-[#2592AD] font-bold' 
-                            : 'text-gray-700 hover:bg-slate-50 hover:text-[#2592AD]'
-                        }`}
-                      >
-                        {cat.name}
-                      </Link>
-                    );
-                  })}
-                </div>
-              )}
-
-              {/* Box 2: Detached Floating Window (Desktop Only) */}
-              {isDropdownOpen && activeParent && currentActiveData?.submenu && (
-                <div
-                  style={{
-                    position: 'fixed',
-                    top: submenuCoords.anchorBottom ? 'auto' : `${submenuCoords.top}px`,
-                    bottom: submenuCoords.anchorBottom ? `${window.innerHeight - submenuCoords.top}px` : 'auto',
-                    left: `${submenuCoords.left}px`,
-                  }}
-                  className="w-80 bg-white border border-gray-200 rounded-lg shadow-xl z-[60] py-2 max-h-[45vh] overflow-y-auto custom-scrollbar transition-all duration-75"
-                  onMouseEnter={() => handleParentHover(activeParent)}
-                  onMouseLeave={() => handleParentHover(null)}
-                >
-                  {currentActiveData.submenu.map((subItem, idx) => (
-                    <Link
-                      key={idx}
-                      to={subItem.path}
-                      onClick={() => {
-                        setIsDropdownOpen(false);
-                        setActiveParent(null);
-                      }}
-                      className={`block px-4 py-2 text-xs font-semibold transition-colors duration-150 ${
-                        isActive(subItem.path)
-                          ? 'bg-slate-50 text-[#2592AD] font-bold'
-                          : 'text-gray-700 hover:bg-slate-50 hover:text-[#2592AD]'
-                      }`}
-                    >
-                      {subItem.name}
-                    </Link>
-                  ))}
-                </div>
-              )}
             </div>
           </div>
 
@@ -395,22 +331,119 @@ const Navbar = () => {
 
           {/* Mobile Hamburger Toggle Button */}
           <div className="lg:hidden">
-            <button onClick={toggleMenu} className="text-gray-700 p-2 hover:bg-gray-100 rounded-md focus:outline-none">
+            <button onClick={toggleMenu} className="text-gray-700 p-2 hover:bg-[#e5efdd] rounded-md focus:outline-none">
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
+          </div>
+        </div>
+        {/* Desktop product mega menu */}
+        <div
+          id="product-mega-menu"
+          className="mega-menu-panel absolute left-4 top-full z-[101] overflow-hidden rounded-xl border border-[#c5dfe7] bg-[#e8f3f5] shadow-xl pointer-events-none lg:block hidden"
+          style={{
+            width: isDropdownOpen ? 'min(calc(100vw - 2rem), 78rem)' : '0px',
+            maxHeight: isDropdownOpen ? 'min(72vh, 720px)' : '0px',
+            opacity: isDropdownOpen ? 1 : 0,
+            pointerEvents: isDropdownOpen ? 'auto' : 'none',
+          }}
+          aria-hidden={!isDropdownOpen}
+          inert={!isDropdownOpen}
+          onMouseEnter={cancelDropdownClose}
+        >
+          <div className="w-[min(calc(100vw_-_2rem),78rem)] max-h-[min(72vh,720px)] overflow-y-auto p-3 sm:p-4 custom-scrollbar">
+            <div className="grid grid-cols-2 gap-x-1.5 gap-y-1 md:grid-cols-3 lg:grid-cols-5">
+              {categories.map((cat) => {
+                const isSubActive = cat.isParent && cat.submenu.some((sub) => isActive(sub.path));
+                const isSelected = activeParent === cat.name;
+                const itemClassName = `flex min-h-11 w-full items-center justify-between gap-2 rounded-lg border px-2.5 py-2 text-left text-sm font-semibold transition-colors ${
+                  isSelected || isSubActive
+                    ? 'border-[#cbdcbe] bg-[#e5efdd] text-[#1f7c94]'
+                    : 'border-transparent text-gray-700 hover:border-[#dce8d4] hover:bg-[#edf4e8] hover:text-[#1f7c94]'
+                }`;
+
+                if (cat.isParent) {
+                  return (
+                    <button
+                      key={cat.name}
+                      type="button"
+                      className={itemClassName}
+                      onMouseEnter={() => {
+                        if (!activeParent) setActiveParent(cat.name);
+                      }}
+                      onFocus={() => {
+                        if (!activeParent) setActiveParent(cat.name);
+                      }}
+                      onClick={() => setActiveParent(cat.name)}
+                      aria-expanded={isSelected}
+                      aria-controls="product-mega-submenu"
+                    >
+                      <span>{cat.name}</span>
+                      <ChevronDown className={`h-4 w-4 shrink-0 transition-transform duration-200 ${isSelected ? 'rotate-180' : ''}`} />
+                    </button>
+                  );
+                }
+
+                return (
+                  <Link
+                    key={cat.name}
+                    to={cat.path}
+                    onClick={closeProductDropdown}
+                    className={`${itemClassName} ${isActive(cat.path) ? 'border-[#cbdcbe] bg-[#e5efdd] text-[#1f7c94]' : ''}`}
+                  >
+                    <span>{cat.name}</span>
+                  </Link>
+                );
+              })}
+            </div>
+
+            <div
+              id="product-mega-submenu"
+              className="mega-menu-submenu overflow-hidden"
+              style={{
+                maxHeight: currentActiveData ? 'min(42vh, 380px)' : '0px',
+                opacity: currentActiveData ? 1 : 0,
+                marginTop: currentActiveData ? '1rem' : '0px',
+              }}
+              aria-hidden={!currentActiveData}
+            >
+              {currentActiveData && (
+                <section key={currentActiveData.name} className="mega-menu-content border-t border-[#dce8d4] pt-4">
+                  <h3 className="mb-3 text-sm font-bold text-[#1f7c94]">{currentActiveData.name}</h3>
+                  <div className="grid max-h-[min(38vh,340px)] grid-cols-2 gap-1 overflow-y-auto pr-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+                    {currentActiveData.submenu.map((subItem) => (
+                      <Link
+                        key={subItem.path}
+                        to={subItem.path}
+                        onClick={() => {
+                          setIsDropdownOpen(false);
+                          setActiveParent(null);
+                        }}
+                        className={`rounded-md px-3 py-2 text-sm font-medium transition-colors ${
+                          isActive(subItem.path)
+                            ? 'bg-[#e5efdd] text-[#1f7c94]'
+                            : 'text-gray-700 hover:bg-[#edf4e8] hover:text-[#1f7c94]'
+                        }`}
+                      >
+                        {subItem.name}
+                      </Link>
+                    ))}
+                  </div>
+                </section>
+              )}
+            </div>
           </div>
         </div>
       </div>
 
       {/* Mobile Drawer Navigation Context Menu */}
       {isMenuOpen && (
-        <div className="lg:hidden border-t border-gray-200 bg-white shadow-inner max-h-[calc(100vh-4rem)] overflow-y-auto">
+        <div className="lg:hidden border-t border-[#c5dfe7] bg-[#e8f3f5] shadow-inner max-h-[calc(100vh-4rem)] overflow-y-auto">
           <div className="px-2 pt-2 pb-3 space-y-1">
             <Link 
               to="/" 
               onClick={() => setIsMenuOpen(false)} 
               className={`block px-3 py-2 rounded-md font-medium ${
-                isActive('/') ? 'bg-[#2592AD]/10 text-[#2592AD] font-semibold' : 'text-gray-700 hover:bg-gray-50'
+                isActive('/') ? 'bg-[#2592AD]/10 text-[#2592AD] font-semibold' : 'text-gray-700 hover:bg-[#e5efdd]'
               }`}
             >
               Home
@@ -420,7 +453,7 @@ const Navbar = () => {
               to="/about" 
               onClick={() => setIsMenuOpen(false)} 
               className={`block px-3 py-2 rounded-md font-medium ${
-                isActive('/about') ? 'bg-[#2592AD]/10 text-[#2592AD] font-semibold' : 'text-gray-700 hover:bg-gray-50'
+                isActive('/about') ? 'bg-[#2592AD]/10 text-[#2592AD] font-semibold' : 'text-gray-700 hover:bg-[#e5efdd]'
               }`}
             >
               About Us
@@ -430,16 +463,28 @@ const Navbar = () => {
             <div>
               <button
                 onClick={toggleDropdown}
+                aria-expanded={isDropdownOpen}
+                aria-controls="mobile-product-menu"
                 className={`w-full flex justify-between items-center px-3 py-2 rounded-md font-medium text-left ${
-                  isProductActive() ? 'text-[#2592AD] font-semibold' : 'text-gray-700 hover:bg-gray-50'
+                  isProductActive() ? 'text-[#2592AD] font-semibold' : 'text-gray-700 hover:bg-[#e5efdd]'
                 }`}
               >
                 <span>Comprehensive Product Range</span>
                 <ChevronDown className={`h-4 w-4 transform transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`} />
               </button>
 
-              {isDropdownOpen && (
-                <div className="ml-1 mt-1 pl-1 border-l border-gray-100 space-y-1 max-h-[55vh] overflow-y-auto custom-scrollbar bg-slate-50/50 p-1 rounded-md">
+              <div
+                id="mobile-product-menu"
+                className="mobile-product-menu overflow-hidden"
+                style={{
+                  maxHeight: isDropdownOpen ? '55vh' : '0px',
+                  opacity: isDropdownOpen ? 1 : 0,
+                  marginTop: isDropdownOpen ? '0.25rem' : '0px',
+                }}
+                aria-hidden={!isDropdownOpen}
+                inert={!isDropdownOpen}
+              >
+                <div className="ml-1 max-h-[55vh] space-y-1 overflow-y-auto rounded-md border border-[#c5dfe7] bg-[#e8f3f5] p-1 shadow-lg custom-scrollbar">
                   {categories.map((cat, index) => {
                     if (cat.isParent) {
                       const isSubOpen = mobileOpenMenu === cat.name;
@@ -449,16 +494,24 @@ const Navbar = () => {
                           <button
                             onClick={() => setMobileOpenMenu(isSubOpen ? null : cat.name)}
                             className={`w-full flex justify-between items-center px-3 py-2 rounded-md text-sm font-semibold text-left transition-colors ${
-                              isSubOpen || isSubActive ? 'text-[#2592AD] bg-white shadow-xs' : 'text-gray-700'
+                              isSubOpen || isSubActive ? 'text-[#2592AD] bg-[#edf4e8] shadow-xs' : 'text-gray-700'
                             }`}
                           >
                             <span className="block truncate pr-4 text-xs sm:text-sm">{cat.name}</span>
                             <ChevronDown className={`h-4 w-4 shrink-0 transition-transform text-gray-400 ${isSubOpen ? 'rotate-180' : '-rotate-90'}`} />
                           </button>
-                          
-                          {/* Subsections render sequentially in ONE main nested list stream */}
-                          {isSubOpen && (
-                            <div className="ml-2 mt-1 pl-2 border-l border-gray-200 space-y-1">
+
+                          <div
+                            className="mobile-product-submenu overflow-hidden"
+                            style={{
+                              maxHeight: isSubOpen ? 'min(48vh, 360px)' : '0px',
+                              opacity: isSubOpen ? 1 : 0,
+                              marginTop: isSubOpen ? '0.25rem' : '0px',
+                            }}
+                            aria-hidden={!isSubOpen}
+                            inert={!isSubOpen}
+                          >
+                            <div className="ml-2 max-h-[min(48vh,360px)] space-y-1 overflow-y-auto border-l border-gray-200 pl-2">
                               {cat.submenu.map((subItem, idx) => (
                                 <Link
                                   key={idx}
@@ -469,7 +522,7 @@ const Navbar = () => {
                                   }}
                                   className={`block px-3 py-2 text-[11px] sm:text-xs font-semibold leading-normal break-words ${
                                     isActive(subItem.path)
-                                      ? 'text-[#2592AD] font-bold bg-white/80 rounded'
+                                      ? 'text-[#2592AD] font-bold bg-[#dcecf1] rounded'
                                       : 'text-gray-600 hover:text-[#2592AD]'
                                   }`}
                                 >
@@ -477,7 +530,7 @@ const Navbar = () => {
                                 </Link>
                               ))}
                             </div>
-                          )}
+                          </div>
                         </div>
                       );
                     }
@@ -492,8 +545,8 @@ const Navbar = () => {
                         }}
                         className={`block px-3 py-2 rounded-md text-xs sm:text-sm font-semibold truncate ${
                           isActive(cat.path)
-                            ? 'text-[#2592AD] bg-white font-bold shadow-xs'
-                            : 'text-gray-700 hover:bg-white'
+                            ? 'text-[#2592AD] bg-[#edf4e8] font-bold shadow-xs'
+                            : 'text-gray-700 hover:bg-[#e5efdd]'
                         }`}
                       >
                         {cat.name}
@@ -501,14 +554,14 @@ const Navbar = () => {
                     );
                   })}
                 </div>
-              )}
+              </div>
             </div>
 
             <Link 
               to="/quality" 
               onClick={() => setIsMenuOpen(false)} 
               className={`block px-3 py-2 rounded-md font-medium ${
-                isActive('/quality') ? 'bg-[#2592AD]/10 text-[#2592AD] font-semibold' : 'text-gray-700 hover:bg-gray-50'
+                isActive('/quality') ? 'bg-[#2592AD]/10 text-[#2592AD] font-semibold' : 'text-gray-700 hover:bg-[#e5efdd]'
               }`}
             >
               Quality Assurance
@@ -518,7 +571,7 @@ const Navbar = () => {
               to="/values" 
               onClick={() => setIsMenuOpen(false)} 
               className={`block px-3 py-2 rounded-md font-medium ${
-                isActive('/values') ? 'bg-[#2592AD]/10 text-[#2592AD] font-semibold' : 'text-gray-700 hover:bg-gray-50'
+                isActive('/values') ? 'bg-[#2592AD]/10 text-[#2592AD] font-semibold' : 'text-gray-700 hover:bg-[#e5efdd]'
               }`}
             >
               Our Belief Values
@@ -543,6 +596,32 @@ const Navbar = () => {
 
       {/* Global Scrollbar Customization Layout Hook */}
       <style>{`
+        .mega-menu-panel {
+          transition: width 480ms cubic-bezier(0.22, 1, 0.36, 1), max-height 500ms cubic-bezier(0.22, 1, 0.36, 1), opacity 180ms ease;
+        }
+        .mega-menu-submenu {
+          transition: max-height 320ms cubic-bezier(0.22, 1, 0.36, 1), margin-top 320ms ease, opacity 180ms ease;
+        }
+        .mega-menu-content {
+          animation: mega-menu-content-enter 220ms ease-out both;
+        }
+        @keyframes mega-menu-content-enter {
+          from { opacity: 0; transform: translateY(-6px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        .mobile-product-menu,
+        .mobile-product-submenu {
+          transition: max-height 380ms cubic-bezier(0.22, 1, 0.36, 1), margin-top 320ms ease, opacity 180ms ease;
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .mega-menu-panel,
+          .mega-menu-submenu,
+          .mega-menu-content,
+          .mobile-product-menu,
+          .mobile-product-submenu {
+            transition: none;
+          }
+        }
         .custom-scrollbar::-webkit-scrollbar {
           width: 6px;
         }

@@ -1,7 +1,41 @@
-import React from "react";
-import { AtSign,Phone,Mail, MapPin, Send } from "lucide-react";
+import React, { useState } from "react";
+import { AtSign, Mail, MapPin, Phone, Send } from "lucide-react";
 
 export default function Footer() {
+const [productPage, setProductPage] = useState(() => {
+  const savedPage = sessionStorage.getItem("footerProductPage");
+  return savedPage !== null ? Number(savedPage) : 0;
+});
+const productsPerPage = 5;
+
+const products = [
+  { name: "Pharma Dry Syrup Bottles", path: "/products/1/group" },
+  { name: "Pharma PET Bottles", path: "/products/55/10ml-22mm" },
+  { name: "Measuring Spoons", path: "/products/2/measuring-hollow-spoon" },
+  { name: "Lotion Bottles", path: "/products/3" },
+  { name: "Hand wash Bottles", path: "/products/4" },
+  { name: "Eye-Ear Dropper Bottle", path: "/products/5/30ml-round" },
+  { name: "Flip-off Seals", path: "/products/6" },
+  { name: "RoPP Caps for Pharma PET Bottles", path: "/products/7" },
+  { name: "Toilet/Floor Cleaner", path: "/products/8/floor-cleaner" },
+  { name: "Floor Cleaner Bottles", path: "/products/12" },
+  { name: "Jars", path: "/products/9/cream-jar" },
+  { name: "Shampoo Bottles", path: "/products/10" },
+  { name: "Oil Bottles", path: "/products/11/oil-1" },
+  { name: "Pharmaceutical Rubber Dropper Assembly", path: "/products/13" },
+  { name: "Stopper CAM Lock fittings for Cold rooms PUF Panels", path: "/products/14" },
+  { name: "Churan Bottle Set", path: "/products/15" },
+  { name: "Tablet Containers", path: "/products/16" },
+  { name: "Applicator For Piles", path: "/products/17" },
+  { name: "Talcum Powder Bottles", path: "/products/18/10gms-flat-talcum-powder-bottle" },
+];
+
+const totalPages = Math.ceil(products.length / productsPerPage);
+
+const visibleProducts = products.slice(
+  productPage * productsPerPage,
+  (productPage + 1) * productsPerPage
+);
   return (
     <footer className="relative overflow-hidden bg-[#edf4e8] px-4 pb-8 pt-12 font-sans">
       <div className="container mx-auto max-w-7xl relative z-10">
@@ -79,27 +113,127 @@ export default function Footer() {
             </div>
 
             {/* Main site links */}
-            <div className="grid grid-cols-2 gap-6 text-center sm:text-left lg:col-span-5">
-              <div>
-                <h4 className="mb-3 text-base font-semibold text-slate-900">Products</h4>
-                <ul className="space-y-2 text-sm text-slate-500">
-                  <li><a href="/products/1" className="hover:text-[#2592ad]">Pharma dry syrup bottles</a></li>
-                  <li><a href="/products/3" className="hover:text-[#2592ad]">Lotion bottles</a></li>
-                  <li><a href="/products/5" className="hover:text-[#2592ad]">Dropper bottles</a></li>
-                  <li><a href="/products/9" className="hover:text-[#2592ad]">Jars</a></li>
-                  <li><a href="/products/11" className="hover:text-[#2592ad]">Oil and shampoo bottles</a></li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="mb-3 text-base font-semibold text-slate-900">Company</h4>
-                <ul className="space-y-2 text-sm text-slate-500">
-                  <li><a href="/about" className="hover:text-[#2592ad]">About us</a></li>
-                  <li><a href="/quality" className="hover:text-[#2592ad]">Quality assurance</a></li>
-                  <li><a href="/values" className="hover:text-[#2592ad]">Our values</a></li>
-                  <li><a href="/contact" className="hover:text-[#2592ad]">Contact us</a></li>
-                </ul>
-              </div>
-            </div>
+            
+{/* Main site links */}
+<div className="grid grid-cols-2 gap-6 text-center sm:text-left lg:col-span-5">
+  <div>
+  <div className="mb-3 flex items-center justify-between gap-2">
+    <h4 className="text-base font-semibold text-slate-900">
+      Products
+    </h4>
+
+    <div className="flex items-center gap-1">
+      {/* Previous page */}
+      <button
+        type="button"
+onClick={() => {
+  setProductPage((prev) => {
+    const newPage = Math.max(0, prev - 1);
+    sessionStorage.setItem("footerProductPage", String(newPage));
+    return newPage;
+  });
+}}        disabled={productPage === 0}
+        aria-label="Previous products"
+        className="flex h-7 w-7 items-center justify-center rounded-full border border-[#dce8d4] text-[#2592ad] transition hover:bg-[#2592ad] hover:text-white disabled:cursor-not-allowed disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-[#2592ad]"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="15"
+          height="15"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="m15 18-6-6 6-6" />
+        </svg>
+      </button>
+
+      {/* Next page */}
+      <button
+        type="button"
+        onClick={() => {
+  setProductPage((prev) => {
+    const newPage = Math.min(totalPages - 1, prev + 1);
+    sessionStorage.setItem("footerProductPage", String(newPage));
+    return newPage;
+  });
+}}
+        disabled={productPage === totalPages - 1}
+        aria-label="Next products"
+        className="flex h-7 w-7 items-center justify-center rounded-full border border-[#dce8d4] text-[#2592ad] transition hover:bg-[#2592ad] hover:text-white disabled:cursor-not-allowed disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-[#2592ad]"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="15"
+          height="15"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="m9 18 6-6-6-6" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  {/* Display five products per page */}
+  <ul className="space-y-2 text-sm text-slate-500">
+    {visibleProducts.map((product) => (
+      <li key={product.path}>
+        <a
+          href={product.path}
+          className="block break-words transition-colors hover:text-[#2592ad]"
+        >
+          {product.name}
+        </a>
+      </li>
+    ))}
+  </ul>
+
+  {/* Page indicator */}
+  <p className="mt-3 text-xs text-slate-400">
+    {productPage * productsPerPage + 1}–
+    {Math.min((productPage + 1) * productsPerPage, products.length)}
+    {" "}of {products.length} products
+  </p>
+</div>
+
+  <div>
+    <h4 className="mb-3 text-base font-semibold text-slate-900">
+      Company
+    </h4>
+
+    <ul className="space-y-2 text-sm text-slate-500">
+      <li>
+        <a href="/about" className="hover:text-[#2592ad]">
+          About us
+        </a>
+      </li>
+      <li>
+        <a href="/quality" className="hover:text-[#2592ad]">
+          Quality assurance
+        </a>
+      </li>
+      <li>
+        <a href="/values" className="hover:text-[#2592ad]">
+          Our values
+        </a>
+      </li>
+      <li>
+        <a href="/contact" className="hover:text-[#2592ad]">
+          Contact us
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
             {/* Contact Information (3 Columns) */}
             <div className="lg:col-span-3 text-center sm:text-left">
               <h4 className="font-semibold text-slate-900 mb-4 text-base">Contact Us</h4>

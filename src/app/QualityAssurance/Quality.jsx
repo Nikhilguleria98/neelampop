@@ -4,6 +4,7 @@ import Moderate from '../../components/Quality/Moderate'
 import IndustriesServed from '../../components/Quality/industriesWeServed'
 import ManufacturingProcess from '../../components/Quality/ManufacturingProcess'
 import QualityAssuranceCards from '../../components/Quality/QualityAssuranceCards'
+import ComingSoonSlider from '../../components/home/ComingSoonTicker'
 
 function Quality() {
   return (
@@ -12,6 +13,7 @@ function Quality() {
       <Moderate/>
      <QualityAssuranceCards/>
      <IndustriesServed/>
+     <ComingSoonSlider/>
      <ManufacturingProcess/>
     </div>
   )

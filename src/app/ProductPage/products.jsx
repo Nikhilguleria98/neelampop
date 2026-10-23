@@ -3224,7 +3224,7 @@ const products = [
       tagline: "Compact pharmaceutical liquid packaging",
 
       images: [
-        // { src: "/medicine_img/10ml-pet-bottle.jpeg", alt: "10ml Pharma PET Bottle" },
+        { src: "/medicine_img/10ml-pet-bottle.jpeg", alt: "10ml Pharma PET Bottle" },
       ],
 
       specs: [
@@ -3246,7 +3246,10 @@ const products = [
       description: "15ml PET bottle with a 22mm neck size.",
       tagline: "Small-capacity PET packaging",
 
-      images: [],
+       images: [
+        { src: "/medicine_img/15ml-pet-bottle.jpeg", alt: "15ml Pharma PET Bottle" },
+      ],
+
       specs: [
         { label: "Capacity", value: "15ml" },
         { label: "Neck Size", value: "22mm" },
@@ -3264,7 +3267,9 @@ const products = [
       description: "15ml PET bottle with a 25mm neck size.",
       tagline: "Small-capacity PET packaging",
 
-      images: [],
+      images: [
+        { src: "/medicine_img/25ml-pet-bottle.jpeg", alt: "15ml Pharma PET Bottle" },
+      ],
       specs: [
         { label: "Capacity", value: "15ml" },
         { label: "Neck Size", value: "25mm" },
@@ -3282,7 +3287,9 @@ const products = [
       description: "30ml PET bottle with a 25mm neck size.",
       tagline: "Practical pharmaceutical packaging",
 
-      images: [],
+      images: [
+        { src: "/medicine_img/30ml-pet-bottle.jpeg", alt: "30ml Pharma PET Bottle" },
+      ],
       specs: [
         { label: "Capacity", value: "30ml" },
         { label: "Neck Size", value: "25mm" },
@@ -3300,7 +3307,9 @@ const products = [
       description: "60ml PET bottle with a 22mm neck size.",
       tagline: "Versatile liquid packaging",
 
-      images: [],
+      images: [
+        { src: "/medicine_img/60ml-pet-bottle.jpeg", alt: "60ml Pharma PET Bottle" },
+      ],
       specs: [
         { label: "Capacity", value: "60ml" },
         { label: "Neck Size", value: "22mm" },
